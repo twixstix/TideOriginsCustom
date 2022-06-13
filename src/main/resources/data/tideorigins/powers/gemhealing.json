@@ -1,0 +1,64 @@
+{
+    "name": "Restoration",
+    "description": "Being around multiple gemstone ores or blocks allows you to absorb minerals from them, healing your injuries.",
+    "type": "origins:multiple",
+    "low_regen": {
+        "type": "origins:stacking_status_effect",
+        "min_stacks": 0,
+        "max_stacks": 1,
+        "duration_per_stack": 60,
+        "tick_rate": 20,
+        "effect": {
+            "effect": "minecraft:regeneration",
+            "is_ambient": true,
+            "show_particles": true,
+            "show_icon": true
+        },
+        "condition": {
+            "type": "origins:block_in_radius",
+            "block_condition": {
+                "type": "origins:and",
+                    "conditions": [
+                    {
+                        "type": "origins:in_tag",
+                        "tag": "tideorigins:gemheal_low"
+                    }
+                ]
+            },
+            "radius": 5,
+            "shape": "cube",
+            "comparison": ">=",
+            "compare_to": 3
+        }
+    },
+    "high_regen": {
+        "type": "origins:stacking_status_effect",
+        "min_stacks": 0,
+        "max_stacks": 1,
+        "duration_per_stack": 60,
+        "tick_rate": 20,
+        "effect": {
+            "effect": "minecraft:regeneration",
+            "is_ambient": true,
+            "show_particles": true,
+            "show_icon": true,
+            "amplifier": 1
+        },
+        "condition": {
+            "type": "origins:block_in_radius",
+            "block_condition": {
+                "type": "origins:and",
+                    "conditions": [
+                    {
+                        "type": "origins:in_tag",
+                        "tag": "tideorigins:gemheal_high"
+                    }
+                ]
+            },
+            "radius": 5,
+            "shape": "cube",
+            "comparison": ">=",
+            "compare_to": 3
+        }
+    }
+}

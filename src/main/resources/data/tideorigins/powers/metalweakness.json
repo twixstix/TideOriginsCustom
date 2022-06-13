@@ -1,0 +1,167 @@
+{
+    "name": "Metallic Weakness",
+    "description": "Heavy metals like gold and iron cause you immense harm. Being in contact with them makes you weak or even blind, and weapons deal increased damage to you.",
+    "type": "origins:multiple",
+    "head": {
+        "type": "origins:stacking_status_effect",
+        "min_stacks": 0,
+        "max_stacks": 1,
+        "duration_per_stack": 100,
+        "effects": [
+            {
+                "effect": "minecraft:weakness",
+                "is_ambient": true,
+                "show_particles": false,
+                "show_icon": true
+            },
+            {
+                "effect": "minecraft:blindness",
+                "is_ambient": true,
+                "show_particles": false,
+                "show_icon": true
+            }
+        ],
+        "condition": {
+            "type": "origins:equipped_item",
+            "equipment_slot": "head",
+            "item_condition": {
+                "type": "origins:ingredient",
+                "ingredient": {
+                    "tag": "tideorigins:metalarmor"
+                }
+            }
+        }
+    },
+    "chest": {
+        "type": "origins:stacking_status_effect",
+        "min_stacks": 0,
+        "max_stacks": 1,
+        "duration_per_stack": 100,
+        "effects": [
+            {
+                "effect": "minecraft:weakness",
+                "is_ambient": true,
+                "show_particles": false,
+                "show_icon": true
+            },
+            {
+                "effect": "minecraft:blindness",
+                "is_ambient": true,
+                "show_particles": false,
+                "show_icon": true
+            }
+        ],
+        "condition": {
+            "type": "origins:equipped_item",
+            "equipment_slot": "chest",
+            "item_condition": {
+                "type": "origins:ingredient",
+                "ingredient": {
+                    "tag": "tideorigins:metalarmor"
+                }
+            }
+        }
+    },
+    "legs": {
+        "type": "origins:stacking_status_effect",
+        "min_stacks": 0,
+        "max_stacks": 1,
+        "duration_per_stack": 100,
+        "effects": [
+            {
+                "effect": "minecraft:weakness",
+                "is_ambient": true,
+                "show_particles": false,
+                "show_icon": true
+            },
+            {
+                "effect": "minecraft:blindness",
+                "is_ambient": true,
+                "show_particles": false,
+                "show_icon": true
+            }
+        ],
+        "condition": {
+            "type": "origins:equipped_item",
+            "equipment_slot": "legs",
+            "item_condition": {
+                "type": "origins:ingredient",
+                "ingredient": {
+                    "tag": "tideorigins:metalarmor"
+                }
+            }
+        }
+    },
+    "feet": {
+        "type": "origins:stacking_status_effect",
+        "min_stacks": 0,
+        "max_stacks": 1,
+        "duration_per_stack": 100,
+        "effects": [
+            {
+                "effect": "minecraft:weakness",
+                "is_ambient": true,
+                "show_particles": false,
+                "show_icon": true
+            },
+            {
+                "effect": "minecraft:blindness",
+                "is_ambient": true,
+                "show_particles": false,
+                "show_icon": true
+            }
+        ],
+        "condition": {
+            "type": "origins:equipped_item",
+            "equipment_slot": "feet",
+            "item_condition": {
+                "type": "origins:ingredient",
+                "ingredient": {
+                    "tag": "tideorigins:metalarmor"
+                }
+            }
+        }
+    },
+    "moredmg": {
+        "type": "origins:modify_damage_taken",
+        "damage_condition": {
+            "type": "origins:attacker",
+            "entity_condition": {
+                "type": "origins:equipped_item",
+                "equipment_slot": "mainhand",
+                "item_condition": {
+                    "type": "origins:ingredient",
+                    "ingredient": {
+                        "tag": "tideorigins:metaltools"
+                    }
+                }
+            }
+        },
+        "modifier": {
+            "operation": "multiply_base",
+            "value": 0.5
+        }
+    },
+    "weakness": {
+        "type": "origins:stacking_status_effect",
+        "min_stacks": 0,
+        "max_stacks": 1,
+        "duration_per_stack": 40,
+        "effect": {
+            "effect": "minecraft:weakness",
+            "is_ambient": true,
+            "show_particles": false,
+            "show_icon": true
+        },
+        "condition": {
+            "type": "origins:equipped_item",
+            "equipment_slot": "mainhand",
+            "item_condition": {
+                "type": "origins:ingredient",
+                "ingredient": {
+                    "tag": "tideorigins:metaltools"
+                }
+            }
+        }
+    }
+}

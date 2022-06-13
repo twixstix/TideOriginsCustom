@@ -1,0 +1,20 @@
+{
+    "name": "Midas' Curse",
+    "description": "Everything you touch turns into gold, unfortunately including food. You can only eat golden food items.",
+    "type": "origins:prevent_item_use",
+    "item_condition": {
+        "type": "origins:and",
+        "conditions": [
+            {
+                "type": "origins:food"
+            },
+            {
+                "type": "origins:ingredient",
+                "ingredient": {
+                    "tag": "tideorigins:gold_food"
+                },
+                "inverted": true
+            }
+        ]
+    }
+}

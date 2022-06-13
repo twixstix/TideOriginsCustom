@@ -1,0 +1,139 @@
+{
+    "name": "STAB Bonus",
+    "description": "Being a Steel-type yourself, iron tools and equipment are more effective for you.",
+    "type": "origins:multiple",
+    "helmet": {
+        "type": "origins:conditioned_attribute",
+        "modifier": {
+            "attribute": "minecraft:generic.armor",
+            "operation": "addition",
+            "value": 1
+        },
+        "tick_rate": 10,
+        "condition": {
+            "type": "origins:equipped_item",
+            "equipment_slot": "head",
+            "item_condition": {
+                "type": "origins:ingredient",
+                "ingredient": {
+                    "item": "minecraft:iron_helmet"
+                }
+            }
+        }
+    },
+    "chest": {
+        "type": "origins:conditioned_attribute",
+        "modifier": {
+            "attribute": "minecraft:generic.armor",
+            "operation": "addition",
+            "value": 2
+        },
+        "tick_rate": 10,
+        "condition": {
+            "type": "origins:equipped_item",
+            "equipment_slot": "chest",
+            "item_condition": {
+                "type": "origins:ingredient",
+                "ingredient": {
+                    "item": "minecraft:iron_chestplate"
+                }
+            }
+        }
+    },
+    "legs": {
+        "type": "origins:conditioned_attribute",
+        "modifier": {
+            "attribute": "minecraft:generic.armor",
+            "operation": "addition",
+            "value": 1
+        },
+        "tick_rate": 10,
+        "condition": {
+            "type": "origins:equipped_item",
+            "equipment_slot": "legs",
+            "item_condition": {
+                "type": "origins:ingredient",
+                "ingredient": {
+                    "item": "minecraft:iron_leggings"
+                }
+            }
+        }
+    },
+    "boots": {
+        "type": "origins:conditioned_attribute",
+        "modifier": {
+            "attribute": "minecraft:generic.armor",
+            "operation": "addition",
+            "value": 1
+        },
+        "tick_rate": 10,
+        "condition": {
+            "type": "origins:equipped_item",
+            "equipment_slot": "feet",
+            "item_condition": {
+                "type": "origins:ingredient",
+                "ingredient": {
+                    "item": "minecraft:iron_boots"
+                }
+            }
+        }
+    },
+    "break": {
+        "type": "origins:modify_break_speed",
+        "modifier": {
+            "operation": "multiply_base",
+            "value": 0.3
+        },
+        "condition": {
+            "type": "origins:equipped_item",
+            "equipment_slot": "mainhand",
+            "item_condition": {
+                "type": "origins:ingredient",
+                "ingredient": [
+                    {
+                        "item": "minecraft:iron_pickaxe"
+                    },
+                    {
+                        "item": "minecraft:iron_shovel"
+                    },
+                    {
+                        "item": "minecraft:iron_axe"
+                    }
+                ]
+            }
+        }
+    },
+    "sword": {
+        "type": "origins:conditioned_attribute",
+        "modifier": {
+            "attribute": "minecraft:generic.attack_damage",
+            "operation": "addition",
+            "value": 1
+        },
+        "tick_rate": 10,
+        "condition": {
+            "type": "origins:equipped_item",
+            "equipment_slot": "mainhand",
+            "item_condition": {
+                "type": "origins:ingredient",
+                "ingredient": [
+                {
+                    "item": "minecraft:iron_sword"
+                },
+                {
+                    "item": "minecraft:iron_axe"
+                },
+                {
+                    "item": "minecraft:iron_pickaxe"
+                },
+                {
+                    "item": "minecraft:iron_hoe"
+                },
+                {
+                    "item": "minecraft:iron_shovel"
+                }
+            ]
+            }
+        }
+    }
+}

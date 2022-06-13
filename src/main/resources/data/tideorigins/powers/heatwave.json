@@ -1,0 +1,65 @@
+{
+    "name": "Heatwave",
+    "description": "Pressing your ability button sends out a wave of flames around you, igniting those caught in it.",
+    "type": "origins:multiple",
+    "ignite": {
+        "type": "origins:active_self",
+        "entity_action": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:area_of_effect",
+                    "radius": 5,
+                    "bientity_action": {
+                        "type": "origins:target_action",
+                        "action": {
+                            "type": "origins:set_on_fire",
+                            "duration": 5
+                        }
+                    },
+                    "bientity_condition": {
+                        "type": "origins:and",
+                        "conditions": [
+                            {
+                                "type": "origins:can_see"
+                            },
+                            {
+                                "type": "origins:target_condition",
+                                "condition": {
+                                    "type": "origins:and",
+                                    "conditions": [
+                                        {
+                                            "type": "origins:nbt",
+                                            "nbt": "{Tags: ['fairy_ally']}",
+                                            "inverted": true
+                                        },
+                                        {
+                                            "type": "origins:nbt",
+                                            "nbt": "{Tags: ['fairy']}",
+                                            "inverted": true
+                                        }
+                                    ]
+                                }
+                            }
+                        ]
+                    }
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "/summon area_effect_cloud ~ ~ ~ {Particle:\"flame\",Radius:5f,Duration:10}"
+                },
+                {
+                    "type": "origins:play_sound",
+                    "sound": "minecraft:entity.blaze.shoot",
+                    "pitch": 0.8
+                }
+            ]
+        },
+        "cooldown": 200,
+        "hud_render": {
+            "should_render": true,
+            "sprite_location": "origins:textures/gui/resource_bar.png",
+            "bar_index": 7
+        }
+    }
+}

@@ -1,0 +1,43 @@
+{   
+    "name": "Lightweight",
+    "description": "You're very light, causing you to float to the ground slowly and be unable to take kinetic damage.",
+    "type": "origins:multiple",
+    "falling": {
+        "type": "apoli:modify_falling",
+        "velocity": 0.01,
+        "take_fall_damage": false,
+        "condition": {
+            "type": "origins:or",
+            "conditions": [{
+                    "type": "origins:and",
+                    "conditions": [{
+                            "type": "origins:sneaking"
+                        },
+                        {
+                            "type": "origins:fall_flying"
+                        }
+                    ]
+                },
+                {
+                    "type": "origins:and",
+                    "conditions": [{
+                            "type": "origins:sneaking",
+                            "inverted": true
+                        },
+                        {
+                            "type": "origins:fall_flying",
+                            "inverted": true
+                        }
+                    ]
+                }
+            ]
+        }
+    },
+    "kinetic": {
+        "type": "origins:invulnerability",
+        "damage_condition": {
+          "type": "origins:name",
+          "name": "flyIntoWall"
+        }
+      }
+}

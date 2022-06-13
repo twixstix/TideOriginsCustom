@@ -1,0 +1,68 @@
+{
+    "name": "Lightning Attractant",
+    "description": "The metal in your body is extremely conductive to electricity. By activating this ability, lightning will strike you, damaging you severely but granting strength and regeneration.",
+    "type": "origins:active_self",
+    "entity_action": {
+        "type": "origins:and",
+        "actions": [
+            {
+                "type": "origins:execute_command",
+                "command": "summon lightning_bolt ~ ~ ~"
+            },
+            {
+                "type": "origins:damage",
+                "amount": 5,
+                "source": {
+                    "name": "lightningBolt"
+                }
+            },
+            {
+                "type": "origins:apply_effect",
+                "effects": [
+                    {
+                        "effect": "minecraft:glowing",
+                        "duration": 1800,
+                        "is_ambient": true,
+                        "show_particles": false,
+                        "show_icon": true
+                    },
+                    {
+                        "effect": "minecraft:strength",
+                        "duration": 1800,
+                        "amplifier": 1,
+                        "is_ambient": true,
+                        "show_particles": false,
+                        "show_icon": true
+                    },
+                    {
+                        "effect": "minecraft:hunger",
+                        "duration": 1800,
+                        "is_ambient": true,
+                        "show_particles": false,
+                        "show_icon": true
+                    },
+                    {
+                        "effect": "minecraft:regeneration",
+                        "duration": 1800,
+                        "is_ambient": true,
+                        "show_particles": false,
+                        "show_icon": true
+                    }
+                ]
+            }
+        ]
+    },
+    "cooldown": 6000,
+    "condition": {
+        "type": "origins:predicate",
+        "predicate": "tideorigins:is_thunderstorm"
+    },
+    "hud_render": {
+        "should_render": true,
+        "sprite_location": "origins:textures/gui/resource_bar.png",
+        "bar_index": 2
+    },
+    "key": {
+        "key": "key.origins.secondary_active"
+    }
+}

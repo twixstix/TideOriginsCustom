@@ -1,0 +1,26 @@
+{
+    "powers": [
+        "origins:water_breathing",
+        "tideorigins:water_sight",
+        "origins:aqua_affinity",
+        "tideorigins:relic_heartofthesea",
+        "origins:like_water",
+        "tideorigins:riptide",
+        "tideorigins:aquadiet",
+        "tideorigins:aquadiet2",
+        "tideorigins:nogapple",
+        "tideorigins:weteyes",
+        "tideorigins:fishfeet",
+        "origins:aquatic",
+        "origins:conduit_power_on_land",
+        "origins:air_from_potions",
+        "tideorigins:meloncat"
+    ],
+    "icon": {
+        "item": "minecraft:cod"
+    },
+    "order": 2,
+    "impact": 3,
+    "name": "Merling",
+    "description": "A fusion of fish and human, Merlings are masters of the sea. Upon finding a relic known as the Heart of the Sea, their abilities can become enhanced even further."
+}

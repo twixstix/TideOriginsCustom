@@ -1,0 +1,210 @@
+{
+    "name": "Incorporeal",
+    "description": "Your ghostly form makes it difficult for physical objects to damage you. Any weapon without a touch of magic to it will deal reduced damage to you.",
+    "type": "origins:modify_damage_taken",
+    "bientity_condition": {
+        "type": "origins:actor_condition",
+        "condition": {
+            "type": "origins:equipped_item",
+            "equipment_slot": "mainhand",
+            "item_condition": {
+                "type": "origins:or",
+                "conditions": [
+                    {
+                        "type": "origins:enchantment",
+                        "enchantment": "minecraft:binding_curse",
+                        "comparison": ">=",
+                        "compare_to": 1
+                    },
+                    {
+                        "type": "origins:enchantment",
+                        "enchantment": "minecraft:vanishing_curse",
+                        "comparison": ">=",
+                        "compare_to": 1
+                    },
+                    {
+                        "type": "origins:enchantment",
+                        "enchantment": "minecraft:mending",
+                        "comparison": ">=",
+                        "compare_to": 1
+                    },
+                    {
+                        "type": "origins:enchantment",
+                        "enchantment": "minecraft:bane_of_arthropods",
+                        "comparison": ">=",
+                        "compare_to": 1
+                    },
+                    {
+                        "type": "origins:enchantment",
+                        "enchantment": "minecraft:smite",
+                        "comparison": ">=",
+                        "compare_to": 1
+                    },
+                    {
+                        "type": "origins:enchantment",
+                        "enchantment": "minecraft:sharpness",
+                        "comparison": ">=",
+                        "compare_to": 1
+                    },
+                    {
+                        "type": "origins:enchantment",
+                        "enchantment": "minecraft:channeling",
+                        "comparison": ">=",
+                        "compare_to": 1
+                    },
+                    {
+                        "type": "origins:enchantment",
+                        "enchantment": "minecraft:efficiency",
+                        "comparison": ">=",
+                        "compare_to": 1
+                    },
+                    {
+                        "type": "origins:enchantment",
+                        "enchantment": "minecraft:fire_aspect",
+                        "comparison": ">=",
+                        "compare_to": 1
+                    },
+                    {
+                        "type": "origins:enchantment",
+                        "enchantment": "minecraft:fortune",
+                        "comparison": ">=",
+                        "compare_to": 1
+                    },
+                    {
+                        "type": "origins:enchantment",
+                        "enchantment": "minecraft:impaling",
+                        "comparison": ">=",
+                        "compare_to": 1
+                    },
+                    {
+                        "type": "origins:enchantment",
+                        "enchantment": "minecraft:knockback",
+                        "comparison": ">=",
+                        "compare_to": 1
+                    },
+                    {
+                        "type": "origins:enchantment",
+                        "enchantment": "minecraft:looting",
+                        "comparison": ">=",
+                        "compare_to": 1
+                    },
+                    {
+                        "type": "origins:enchantment",
+                        "enchantment": "minecraft:loyalty",
+                        "comparison": ">=",
+                        "compare_to": 1
+                    },
+                    {
+                        "type": "origins:enchantment",
+                        "enchantment": "minecraft:luck_of_the_sea",
+                        "comparison": ">=",
+                        "compare_to": 1
+                    },
+                    {
+                        "type": "origins:enchantment",
+                        "enchantment": "minecraft:lure",
+                        "comparison": ">=",
+                        "compare_to": 1
+                    },
+                    {
+                        "type": "origins:enchantment",
+                        "enchantment": "minecraft:riptide",
+                        "comparison": ">=",
+                        "compare_to": 1
+                    },
+                    {
+                        "type": "origins:enchantment",
+                        "enchantment": "minecraft:silk_touch",
+                        "comparison": ">=",
+                        "compare_to": 1
+                    },
+                    {
+                        "type": "origins:enchantment",
+                        "enchantment": "minecraft:sweeping",
+                        "comparison": ">=",
+                        "compare_to": 1
+                    },
+                    {
+                        "type": "origins:enchantment",
+                        "enchantment": "minecraft:unbreaking",
+                        "comparison": ">=",
+                        "compare_to": 1
+                    },
+                    {
+                        "type": "origins:enchantment",
+                        "enchantment": "minecraft:unbreaking",
+                        "comparison": ">=",
+                        "compare_to": 1
+                    },
+                    {
+                        "type": "origins:enchantment",
+                        "enchantment": "minecraft:flame",
+                        "comparison": ">=",
+                        "compare_to": 1
+                    },
+                    {
+                        "type": "origins:enchantment",
+                        "enchantment": "minecraft:infinity",
+                        "comparison": ">=",
+                        "compare_to": 1
+                    },
+                    {
+                        "type": "origins:enchantment",
+                        "enchantment": "minecraft:multishot",
+                        "comparison": ">=",
+                        "compare_to": 1
+                    },
+                    {
+                        "type": "origins:enchantment",
+                        "enchantment": "minecraft:power",
+                        "comparison": ">=",
+                        "compare_to": 1
+                    },
+                    {
+                        "type": "origins:enchantment",
+                        "enchantment": "minecraft:piercing",
+                        "comparison": ">=",
+                        "compare_to": 1
+                    },
+                    {
+                        "type": "origins:enchantment",
+                        "enchantment": "minecraft:punch",
+                        "comparison": ">=",
+                        "compare_to": 1
+                    },
+                    {
+                        "type": "origins:enchantment",
+                        "enchantment": "minecraft:quick_charge",
+                        "comparison": ">=",
+                        "compare_to": 1
+                    },
+                    {
+                        "type": "origins:enchantment",
+                        "enchantment": "minecraft:unbreaking",
+                        "comparison": ">=",
+                        "compare_to": 1
+                    }
+                ],
+                "inverted": true
+            }
+        }
+    },
+    "damage_condition": {
+        "type": "origins:or",
+        "conditions": [
+            {
+                "type": "origins:name",
+                "name": "player"
+            },
+            {
+                "type": "origins:name",
+                "name": "mob"
+            }
+        ]
+    },
+    "modifier": {
+        "name": "reduce dmg from unenchanted weapons",
+        "operation": "multiply_total",
+        "value": -0.5
+    }
+}

@@ -1,0 +1,17 @@
+{
+	"powers": [
+		"tideorigins:strength",
+		"tideorigins:bloodlust",
+		"tideorigins:butcher",
+        "tideorigins:beastofprey",
+        "tideorigins:frail",
+        "tideorigins:hatchet",
+        "tideorigins:w_weakbow"
+
+	],
+	"icon": "minecraft:bone",
+    "order": 4,
+	"impact": 1,
+	"name": "Werewolf",
+	"description": "Creatures of the night, werewolves are terrifyingly strong fusions of man and beast."
+}

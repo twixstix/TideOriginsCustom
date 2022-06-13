@@ -1,0 +1,20 @@
+{
+	"powers": [
+		"tideorigins:meleeonly",
+		"tideorigins:swift",
+		"tideorigins:petite",
+        "tideorigins:grabbable"
+	],
+	"icon": "minecraft:raw_iron",
+    "order": 4,
+	"impact": 1,
+	"name": "Riolu",
+	"description": "Despite their tiny bodies, Riolu are pint-size powerhouses. Given the right conditions, perhaps they can even evolve..?",
+    "upgrades": [
+        {
+            "condition": "tideorigins:riolu_evolve",
+            "origin": "tideorigins:lucario",
+            "announcement": "What? You're evolving! ...Congratulations! You have evolved into Lucario!"
+        }
+    ]
+}

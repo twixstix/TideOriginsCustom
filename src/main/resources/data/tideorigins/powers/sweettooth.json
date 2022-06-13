@@ -1,0 +1,19 @@
+{
+    "name": "Sweet Tooth",
+    "description": "Sugary foods restore more hunger and saturation for you than others.",
+    "type": "origins:modify_food",
+    "item_condition": {
+        "type": "origins:ingredient",
+        "ingredient": {
+            "tag": "tideorigins:sweets"
+        }
+    },
+    "food_modifier": {
+        "operation": "addition",
+        "value": 2
+    },
+    "saturation_modifier": {
+        "operation": "addition",
+        "value": 0.8
+    }
+}

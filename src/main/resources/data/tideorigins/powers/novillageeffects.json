@@ -1,0 +1,9 @@
+{
+    "name": "Curse Immunity",
+    "description": "Illagers cannot curse you, preventing you from gaining Bad Omen. However, this also means you cannot gain Hero of the Village.",
+    "type": "origins:effect_immunity",
+    "effects": [
+        "minecraft:bad_omen",
+        "minecraft:hero_of_the_village"
+    ]
+}

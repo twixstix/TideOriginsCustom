@@ -1,0 +1,42 @@
+{   
+    "type": "origins:multiple",
+    "hidden": true,
+    "falling": {
+        "type": "apoli:modify_falling",
+        "velocity": 0.01,
+        "take_fall_damage": false,
+        "condition": {
+            "type": "origins:or",
+            "conditions": [{
+                    "type": "origins:and",
+                    "conditions": [{
+                            "type": "origins:sneaking"
+                        },
+                        {
+                            "type": "origins:fall_flying"
+                        }
+                    ]
+                },
+                {
+                    "type": "origins:and",
+                    "conditions": [{
+                            "type": "origins:sneaking",
+                            "inverted": true
+                        },
+                        {
+                            "type": "origins:fall_flying",
+                            "inverted": true
+                        }
+                    ]
+                }
+            ]
+        }
+    },
+    "airspeed": {
+        "type": "origins:modify_air_speed",
+        "modifier": {
+            "operation": "multiply_total",
+            "value": -0.75
+        }
+    }
+}

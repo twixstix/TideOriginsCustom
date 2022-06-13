@@ -1,0 +1,28 @@
+{
+    "name": "Flame Touch",
+    "description": "Your body is made of pure flame. Enemies you attack will be set on fire, and attackers will be burnt briefly as well.",
+    "type": "origins:multiple",
+    "attack": {
+        "type": "origins:target_action_on_hit",
+        "entity_action": {
+            "type": "origins:set_on_fire",
+            "duration": 3
+        },
+        "cooldown": 80,
+        "hud_render": {
+            "should_render": false
+        }
+    },
+    "defend": {
+        "type": "origins:attacker_action_when_hit",
+        "entity_action": {
+            "type": "origins:set_on_fire",
+            "duration": 1
+        },
+        "cooldown": 40,
+        "damage_condition": {
+            "type": "origins:projectile",
+            "inverted": true
+        }
+    }
+}

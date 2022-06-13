@@ -1,0 +1,19 @@
+{
+    "name": "Nimble",
+    "description": "You're naturally quick and can maneuver well enough to not take fall damage.",
+    "type": "origins:multiple",
+    "fallimmune": {
+        "type": "origins:modify_falling",
+        "velocity": 0.08,
+        "take_fall_damage": false
+    },
+    "speed": {
+        "type": "origins:attribute",
+        "modifier": {
+            "name": "fast",
+            "attribute": "minecraft:generic.movement_speed",
+            "value": 0.3,
+            "operation": "multiply_base"
+        }
+    }
+}

@@ -1,0 +1,92 @@
+{
+    "name": "Avarice",
+    "description": "Tools you craft immediately convert into gold, preventing you from using ones made of other materials. Additionally, you cannot equip armor made of anything but gold.",
+    "type": "origins:multiple",
+    "sword": {
+        "type": "origins:modify_crafting",
+        "item_condition": {
+            "type": "origins:ingredient",
+            "ingredient": {
+                "tag": "tideorigins:swords"
+            }
+        },
+        "result": {
+            "item": "minecraft:golden_sword"
+        }
+    },
+    "axe": {
+        "type": "origins:modify_crafting",
+        "item_condition": {
+            "type": "origins:ingredient",
+            "ingredient": {
+                "tag": "tideorigins:axes"
+            }
+        },
+        "result": {
+            "item": "minecraft:golden_axe"
+        }
+    },
+    "shovel": {
+        "type": "origins:modify_crafting",
+        "item_condition": {
+            "type": "origins:ingredient",
+            "ingredient": {
+                "tag": "tideorigins:shovels"
+            }
+        },
+        "result": {
+            "item": "minecraft:golden_shovel"
+        }
+    },
+    "picks": {
+        "type": "origins:modify_crafting",
+        "item_condition": {
+            "type": "origins:ingredient",
+            "ingredient": {
+                "tag": "tideorigins:picks"
+            }
+        },
+        "result": {
+            "item": "minecraft:golden_pickaxe"
+        }
+    },
+    "hoe": {
+        "type": "origins:modify_crafting",
+        "item_condition": {
+            "type": "origins:ingredient",
+            "ingredient": {
+                "tag": "tideorigins:hoes"
+            }
+        },
+        "result": {
+            "item": "minecraft:golden_hoe"
+        }
+    },
+    "preventarmor": {
+        "type": "origins:restrict_armor",
+        "head": {
+            "type": "origins:ingredient",
+            "ingredient": {
+                "tag": "tideorigins:nongoldarmor"
+            }
+        },
+        "chest": {
+            "type": "origins:ingredient",
+            "ingredient": {
+                "tag": "tideorigins:nongoldarmor"
+            }
+        },
+        "legs": {
+            "type": "origins:ingredient",
+            "ingredient": {
+                "tag": "tideorigins:nongoldarmor"
+            }
+        },
+        "feet": {
+            "type": "origins:ingredient",
+            "ingredient": {
+                "tag": "tideorigins:nongoldarmor"
+            }
+        }
+    }
+}

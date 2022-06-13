@@ -1,0 +1,22 @@
+{
+    "replace": false,
+    "values": [
+        "minecraft:wooden_sword",
+        "minecraft:stone_sword",
+        "minecraft:iron_sword",
+        "minecraft:golden_sword",
+        "minecraft:diamond_sword",
+        "minecraft:netherite_sword",
+        "additionaladditions:rose_gold_sword",
+        "additionaladditions:gilded_netherite_sword",
+        "betternether:cincinnasite_sword",
+        "betternether:cincinnasite_sword_diamond",
+        "betternether:nether_ruby_sword",
+        "emerald_tools:ruby_sword",
+        "emerald_tools:ruby_steel_sword",
+        "emerald_tools:amethyst_sword",
+        "emerald_tools:steel_sword",
+        "emerald_tools:obsidian_sword",
+        "emerald_tools:copper_sword"
+    ]
+}

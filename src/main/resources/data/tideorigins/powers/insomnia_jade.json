@@ -1,0 +1,7 @@
+{
+    "name": "Insomnia",
+    "description": "Netherborn creatures cannot sleep.",
+    "type": "origins:prevent_sleep",
+    "message": "What's this thing for?",
+    "set_spawn_point": true
+}

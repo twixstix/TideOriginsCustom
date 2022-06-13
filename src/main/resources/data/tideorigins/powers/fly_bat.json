@@ -1,0 +1,7 @@
+{
+    "type": "origins:elytra_flight",
+    "name": "Glider",
+    "description": "You can glide using your wings.",
+    "render_elytra": true,
+    "texture_location": "tideorigins:textures/elytra_bat.png"
+}

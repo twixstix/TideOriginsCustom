@@ -1,0 +1,16 @@
+{
+    "name": "Hard Shell",
+    "description": "Your shell protects you, giving you extra resistance.",
+    "type": "origins:stacking_status_effect",
+    "min_stacks": 0,
+    "max_stacks": 1,
+    "duration_per_stack": 40,
+    "effects": [
+        {
+            "effect": "minecraft:resistance",
+            "is_ambient": true,
+            "show_particles": false,
+            "show_icon": false
+        }
+    ]
+}

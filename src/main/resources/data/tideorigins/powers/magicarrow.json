@@ -1,0 +1,84 @@
+{
+    "name": "Magic Arrows",
+    "description": "You spawn with a special Wand that allows you to fire arrows enchanted with Healing or Harming.",
+    "type": "origins:multiple",
+    "stick": {
+        "type": "origins:starting_equipment",
+        "stacks": [
+            {
+                "item": "minecraft:stick",
+                "tag": "{display:{Name:'{\"text\":\"Wand\"}',Lore:['{\"text\":\"Holding this increases your magical power.\"}']},HideFlags:1,Enchantments:[{id:\"yigd:soulbound\",lvl:1s}]}"
+            }
+        ]
+    },
+    "harming": {
+        "type": "origins:fire_projectile",
+        "entity_type": "minecraft:arrow",
+        "tag": "{pickup:0b,Potion:\"minecraft:harming\"}",
+        "divergence": 0,
+        "cooldown": 20,
+        "hud_render": {
+            "should_render": true,
+            "sprite_location": "origins:textures/gui/community/huang/resource_bar_01.png",
+            "bar_index": 2
+        },
+        "key": {
+            "key": "key.attack"
+        },
+        "sound": "entity.arrow.shoot",
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:equipped_item",
+                    "equipment_slot": "mainhand",
+                    "item_condition": {
+                        "type": "origins:nbt",
+                        "nbt": "{display:{Name:'{\"text\":\"Wand\"}',Lore:['{\"text\":\"Holding this increases your magical power.\"}']},HideFlags:1,Enchantments:[{id:\"yigd:soulbound\",lvl:1s}]}"
+                    }
+                },
+                {
+                    "type": "origins:resource",
+                    "resource": "tideorigins:magicarrow_healing",
+                    "comparison": "==",
+                    "compare_to": 0
+                }
+            ]
+        }
+    },
+    "healing": {
+        "type": "origins:fire_projectile",
+        "entity_type": "minecraft:arrow",
+        "tag": "{pickup:0b,Potion:\"minecraft:healing\"}",
+        "divergence": 0,
+        "cooldown": 20,
+        "hud_render": {
+            "should_render": true,
+            "sprite_location": "origins:textures/gui/community/huang/resource_bar_01.png",
+            "bar_index": 2
+        },
+        "key": {
+            "key": "key.use"
+        },
+        "sound": "entity.arrow.shoot",
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:equipped_item",
+                    "equipment_slot": "mainhand",
+                    "item_condition": {
+                        "type": "origins:nbt",
+                        "nbt": "{display:{Name:'{\"text\":\"Wand\"}',Lore:['{\"text\":\"Holding this increases your magical power.\"}']},HideFlags:1,Enchantments:[{id:\"yigd:soulbound\",lvl:1s}]}"
+                    }
+                },
+                {
+                    "type": "origins:resource",
+                    "resource": "tideorigins:magicarrow_harming",
+                    "comparison": "==",
+                    "compare_to": 0
+                }
+            ]
+        }
+    }
+}

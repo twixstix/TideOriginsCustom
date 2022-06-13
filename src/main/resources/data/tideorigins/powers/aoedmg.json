@@ -1,0 +1,32 @@
+{
+    "name": "aoe damage",
+    "description": "deals damage in an area then kills itself. rip",
+    "hidden": true,
+    "type": "origins:action_over_time",
+    "interval": 3,
+    "entity_action": {
+        "type": "origins:and",
+        "actions": [
+            {
+                "type": "origins:area_of_effect",
+                "radius": 3,
+                "bientity_action": {
+                    "type": "origins:target_action",
+                    "action": {
+                        "type": "origins:damage",
+                        "amount": 4,
+                        "source": {
+                            "name": "tideorigins.aura",
+                            "bypasses_armor": true
+                        }
+                    }
+                },
+                "include_target": true
+            },
+            {
+                "type": "origins:execute_command",
+                "command": "/kill @s"
+            }
+        ]
+    }
+}

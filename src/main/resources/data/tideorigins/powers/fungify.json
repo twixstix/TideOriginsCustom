@@ -1,0 +1,118 @@
+{
+    "type": "origins:active_self",
+    "name": "Fungify",
+    "description": "Covers the ground you're looking at with spores at the cost of some hunger. If the ground is already mycelium, it grows a mushroom, which you can then grow into a giant mushroom.",
+    "entity_action": {
+        "type": "origins:and",
+        "actions": [
+        {
+            "type": "origins:raycast",
+            "distance": 6,
+            "shape_type": "outline",
+            "block_action": {
+                "type": "origins:if_else_list",
+                "actions": [
+                {
+                    "condition": {
+                        "type": "origins:in_tag",
+                        "tag": "tideorigins:mushrooms"
+                    },
+                    "action": {
+                        "type": "origins:bonemeal"
+                    }
+                },
+                {
+                    "condition": {
+                        "type": "origins:in_tag",
+                        "tag": "tideorigins:mycelium_replaceable"
+                    },
+                    "action": {
+                        "type": "origins:execute_command",
+                        "command": "/function tideorigins:fungify"
+                    }
+                },
+                {
+                    "condition": {
+                        "type": "origins:and",
+                        "conditions": [
+                            {
+                                "type": "origins:block",
+                                "block": "minecraft:mycelium"
+                            },
+                            {
+                                "type": "origins:offset",
+                                "condition": {
+                                    "type": "origins:block",
+                                    "block": "minecraft:air"
+                                },
+                                "y": 1
+                            }
+                        ]
+                        
+                    },
+                    "action": {
+                        "type": "origins:choice",
+                        "actions": [
+                            {
+                                "element": {
+                                "type": "origins:add_block",
+                                "block": "minecraft:brown_mushroom"
+                                },
+                                "weight": 10
+                            },
+                            {
+                                "element": {
+                                "type": "origins:add_block",
+                                "block": "minecraft:red_mushroom"
+                                },
+                                "weight": 10
+                            }
+                        ]
+                    }
+                }
+                ]
+            },
+            "bientity_action": {
+                "type": "origins:target_action",
+                "action": {
+                    "type": "origins:execute_command",
+                    "command": "/function tideorigins:mooshroom"
+                }
+            },
+            "bientity_condition": {
+                "type": "origins:target_condition",
+                "condition": {
+                    "type": "origins:entity_type",
+                    "entity_type": "minecraft:cow"
+                }
+            }
+        },
+        {
+            "type": "origins:exhaust",
+            "amount": 20
+        }]
+    },
+    "condition": {
+        "type": "origins:and",
+        "conditions": [
+            {
+                "type": "origins:food_level",
+                "comparison": ">",
+                "compare_to": 0
+            },
+            {
+                "type": "origins:raycast",
+                "distance": 6,
+                "shape_type": "collider",
+                "fluid_handling": "none"
+            }
+        ]
+
+    },
+    "cooldown": 10,
+    "hud_render": {
+        "should_render": true,
+        "sprite_location": "origins:textures/gui/community/spiderkolo/resource_bar_01.png",
+		"bar_index": 7
+    }
+}

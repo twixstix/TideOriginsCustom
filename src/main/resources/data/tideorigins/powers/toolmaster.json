@@ -1,0 +1,19 @@
+{
+    "name": "Tool Expertise",
+    "description": "Though it may seem strange to others, your practise with unusual weapons like shovels and hoes allows you to deal more damage with them.",
+    "type": "origins:modify_damage_dealt",
+    "modifier": {
+        "operation": "addition",
+        "value": 4
+    },
+    "condition": {
+        "type": "origins:equipped_item",
+        "equipment_slot": "mainhand",
+        "item_condition": {
+            "type": "origins:ingredient",
+            "ingredient": {
+                "tag": "tideorigins:tools"
+            }
+        }
+    }
+}

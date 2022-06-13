@@ -1,0 +1,21 @@
+{
+    "name": "Wet Eyes",
+    "description": "Your eyes are fully adapted to vision underwater, and will dry out on land.",
+    "type": "origins:shader",
+    "shader": "minecraft:shaders/post/art.json",
+    "condition": {
+        "type": "origins:and",
+        "conditions": [
+            {
+                "type": "origins:submerged_in",
+                "fluid": "minecraft:water",
+                "inverted": true
+            },
+            {
+                "type": "origins:status_effect",
+                "effect": "minecraft:water_breathing",
+                "inverted": true
+            }
+        ]
+    }
+}

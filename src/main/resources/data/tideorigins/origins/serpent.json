@@ -1,0 +1,24 @@
+{
+	"powers": [
+		"origins:water_breathing",
+		"tideorigins:water_sight",
+		"origins:aqua_affinity",
+		"origins:swim_speed",
+		"origins:like_water",
+        "tideorigins:smallserpent",
+        "tideorigins:clingy",
+		"origins:aquatic",
+        "origins:no_shield",
+        "tideorigins:flammable",
+		"origins:conduit_power_on_land",
+		"origins:air_from_potions"
+	],
+	"icon": {
+		"item": "minecraft:prismarine_crystals"
+	},
+	"order": 4,
+	"impact": 3,
+    "name": "Serpentling",
+	"description": "Related to the great sea dragons of yore, these tiny sea serpents can squeeze through every corner of the ocean.",
+	"unchoosable": true
+}

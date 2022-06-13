@@ -1,0 +1,39 @@
+{
+    "name": "Good Hearing",
+    "description": "You can detect nearby entities in a small area around you.",
+    "type": "origins:multiple",
+    "toggle": {
+        "type": "origins:toggle",
+        "active_by_default": false,
+        "key": {
+            "key": "key.origins.primary_active",
+            "continuous": false
+        }
+    },
+    "glow": {
+        "type": "origins:entity_glow",
+        "condition": {
+            "type": "origins:power_active",
+            "power": "tideorigins:detect_toggle"
+        },
+        "bientity_condition": {
+            "type": "origins:distance",
+            "comparison": "<=",
+            "compare_to": 20
+        },
+        "entity_condition": {
+            "type": "origins:living"
+        },
+        "use_teams": false,
+        "red": 1.0,
+        "green": 1.0,
+        "blue": 1.0
+    },
+    "squawk": {
+        "type": "origins:active_self",
+        "entity_action": {
+            "type": "origins:play_sound",
+            "sound": "minecraft:entity.parrot.ambient"
+        }
+    }
+}

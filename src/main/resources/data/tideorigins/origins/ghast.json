@@ -1,0 +1,17 @@
+{
+	"powers": [
+        "tideorigins:fly",
+        "tideorigins:slowfloat",
+        "origins:fire_immunity",
+        "tideorigins:fireball",
+        "origins:nether_spawn",
+        "tideorigins:weak_to_arrows",
+        "tideorigins:weak_melee",
+        "origins:light_armor"
+	],
+	"icon": "minecraft:ghast_tear",
+    "order": 4,
+	"impact": 2,
+	"name": "Ghastling",
+	"description": "These netherborn creatures float gently through the air, shooting fireballs at anything that angers them."
+}

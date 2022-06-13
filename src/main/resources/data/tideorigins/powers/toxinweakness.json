@@ -1,0 +1,44 @@
+{
+    "name": "Decay",
+    "description": "Magical toxins such as poison and wither are more harmful to you. Poison is capable of killing you, and wither does double damage.",
+    "type": "origins:multiple",
+    "poison": {
+        "type": "origins:action_over_time",
+        "entity_action": {
+            "type": "origins:damage",
+            "amount": 99,
+            "source": {
+                "name": "wither",
+                "bypasses_armor": true,
+                "unblockable": true
+            }
+        },
+        "interval": 20,
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:status_effect",
+                    "effect": "minecraft:poison"
+
+                },
+                {
+                    "type": "origins:health",
+                    "comparison": "<=",
+                    "compare_to": 1
+                }
+            ]
+        }
+    },
+    "wither": {
+        "type": "origins:modify_damage_taken",
+        "damage_condition": {
+            "type": "origins:name",
+            "name": "wither"
+        },
+        "modifier": {
+            "operation": "multiply_base",
+            "value": 1
+        }
+    }
+}

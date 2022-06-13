@@ -1,0 +1,252 @@
+{
+    "name": "Golden Touch",
+    "description": "Both a curse and a blessing, all ores that you harvest will be converted into gold.",
+    "type": "origins:multiple",
+    "removedrop_ores": {
+        "type": "origins:modify_harvest",
+        "block_condition": {
+            "type": "origins:in_tag",
+            "tag": "tideorigins:ores"
+        },
+        "allow": false
+    },
+    "removedrop_raw": {
+        "type": "origins:modify_harvest",
+        "block_condition": {
+            "type": "origins:in_tag",
+            "tag": "tideorigins:raw_ores"
+        },
+        "allow": false
+    },
+    "removedrop_cube": {
+        "type": "origins:modify_harvest",
+        "block_condition": {
+            "type": "origins:in_tag",
+            "tag": "tideorigins:ore_blocks"
+        },
+        "allow": false
+    },
+    "modify_speed": {
+        "type": "origins:modify_break_speed",
+        "block_condition": {
+            "type": "origins:in_tag",
+            "tag": "tideorigins:ores"
+        },
+        "condition": {
+            "type": "origins:equipped_item",
+            "equipment_slot": "mainhand",
+            "item_condition": {
+                "type": "origins:ingredient",
+                "ingredient": {
+                    "item": "minecraft:golden_pickaxe"
+                }
+            }
+        },
+        "modifier": {
+            "value": 0.05,
+            "operation": "addition"
+        }
+    },
+    "ore_summon_base": {
+        "type": "origins:action_on_block_break",
+        "block_action": {
+            "type": "origins:execute_command",
+            "command": "/summon item ~ ~ ~ {Item:{id:'minecraft:raw_gold',Count:1b}}"
+        },
+        "block_condition": {
+            "type": "origins:in_tag",
+            "tag": "tideorigins:ores"
+        },
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:equipped_item",
+                    "equipment_slot": "mainhand",
+                    "item_condition": {
+                        "type": "origins:ingredient",
+                        "ingredient": {
+                            "item": "minecraft:golden_pickaxe"
+                        }
+                    }
+                },
+                {
+                    "type": "origins:equipped_item",
+                    "equipment_slot": "mainhand",
+                    "item_condition": {
+                        "type": "origins:enchantment",
+                        "enchantment": "minecraft:fortune",
+                        "comparison": "==",
+                        "compare_to": 0
+                    }
+                }
+            ]
+        },
+        "only_when_harvested": false
+    },
+    "ore_summon_levelone": {
+        "type": "origins:action_on_block_break",
+        "block_action": {
+            "type": "origins:execute_command",
+            "command": "/summon item ~ ~ ~ {Item:{id:'minecraft:raw_gold',Count:2b}}"
+        },
+        "block_condition": {
+            "type": "origins:in_tag",
+            "tag": "tideorigins:ores"
+        },
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:equipped_item",
+                    "equipment_slot": "mainhand",
+                    "item_condition": {
+                        "type": "origins:ingredient",
+                        "ingredient": {
+                            "item": "minecraft:golden_pickaxe"
+                        }
+                    }
+                },
+                {
+                    "type": "origins:equipped_item",
+                    "equipment_slot": "mainhand",
+                    "item_condition": {
+                        "type": "origins:enchantment",
+                        "enchantment": "minecraft:fortune",
+                        "comparison": "==",
+                        "compare_to": 1
+                    }
+                }
+            ]
+        },
+        "only_when_harvested": false
+    },
+    "ore_summon_leveltwo": {
+        "type": "origins:action_on_block_break",
+        "block_action": {
+            "type": "origins:execute_command",
+            "command": "/summon item ~ ~ ~ {Item:{id:'minecraft:raw_gold',Count:3b}}"
+        },
+        "block_condition": {
+            "type": "origins:in_tag",
+            "tag": "tideorigins:ores"
+        },
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:equipped_item",
+                    "equipment_slot": "mainhand",
+                    "item_condition": {
+                        "type": "origins:ingredient",
+                        "ingredient": {
+                            "item": "minecraft:golden_pickaxe"
+                        }
+                    }
+                },
+                {
+                    "type": "origins:equipped_item",
+                    "equipment_slot": "mainhand",
+                    "item_condition": {
+                        "type": "origins:enchantment",
+                        "enchantment": "minecraft:fortune",
+                        "comparison": "==",
+                        "compare_to": 2
+                    }
+                }
+            ]
+        },
+        "only_when_harvested": false
+    },
+    "ore_summon_levelthree": {
+        "type": "origins:action_on_block_break",
+        "block_action": {
+            "type": "origins:execute_command",
+            "command": "/summon item ~ ~ ~ {Item:{id:'minecraft:raw_gold',Count:4b}}"
+        },
+        "block_condition": {
+            "type": "origins:in_tag",
+            "tag": "tideorigins:ores"
+        },
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:equipped_item",
+                    "equipment_slot": "mainhand",
+                    "item_condition": {
+                        "type": "origins:ingredient",
+                        "ingredient": {
+                            "item": "minecraft:golden_pickaxe"
+                        }
+                    }
+                },
+                {
+                    "type": "origins:equipped_item",
+                    "equipment_slot": "mainhand",
+                    "item_condition": {
+                        "type": "origins:enchantment",
+                        "enchantment": "minecraft:fortune",
+                        "comparison": "==",
+                        "compare_to": 3
+                    }
+                }
+            ]
+        },
+        "only_when_harvested": false
+    },
+    "raw_summon": {
+        "type": "origins:action_on_block_break",
+        "block_action": {
+            "type": "origins:execute_command",
+            "command": "/summon item ~ ~ ~ {Item:{id:'minecraft:raw_gold_block',Count:1b}}"
+        },
+        "block_condition": {
+            "type": "origins:in_tag",
+            "tag": "tideorigins:raw_ores"
+        },
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:equipped_item",
+                    "equipment_slot": "mainhand",
+                    "item_condition": {
+                        "type": "origins:ingredient",
+                        "ingredient": {
+                            "item": "minecraft:golden_pickaxe"
+                        }
+                    }
+                }
+            ]
+        },
+        "only_when_harvested": false
+    },
+    "cube_summon": {
+        "type": "origins:action_on_block_break",
+        "block_action": {
+            "type": "origins:execute_command",
+            "command": "/summon item ~ ~ ~ {Item:{id:'minecraft:gold_block',Count:1b}}"
+        },
+        "block_condition": {
+            "type": "origins:in_tag",
+            "tag": "tideorigins:ore_blocks"
+        },
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:equipped_item",
+                    "equipment_slot": "mainhand",
+                    "item_condition": {
+                        "type": "origins:ingredient",
+                        "ingredient": {
+                            "item": "minecraft:golden_pickaxe"
+                        }
+                    }
+                }
+            ]
+        },
+        "only_when_harvested": false
+    }
+}

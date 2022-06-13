@@ -1,0 +1,21 @@
+{
+    "type": "origins:modify_food",
+    "hidden": true,
+    "description": "Makes gapples give no saturation for origins that arent supposed to eat them.",
+    "item_condition": {
+        "type": "origins:ingredient",
+        "ingredient": {
+            "item": "minecraft:golden_apple"
+        }
+    },
+    "food_modifier": {
+        "name": "set to zero",
+        "operation": "addition",
+        "value": -4
+    },
+    "saturation_modifier": {
+        "name": "set to zero",
+        "operation": "addition",
+        "value": -10
+    }
+}

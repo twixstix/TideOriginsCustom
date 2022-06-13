@@ -1,0 +1,22 @@
+{
+    "replace": false,
+    "values": [
+        "minecraft:wooden_hoe",
+        "minecraft:stone_hoe",
+        "minecraft:iron_hoe",
+        "minecraft:golden_hoe",
+        "minecraft:diamond_hoe",
+        "minecraft:netherite_hoe",
+        "additionaladditions:rose_gold_hoe",
+        "additionaladditions:gilded_netherite_hoe",
+        "betternether:cincinnasite_hoe",
+        "betternether:cincinnasite_hoe_diamond",
+        "betternether:nether_ruby_hoe",
+        "emerald_tools:emerald_hoe",
+        "emerald_tools:ruby_hoe",
+        "emerald_tools:amethyst_hoe",
+        "emerald_tools:steel_hoe",
+        "emerald_tools:obsidian_hoe",
+        "emerald_tools:copper_hoe"
+    ]
+}

@@ -1,0 +1,65 @@
+{
+    "name": "Mycelium System",
+    "description": "Standing on mycelium will slowly restore your hunger. Other food sources do nothing for you, but you can consume Mushroom Stew in a pinch.",
+    "type": "origins:multiple",
+    "feed": {
+        "type": "origins:action_over_time",
+        "interval": 40,
+        "entity_action": {
+            "type": "origins:feed",
+            "food": 1,
+            "saturation": 1
+        },
+        "condition": {
+            "type": "origins:on_block",
+            "block_condition": {
+                "type": "origins:block",
+                "block": "minecraft:mycelium"
+            }
+        }
+    },
+    "nofood": {
+        "type": "origins:prevent_item_use",
+        "item_condition": {
+            "type": "origins:and",
+            "conditions": [
+            {
+                "type": "origins:food"
+            },
+            {
+                "type": "origins:ingredient",
+                "ingredient": {
+                    "tag": "origins:ignore_diet"
+                },
+                "inverted": true
+            },
+            {
+                "type": "origins:ingredient",
+                "ingredient": {
+                "item": "minecraft:mushroom_stew"
+                },
+                "inverted": true
+            }
+            ]
+        }
+    },
+    "stew": {
+        "type": "origins:modify_food",
+        "item_condition": {
+            "type": "origins:ingredient",
+            "ingredient": {
+                "item": "minecraft:mushroom_stew"
+            }
+        },
+        "food_modifier": {
+            "name": "reduce by 2 shanks",
+            "operation": "addition",
+            "value": -4
+        },
+        "saturation_modifier": {
+            "name": "reduce by 6 i hope lmao",
+            "operation": "addition",
+            "value": -6
+        }
+    }
+}

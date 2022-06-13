@@ -1,0 +1,29 @@
+{
+    "replace": false,
+    "values": [
+      "minecraft:sugar",
+      "minecraft:snowball",
+      "minecraft:quartz",
+      "minecraft:prismarine_shard",
+      "minecraft:blaze_powder",
+      "minecraft:glistering_melon_slice",
+      "minecraft:gunpowder",
+      "minecraft:rabbit_foot",
+      "minecraft:poisonous_potato",
+      "minecraft:ghast_tear",
+      "minecraft:scute",
+      "minecraft:magma_cream",
+      "minecraft:pufferfish",
+      "minecraft:glass_bottle",
+      "minecraft:ink_sac",
+      "minecraft:golden_carrot",
+      "minecraft:rotten_flesh",
+      "minecraft:fermented_spider_eye",
+      "minecraft:spider_eye",
+      "minecraft:wither_rose",
+      "minecraft:glow_ink_sac",
+      "minecraft:chorus_fruit",
+      "minecraft:experience_bottle",
+      "minecraft:phantom_membrane"
+    ]
+  }

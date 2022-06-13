@@ -1,0 +1,31 @@
+{
+    "name": "Splash Potion",
+    "description": "Throws a potion in front of you, instantly applying its effect. By default, its effect is Instant Damage.",
+    "type": "origins:multiple",
+    "effect_default": {
+        "type": "origins:fire_projectile",
+        "entity_type": "minecraft:potion",
+        "tag": "{Item:{id:\"minecraft:splash_potion\",Count:1b,tag:{Potion:\"minecraft:harming\"}}}",
+        "divergence": 0,
+        "cooldown": 40,
+        "hud_render": {
+            "should_render": true,
+            "sprite_location": "origins:textures/gui/community/spiderkolo/resource_bar_02.png",
+            "bar_index": 10
+        },
+        "key": {
+            "key": "key.origins.primary_active"
+        },
+        "condition": {
+            "type": "origins:equipped_item",
+            "equipment_slot": "offhand",
+            "item_condition": {
+                "type": "origins:ingredient",
+                "ingredient": {
+                    "tag": "tideorigins:potioningredients"
+                },
+                "inverted": true
+            }           
+        }
+    }
+}

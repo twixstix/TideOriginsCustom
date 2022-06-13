@@ -1,0 +1,21 @@
+{
+	"powers": [
+        "tideorigins:evoker_fangs",
+        "tideorigins:magicarrow",
+		"tideorigins:adaptivemagic",
+        "tideorigins:totemofundying",
+        "moborigins:pillager_aligned",
+        "moborigins:illager",
+        "tideorigins:smallevoker",
+        "tideorigins:xpeater",
+		"tideorigins:nullmelee",
+		"tideorigins:novillageeffects",
+        "origins:no_shield",
+        "tideorigins:wololo"
+	],
+	"icon": "minecraft:totem_of_undying",
+    "order": 4,
+	"impact": 3,
+	"name": "Baby Evoker",
+	"description": "Don't let their youth fool you - Evokers are potent wielders of magic at even a young age."
+}

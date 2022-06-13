@@ -1,0 +1,16 @@
+{
+	"powers": [
+		"tideorigins:gemcoating",
+        "tideorigins:diamondhands",
+        "tideorigins:gemhealing",
+		"tideorigins:rockstomach",
+        "tideorigins:density",
+		"tideorigins:crystalskin",
+        "tideorigins:nogapple"
+	],
+	"icon": "minecraft:amethyst_cluster",
+    "order": 4,
+	"impact": 3,
+	"name": "Crystalline",
+	"description": "Natural denizens of the underground, the Crystalline are sapient creatures made of pure gemstones."
+}

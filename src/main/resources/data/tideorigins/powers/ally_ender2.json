@@ -1,0 +1,25 @@
+{
+    "name": "Ender Ally",
+    "description": "Endermen view you as an ally and will not be provoked by your gaze. Because of this bond, you cannot bring yourself to hurt them either.",
+    "type": "origins:multiple",
+    "neutral": {
+        "type": "extraorigins:mob_neutrality",
+        "entity_types": [
+            "minecraft:enderman"
+        ]
+    },
+    "nohit": {
+        "type": "origins:modify_damage_dealt",
+        "bientity_condition": {
+            "type": "origins:target_condition",
+            "condition": {
+                "type": "origins:entity_type",
+                "entity_type": "minecraft:enderman"
+            }
+        },
+        "modifier": {
+            "operation": "multiply_total",
+            "value": -1
+        }
+    }
+}

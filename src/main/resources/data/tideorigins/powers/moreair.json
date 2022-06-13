@@ -1,0 +1,15 @@
+{
+    "name": "Amphibious",
+    "description": "You can breathe underwater longer than most creatures (but not forever!).",
+    "type": "origins:action_over_time",
+    "entity_action": {
+        "type": "origins:gain_air",
+        "value": 5
+    },
+    "interval": 10,
+    "condition": {
+        "type": "origins:air",
+        "comparison": ">",
+        "compare_to": 0
+    }
+}

@@ -1,0 +1,10 @@
+{
+    "name": "Fragility",
+    "description": "You're built for attack, not defense. You have slightly less health than most people.",
+    "type": "origins:attribute",
+    "modifier": {
+      "attribute": "minecraft:generic.max_health",
+      "value": -2.0,
+      "operation": "addition"
+    }
+}

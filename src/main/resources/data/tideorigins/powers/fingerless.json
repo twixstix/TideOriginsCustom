@@ -1,0 +1,21 @@
+{
+    "name": "Fingerless",
+    "description": "Your lack of fingers prevents you from interacting with complicated tools and blocks.",
+    "type": "origins:multiple",
+    "items": {
+        "type": "origins:prevent_item_use",
+        "item_condition": {
+            "type": "origins:ingredient",
+            "ingredient": {
+                "tag": "tideorigins:trialite_items"
+            }
+        }
+    },
+    "blocks": {
+        "type": "origins:prevent_block_use",
+        "block_condition": {
+            "type": "origins:in_tag",
+            "tag": "tideorigins:trialite_blocks"
+        }
+    }
+}

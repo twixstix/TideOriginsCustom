@@ -1,0 +1,10 @@
+{
+    "name": "Aquatic Adaptation",
+    "description": "You can breathe underwater as well as on land.",
+    "type": "origins:action_over_time",
+    "entity_action": {
+        "type": "origins:gain_air",
+        "value": 5
+    },
+    "interval": 5
+}

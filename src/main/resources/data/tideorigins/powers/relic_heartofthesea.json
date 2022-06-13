@@ -1,0 +1,36 @@
+{
+    "name": "Relic Boost",
+    "description": "You've obtained a special Relic known as the Heart of the Sea. It has increased your swim speed and granted you extra strength in water.",
+    "type": "origins:multiple",
+    "starting": {
+        "type": "origins:starting_equipment",
+        "stacks": [
+            {
+                "item": "tideorigins:heart_of_the_sea",
+                "tag": "{Enchantments:[{}]}"
+            }
+        ]
+    },
+    "swimspeed": {
+        "type": "origins:modify_swim_speed",
+        "modifier": {
+            "name": "Additional swim speed",
+            "value": 0.05,
+            "operation": "addition"
+        }
+    },
+    "strength": {
+        "type": "origins:conditioned_attribute",
+        "modifier": {
+            "name": "stronk",
+            "attribute": "minecraft:generic.attack_damage",
+            "value": 2,
+            "operation": "addition"
+        },
+        "tick_rate": 20,
+        "condition": {
+            "type": "origins:submerged_in",
+            "fluid": "minecraft:water"
+        }
+    }
+}

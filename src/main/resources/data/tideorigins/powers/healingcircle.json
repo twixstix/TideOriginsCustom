@@ -1,0 +1,29 @@
+{
+    "name": "Healing Circle",
+    "description": "Activate to create a healing circle around you.",
+    "type": "origins:active_self",
+    "entity_action": {
+        "type": "origins:and",
+        "actions": [
+            {
+                "type": "origins:execute_command",
+                "command": "/summon area_effect_cloud ~ ~0.2 ~ {Particle:\"electric_spark\",ReapplicationDelay:20,Radius:2f,RadiusPerTick:0f,RadiusOnUse:0f,Duration:100,Potion:\"minecraft:healing\"}"
+            },
+            {
+                "type": "origins:exhaust",
+                "amount": 40
+            }
+        ]
+    },
+    "cooldown": 240,
+    "condition": {
+        "type": "origins:food_level",
+        "comparison": ">",
+        "compare_to": 0
+    },
+    "hud_render": {
+        "should_render": true,
+        "sprite_location": "origins:textures/gui/community/huang/resource_bar_01.png",
+        "bar_index": 4
+    }
+}

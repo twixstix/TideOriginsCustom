@@ -1,0 +1,11 @@
+{
+    "name": "Swift",
+    "description": "You're naturally quick.",
+    "type": "origins:attribute",
+    "modifier": {
+        "name": "fast",
+        "attribute": "minecraft:generic.movement_speed",
+        "value": 0.15,
+        "operation": "multiply_base"
+    }
+}

@@ -1,0 +1,70 @@
+{
+    "name": "Long-Range Design",
+    "description": "The axes you use were designed for incapacitating targets at range, not for direct attacks or wood chopping. They deal less damage in combat and break faster than average.",
+    "type": "origins:multiple",
+    "reducedmg": {
+        "type": "origins:conditioned_attribute",
+        "modifier": {
+            "attribute": "minecraft:generic.attack_damage",
+            "operation": "addition",
+            "value": -6
+        },
+        "tick_rate": 10,
+        "condition": {
+            "type": "origins:equipped_item",
+            "equipment_slot": "mainhand",
+            "item_condition": {
+                "type": "origins:ingredient",
+                "ingredient": {
+                    "tag": "tideorigins:axes"
+                }
+            }
+        }
+    },
+    "break_block": {
+        "type": "origins:action_on_block_break",
+        "entity_action": {
+            "type": "origins:equipped_item_action",
+            "equipment_slot": "mainhand",
+            "action": {
+                "type": "origins:damage",
+                "amount": 1,
+                "ignore_unbreaking": true
+            }
+        },
+        "condition": {
+            "type": "origins:equipped_item",
+            "equipment_slot": "mainhand",
+            "item_condition": {
+                "type": "origins:ingredient",
+                "ingredient": {
+                    "tag": "tideorigins:axes"
+                }
+            }
+        },
+        "only_when_harvested": false
+    },
+    "break_atk": {
+        "type": "origins:self_action_on_hit",
+        "entity_action": {
+            "type": "origins:equipped_item_action",
+            "equipment_slot": "mainhand",
+            "action": {
+                "type": "origins:damage",
+                "amount": 2,
+                "ignore_unbreaking": true
+            }
+        },
+        "condition": {
+            "type": "origins:equipped_item",
+            "equipment_slot": "mainhand",
+            "item_condition": {
+                "type": "origins:ingredient",
+                "ingredient": {
+                    "tag": "tideorigins:axes"
+                }
+            }
+        },
+        "cooldown": 5
+    }
+}

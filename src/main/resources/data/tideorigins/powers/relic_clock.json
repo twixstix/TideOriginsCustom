@@ -1,0 +1,11 @@
+{
+    "name": "Time Awareness",
+    "description": "You have a clock on your person at all times.",
+    "type": "origins:starting_equipment",
+        "stacks": [
+            {
+                "item": "minecraft:clock",
+                "tag": "{Enchantments:[{}]}"
+            }
+        ]
+}

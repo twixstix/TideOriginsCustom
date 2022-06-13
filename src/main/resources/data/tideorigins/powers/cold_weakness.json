@@ -1,0 +1,164 @@
+{
+    "name": "Hypothermia",
+    "description": "Cold biomes dull your flames, causing you to become slow and weak over time. If you don't evacuate quickly, you will even start to take damage.",
+    "type": "origins:multiple",
+    "timerbar": {
+        "type": "origins:resource",
+        "min": 0,
+        "max": 10,
+        "hud_render": {
+            "should_render": false
+        }
+    },
+    "gaincold": {
+        "type": "origins:action_over_time",
+        "entity_action": {
+            "type": "origins:change_resource",
+            "resource": "tideorigins:cold_weakness_timerbar",
+            "change": 1
+        },
+        "interval": 20,
+        "condition": {
+            "type": "origins:biome",
+            "condition": {
+                "type": "origins:temperature",
+                "comparison": "<=",
+                "compare_to": 0.3
+            }
+        }
+    },
+    "reducecold": {
+        "type": "origins:action_over_time",
+        "entity_action": {
+            "type": "origins:change_resource",
+            "resource": "tideorigins:cold_weakness_timerbar",
+            "change": -1
+        },
+        "interval": 20,
+        "condition": {
+            "type": "origins:biome",
+            "condition": {
+                "type": "origins:temperature",
+                "comparison": ">",
+                "compare_to": 0.3
+            }
+        }
+    },
+    "flowerwarmth": {
+        "type": "origins:action_over_time",
+        "entity_action": {
+            "type": "origins:change_resource",
+            "resource": "tideorigins:cold_weakness_timerbar",
+            "change": -1
+        },
+        "interval": 5,
+        "condition": {
+            "type": "origins:equipped_item",
+            "equipment_slot": "mainhand",
+            "item_condition": {
+                "type": "origins:ingredient",
+                "ingredient": {
+                    "item": "tideorigins:emberbloom"
+                }
+            }
+        }
+    },
+    "damage": {
+        "type": "origins:damage_over_time",
+        "interval": 20,
+        "onset_delay": 1,
+        "damage": 2,
+        "damage_source": {
+            "name": "freeze",
+            "unblockable": true,
+            "bypasses_armor": true
+        },
+        "condition": {
+            "type": "origins:resource",
+            "resource": "tideorigins:cold_weakness_timerbar",
+            "comparison": "==",
+            "compare_to": 10
+        }
+    },
+    "statusone": {
+        "type": "origins:stacking_status_effect",
+        "min_stacks": 0,
+        "max_stacks": 1,
+        "duration_per_stack": 20,
+        "effects": [
+            {
+                "effect": "minecraft:weakness",
+                "is_ambient": true,
+                "show_particles": false,
+                "show_icon": true
+            },
+            {
+                "effect": "minecraft:slowness",
+                "is_ambient": true,
+                "show_particles": false,
+                "show_icon": true
+            }
+        ],
+        "condition": {
+            "type": "origins:resource",
+            "resource": "tideorigins:cold_weakness_timerbar",
+            "comparison": ">=",
+            "compare_to": 3
+        }
+    },
+    "statustwo": {
+        "type": "origins:stacking_status_effect",
+        "min_stacks": 0,
+        "max_stacks": 1,
+        "duration_per_stack": 20,
+        "effects": [
+            {
+                "effect": "minecraft:weakness",
+                "is_ambient": true,
+                "show_particles": false,
+                "show_icon": true,
+                "amplifier": 1
+            },
+            {
+                "effect": "minecraft:slowness",
+                "is_ambient": true,
+                "show_particles": false,
+                "show_icon": true,
+                "amplifier": 1
+            }
+        ],
+        "condition": {
+            "type": "origins:resource",
+            "resource": "tideorigins:cold_weakness_timerbar",
+            "comparison": ">=",
+            "compare_to": 6
+        }
+    },
+    "shake": {
+        "type": "origins:shaking",
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:biome",
+                    "condition": {
+                        "type": "origins:temperature",
+                        "comparison": "<=",
+                        "compare_to": 0.3
+                    }
+                },
+                {
+                    "type": "origins:equipped_item",
+                    "equipment_slot": "mainhand",
+                    "item_condition": {
+                        "type": "origins:ingredient",
+                        "ingredient": {
+                            "item": "tideorigins:emberbloom"
+                        }
+                    },
+                    "inverted": true
+                }
+            ]
+        }
+    }
+}

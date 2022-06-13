@@ -1,0 +1,17 @@
+{
+	"powers": [
+		"tideorigins:smallnormal",
+        "origins:elytra",
+		"tideorigins:elytra_propel",
+		"origins:aerial_combatant",
+		"origins:light_armor",
+		"origins:claustrophobia",
+		"origins:more_kinetic_damage",
+		"tideorigins:shiny"
+	],
+	"icon": "minecraft:black_dye",
+    "order": 4,
+	"impact": 1,
+	"name": "Crow",
+	"description": "A smaller Elytrian variant, Crows have an affinity for all things shiny."
+}

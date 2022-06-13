@@ -1,0 +1,17 @@
+{
+	"powers": [
+        "tideorigins:potion_splash",
+        "tideorigins:potion_cloud",
+        "tideorigins:magicimmune",
+		"tideorigins:weakmelee",
+        "tideorigins:noregen",
+        "tideorigins:flammable",
+        "tideorigins:nogapple"
+	],
+	"icon": "minecraft:splash_potion",
+    "order": 4,
+	"impact": 3,
+	"name": "Witch",
+	"description": "Witches are masters of alchemy, supplementing their poor combat skills with sheer versitility.",
+    "unchoosable": true
+}

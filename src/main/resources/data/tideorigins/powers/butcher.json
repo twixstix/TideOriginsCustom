@@ -1,0 +1,425 @@
+{
+    "name": "Butcher",
+    "description": "You make use of every part of your kills. You obtain more meat per corpse and restore a bit of hunger with every kill.",
+    "type": "origins:multiple",
+    "eat": {
+        "type": "origins:self_action_on_kill",
+        "entity_action": {
+            "type": "origins:feed",
+            "food": 2,
+            "saturation": 2
+        },
+        "cooldown": 10,
+        "hud_render": {
+            "should_render": false
+        }
+    },
+    "kill_pigs_raw": {
+        "type": "origins:target_action_on_hit",
+        "entity_action": {
+            "type": "origins:execute_command",
+            "command": "/summon item ~ ~ ~ {Item:{id:'minecraft:porkchop',Count:2b}}"
+        },
+        "target_condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:health",
+                    "comparison": "==",
+                    "compare_to": 0
+                },
+                {
+                    "type": "origins:on_fire",
+                    "inverted": true
+                },
+                {
+                    "type": "origins:in_tag",
+                    "tag": "tideorigins:pigs"
+                }
+            ]
+        },
+        "cooldown": 10
+    },
+    "kill_pigs_cook": {
+        "type": "origins:target_action_on_hit",
+        "entity_action": {
+            "type": "origins:execute_command",
+            "command": "/summon item ~ ~ ~ {Item:{id:'minecraft:cooked_porkchop',Count:2b}}"
+        },
+        "target_condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:health",
+                    "comparison": "==",
+                    "compare_to": 0
+                },
+                {
+                    "type": "origins:on_fire"
+                },
+                {
+                    "type": "origins:in_tag",
+                    "tag": "tideorigins:pigs"
+                }
+            ]
+        },
+        "cooldown": 10
+    },
+    "kill_cow_raw": {
+        "type": "origins:target_action_on_hit",
+        "entity_action": {
+            "type": "origins:execute_command",
+            "command": "/summon item ~ ~ ~ {Item:{id:'minecraft:beef',Count:2b}}"
+        },
+        "target_condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:health",
+                    "comparison": "==",
+                    "compare_to": 0
+                },
+                {
+                    "type": "origins:on_fire",
+                    "inverted": true
+                },
+                {
+                    "type": "origins:entity_type",
+                    "entity_type": "minecraft:cow"
+                }
+            ]
+        },
+        "cooldown": 10
+    },
+    "kill_cow_cook": {
+        "type": "origins:target_action_on_hit",
+        "entity_action": {
+            "type": "origins:execute_command",
+            "command": "/summon item ~ ~ ~ {Item:{id:'minecraft:cooked_beef',Count:2b}}"
+        },
+        "target_condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:health",
+                    "comparison": "==",
+                    "compare_to": 0
+                },
+                {
+                    "type": "origins:on_fire"
+                },
+                {
+                    "type": "origins:entity_type",
+                    "entity_type": "minecraft:cow"
+                }
+            ]
+        },
+        "cooldown": 10
+    },
+    "kill_chk_raw": {
+        "type": "origins:target_action_on_hit",
+        "entity_action": {
+            "type": "origins:execute_command",
+            "command": "/summon item ~ ~ ~ {Item:{id:'minecraft:chicken',Count:2b}}"
+        },
+        "target_condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:health",
+                    "comparison": "==",
+                    "compare_to": 0
+                },
+                {
+                    "type": "origins:on_fire",
+                    "inverted": true
+                },
+                {
+                    "type": "origins:entity_type",
+                    "entity_type": "minecraft:chicken"
+                }
+            ]
+        },
+        "cooldown": 10
+    },
+    "kill_chk_cook": {
+        "type": "origins:target_action_on_hit",
+        "entity_action": {
+            "type": "origins:execute_command",
+            "command": "/summon item ~ ~ ~ {Item:{id:'minecraft:cooked_chicken',Count:2b}}"
+        },
+        "target_condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:health",
+                    "comparison": "==",
+                    "compare_to": 0
+                },
+                {
+                    "type": "origins:on_fire"
+                },
+                {
+                    "type": "origins:entity_type",
+                    "entity_type": "minecraft:chicken"
+                }
+            ]
+        },
+        "cooldown": 10
+    },
+    "kill_rabbit_raw": {
+        "type": "origins:target_action_on_hit",
+        "entity_action": {
+            "type": "origins:execute_command",
+            "command": "/summon item ~ ~ ~ {Item:{id:'minecraft:rabbit',Count:2b}}"
+        },
+        "target_condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:health",
+                    "comparison": "==",
+                    "compare_to": 0
+                },
+                {
+                    "type": "origins:on_fire",
+                    "inverted": true
+                },
+                {
+                    "type": "origins:entity_type",
+                    "entity_type": "minecraft:rabbit"
+                }
+            ]
+        },
+        "cooldown": 10
+    },
+    "kill_rabbit_cook": {
+        "type": "origins:target_action_on_hit",
+        "entity_action": {
+            "type": "origins:execute_command",
+            "command": "/summon item ~ ~ ~ {Item:{id:'minecraft:cooked_rabbit',Count:2b}}"
+        },
+        "target_condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:health",
+                    "comparison": "==",
+                    "compare_to": 0
+                },
+                {
+                    "type": "origins:on_fire"
+                },
+                {
+                    "type": "origins:entity_type",
+                    "entity_type": "minecraft:cow"
+                }
+            ]
+        },
+        "cooldown": 10
+    },
+    "kill_sheep_raw": {
+        "type": "origins:target_action_on_hit",
+        "entity_action": {
+            "type": "origins:execute_command",
+            "command": "/summon item ~ ~ ~ {Item:{id:'minecraft:mutton',Count:2b}}"
+        },
+        "target_condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:health",
+                    "comparison": "==",
+                    "compare_to": 0
+                },
+                {
+                    "type": "origins:on_fire",
+                    "inverted": true
+                },
+                {
+                    "type": "origins:entity_type",
+                    "entity_type": "minecraft:sheep"
+                }
+            ]
+        },
+        "cooldown": 10
+    },
+    "kill_sheep_cook": {
+        "type": "origins:target_action_on_hit",
+        "entity_action": {
+            "type": "origins:execute_command",
+            "command": "/summon item ~ ~ ~ {Item:{id:'minecraft:cooked_mutton',Count:2b}}"
+        },
+        "target_condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:health",
+                    "comparison": "==",
+                    "compare_to": 0
+                },
+                {
+                    "type": "origins:on_fire"
+                },
+                {
+                    "type": "origins:entity_type",
+                    "entity_type": "minecraft:sheep"
+                }
+            ]
+        },
+        "cooldown": 10
+    },
+    "kill_cod_raw": {
+        "type": "origins:target_action_on_hit",
+        "entity_action": {
+            "type": "origins:execute_command",
+            "command": "/summon item ~ ~ ~ {Item:{id:'minecraft:cod',Count:1b}}"
+        },
+        "target_condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:health",
+                    "comparison": "==",
+                    "compare_to": 0
+                },
+                {
+                    "type": "origins:on_fire",
+                    "inverted": true
+                },
+                {
+                    "type": "origins:entity_type",
+                    "entity_type": "minecraft:cod"
+                }
+            ]
+        },
+        "cooldown": 10
+    },
+    "kill_cod_cook": {
+        "type": "origins:target_action_on_hit",
+        "entity_action": {
+            "type": "origins:execute_command",
+            "command": "/summon item ~ ~ ~ {Item:{id:'minecraft:cooked_cod',Count:1b}}"
+        },
+        "target_condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:health",
+                    "comparison": "==",
+                    "compare_to": 0
+                },
+                {
+                    "type": "origins:on_fire"
+                },
+                {
+                    "type": "origins:entity_type",
+                    "entity_type": "minecraft:cod"
+                }
+            ]
+        },
+        "cooldown": 10
+    },
+    "kill_salmon_raw": {
+        "type": "origins:target_action_on_hit",
+        "entity_action": {
+            "type": "origins:execute_command",
+            "command": "/summon item ~ ~ ~ {Item:{id:'minecraft:salmon',Count:1b}}"
+        },
+        "target_condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:health",
+                    "comparison": "==",
+                    "compare_to": 0
+                },
+                {
+                    "type": "origins:on_fire",
+                    "inverted": true
+                },
+                {
+                    "type": "origins:entity_type",
+                    "entity_type": "minecraft:salmon"
+                }
+            ]
+        },
+        "cooldown": 10
+    },
+    "kill_salmon_cooked": {
+        "type": "origins:target_action_on_hit",
+        "entity_action": {
+            "type": "origins:execute_command",
+            "command": "/summon item ~ ~ ~ {Item:{id:'minecraft:cooked_salmon',Count:1b}}"
+        },
+        "target_condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:health",
+                    "comparison": "==",
+                    "compare_to": 0
+                },
+                {
+                    "type": "origins:on_fire"
+                },
+                {
+                    "type": "origins:entity_type",
+                    "entity_type": "minecraft:salmon"
+                }
+            ]
+        },
+        "cooldown": 10
+    },
+    "kill_deers_raw": {
+        "type": "origins:target_action_on_hit",
+        "entity_action": {
+            "type": "origins:execute_command",
+            "command": "/summon item ~ ~ ~ {Item:{id:'betteranimalsplus:venisonraw',Count:2b}}"
+        },
+        "target_condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:health",
+                    "comparison": "==",
+                    "compare_to": 0
+                },
+                {
+                    "type": "origins:on_fire",
+                    "inverted": true
+                },
+                {
+                    "type": "origins:in_tag",
+                    "tag": "tideorigins:deer"
+                }
+            ]
+        },
+        "cooldown": 10
+    },
+    "kill_deers_cook": {
+        "type": "origins:target_action_on_hit",
+        "entity_action": {
+            "type": "origins:execute_command",
+            "command": "/summon item ~ ~ ~ {Item:{id:'betteranimalsplus:venisoncooked',Count:2b}}"
+        },
+        "target_condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:health",
+                    "comparison": "==",
+                    "compare_to": 0
+                },
+                {
+                    "type": "origins:on_fire"
+                },
+                {
+                    "type": "origins:in_tag",
+                    "tag": "tideorigins:deer"
+                }
+            ]
+        },
+        "cooldown": 10
+    }
+}

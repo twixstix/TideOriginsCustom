@@ -1,0 +1,19 @@
+{
+    "name": "Flexibility",
+    "description": "Your experience in battle allows you to reach a bit further than average.",
+    "type": "origins:attribute",
+    "modifiers": [
+        {
+            "name": "attkrange",
+            "attribute": "reach-entity-attributes:attack_range",
+            "operation": "addition",
+            "value": 0.5
+        },
+        {
+            "name": "buildrange",
+            "attribute": "reach-entity-attributes:reach",
+            "operation": "addition",
+            "value": 0.5
+        }
+    ]
+}

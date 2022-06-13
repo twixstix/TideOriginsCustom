@@ -1,0 +1,550 @@
+{
+    "name": "Nature's Blessing",
+    "description": "You can grow plants by right-clicking on them while sneaking.",
+    "type": "origins:multiple",
+    "bonemeal": {
+        "type": "origins:action_on_block_use",
+        "block_action": {
+            "type": "origins:bonemeal",
+            "effects": true
+        },
+        "entity_action": {
+            "type": "origins:exhaust",
+            "amount": 10
+        },
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:sneaking"
+                },
+                {
+                    "type": "origins:food_level",
+                    "comparison": ">",
+                    "compare_to": 0
+                },
+                {
+                    "type": "origins:equipped_item",
+                    "equipment_slot": "mainhand",
+                    "item_condition": {
+                        "type": "origins:empty"
+                    }
+                }
+            ]
+        }
+    },
+    "sugarcane": {
+        "type": "origins:action_on_block_use",
+        "block_action": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:execute_command",
+                    "command": "particle minecraft:composter ~ ~ ~ .3 .3 .3 0 10 normal",
+                    "permission_level": 4
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "playsound minecraft:item.bone_meal.use player @a[distance=..32] ~ ~ ~ .5 1",
+                    "permission_level": 4
+                },
+                {
+                    "type": "origins:offset",
+                    "action": {
+                        "type": "origins:set_block",
+                        "block": "sugar_cane"
+                    },
+                    "y": 1
+                }
+            ]
+        },
+        "entity_action": {
+            "type": "origins:exhaust",
+            "amount": 10
+        },
+        "block_condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:block",
+                    "block": "sugar_cane"
+                },
+                {
+                    "type": "origins:offset",
+                    "condition": {
+                        "type": "origins:block",
+                        "block": "air"
+                    },
+                    "y": 1
+                },
+                {
+                    "type": "origins:offset",
+                    "condition": {
+                        "inverted": true,
+                        "type": "origins:block",
+                        "block": "sugar_cane"
+                    },
+                    "y": -2
+                }
+            ]
+        },
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:sneaking"
+                },
+                {
+                    "type": "origins:food_level",
+                    "comparison": ">",
+                    "compare_to": 0
+                }
+            ]
+        }
+    },
+    "cactus": {
+        "type": "origins:action_on_block_use",
+        "block_action": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:execute_command",
+                    "command": "particle minecraft:composter ~ ~ ~ .3 .3 .3 0 10 normal",
+                    "permission_level": 4
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "playsound minecraft:item.bone_meal.use player @a[distance=..32] ~ ~ ~ .5 1",
+                    "permission_level": 4
+                },
+                {
+                    "type": "origins:offset",
+                    "action": {
+                        "type": "origins:set_block",
+                        "block": "cactus"
+                    },
+                    "y": 1
+                }
+            ]
+        },
+        "entity_action": {
+            "type": "origins:exhaust",
+            "amount": 10
+        },
+        "block_condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:block",
+                    "block": "cactus"
+                },
+                {
+                    "type": "origins:offset",
+                    "condition": {
+                        "type": "origins:block",
+                        "block": "air"
+                    },
+                    "y": 1
+                },
+                {
+                    "type": "origins:offset",
+                    "condition": {
+                        "inverted": true,
+                        "type": "origins:block",
+                        "block": "cactus"
+                    },
+                    "y": -2
+                }
+            ]
+        },
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:sneaking"
+                },
+                {
+                    "type": "origins:food_level",
+                    "comparison": ">",
+                    "compare_to": 0
+                }
+            ]
+        }
+    },
+    "pumpkin": {
+        "type": "origins:action_on_block_use",
+        "entity_action": {
+            "type": "origins:exhaust",
+            "amount": 10
+        },
+        "block_action": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:execute_command",
+                    "command": "particle minecraft:composter ~ ~ ~ .3 .3 .3 0 10 normal",
+                    "permission_level": 4
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "playsound minecraft:item.bone_meal.use player @a[distance=..32] ~ ~ ~ .5 1",
+                    "permission_level": 4
+                },
+                {
+                    "type": "origins:choice",
+                    "actions": [
+                        {
+                            "weight": 1,
+                            "element": {
+                                "type": "origins:offset",
+                                "action": {
+                                    "type": "origins:if_else",
+                                    "condition": {
+                                        "type": "origins:and",
+                                        "conditions": [
+                                            {
+                                                "type": "origins:block",
+                                                "block": "air"
+                                            },
+                                            {
+                                                "type": "origins:offset",
+                                                "condition": {
+                                                    "type": "origins:in_tag",
+                                                    "tag": "minecraft:dirt"
+                                                },
+                                                "y": -1
+                                            }
+                                        ]
+                                    },
+                                    "if_action": {
+                                        "type": "origins:set_block",
+                                        "block": "pumpkin"
+                                    }
+                                },
+                                "x": 1
+                            }
+                        },
+                        {
+                            "weight": 1,
+                            "element": {
+                                "type": "origins:offset",
+                                "action": {
+                                    "type": "origins:if_else",
+                                    "condition": {
+                                        "type": "origins:and",
+                                        "conditions": [
+                                            {
+                                                "type": "origins:block",
+                                                "block": "air"
+                                            },
+                                            {
+                                                "type": "origins:offset",
+                                                "condition": {
+                                                    "type": "origins:in_tag",
+                                                    "tag": "minecraft:dirt"
+                                                },
+                                                "y": -1
+                                            }
+                                        ]
+                                    },
+                                    "if_action": {
+                                        "type": "origins:set_block",
+                                        "block": "pumpkin"
+                                    }
+                                },
+                                "x": -1
+                            }
+                        },
+                        {
+                            "weight": 1,
+                            "element": {
+                                "type": "origins:offset",
+                                "action": {
+                                    "type": "origins:if_else",
+                                    "condition": {
+                                        "type": "origins:and",
+                                        "conditions": [
+                                            {
+                                                "type": "origins:block",
+                                                "block": "air"
+                                            },
+                                            {
+                                                "type": "origins:offset",
+                                                "condition": {
+                                                    "type": "origins:in_tag",
+                                                    "tag": "minecraft:dirt"
+                                                },
+                                                "y": -1
+                                            }
+                                        ]
+                                    },
+                                    "if_action": {
+                                        "type": "origins:set_block",
+                                        "block": "pumpkin"
+                                    }
+                                },
+                                "z": 1
+                            }
+                        },
+                        {
+                            "weight": 1,
+                            "element": {
+                                "type": "origins:offset",
+                                "action": {
+                                    "type": "origins:if_else",
+                                    "condition": {
+                                        "type": "origins:and",
+                                        "conditions": [
+                                            {
+                                                "type": "origins:block",
+                                                "block": "air"
+                                            },
+                                            {
+                                                "type": "origins:offset",
+                                                "condition": {
+                                                    "type": "origins:in_tag",
+                                                    "tag": "minecraft:dirt"
+                                                },
+                                                "y": -1
+                                            }
+                                        ]
+                                    },
+                                    "if_action": {
+                                        "type": "origins:set_block",
+                                        "block": "pumpkin"
+                                    }
+                                },
+                                "z": -1
+                            }
+                        }
+                    ]
+                }
+            ]
+        },
+        "block_condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:block",
+                    "block": "pumpkin_stem"
+                },
+                {
+                    "type": "origins:block_state",
+                    "property": "age",
+                    "comparison": "==",
+                    "compare_to": 7
+                },
+                {
+                    "type": "origins:adjacent",
+                    "adjacent_condition": {
+                        "type": "origins:block",
+                        "block": "pumpkin"
+                    },
+                    "comparison": "==",
+                    "compare_to": 0
+                }
+            ]
+        },
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:sneaking"
+                },
+                {
+                    "type": "origins:food_level",
+                    "comparison": ">",
+                    "compare_to": 0
+                }
+            ]
+        }
+    },
+    "melon": {
+        "type": "origins:action_on_block_use",
+        "entity_action": {
+            "type": "origins:exhaust",
+            "amount": 10
+        },
+        "block_action": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:execute_command",
+                    "command": "particle minecraft:composter ~ ~ ~ .3 .3 .3 0 10 normal",
+                    "permission_level": 4
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "playsound minecraft:item.bone_meal.use player @a[distance=..32] ~ ~ ~ .5 1",
+                    "permission_level": 4
+                },
+                {
+                    "type": "origins:choice",
+                    "actions": [
+                        {
+                            "weight": 1,
+                            "element": {
+                                "type": "origins:offset",
+                                "action": {
+                                    "type": "origins:if_else",
+                                    "condition": {
+                                        "type": "origins:and",
+                                        "conditions": [
+                                            {
+                                                "type": "origins:block",
+                                                "block": "air"
+                                            },
+                                            {
+                                                "type": "origins:offset",
+                                                "condition": {
+                                                    "type": "origins:in_tag",
+                                                    "tag": "minecraft:dirt"
+                                                },
+                                                "y": -1
+                                            }
+                                        ]
+                                    },
+                                    "if_action": {
+                                        "type": "origins:set_block",
+                                        "block": "melon"
+                                    }
+                                },
+                                "x": 1
+                            }
+                        },
+                        {
+                            "weight": 1,
+                            "element": {
+                                "type": "origins:offset",
+                                "action": {
+                                    "type": "origins:if_else",
+                                    "condition": {
+                                        "type": "origins:and",
+                                        "conditions": [
+                                            {
+                                                "type": "origins:block",
+                                                "block": "air"
+                                            },
+                                            {
+                                                "type": "origins:offset",
+                                                "condition": {
+                                                    "type": "origins:in_tag",
+                                                    "tag": "minecraft:dirt"
+                                                },
+                                                "y": -1
+                                            }
+                                        ]
+                                    },
+                                    "if_action": {
+                                        "type": "origins:set_block",
+                                        "block": "melon"
+                                    }
+                                },
+                                "x": -1
+                            }
+                        },
+                        {
+                            "weight": 1,
+                            "element": {
+                                "type": "origins:offset",
+                                "action": {
+                                    "type": "origins:if_else",
+                                    "condition": {
+                                        "type": "origins:and",
+                                        "conditions": [
+                                            {
+                                                "type": "origins:block",
+                                                "block": "air"
+                                            },
+                                            {
+                                                "type": "origins:offset",
+                                                "condition": {
+                                                    "type": "origins:in_tag",
+                                                    "tag": "minecraft:dirt"
+                                                },
+                                                "y": -1
+                                            }
+                                        ]
+                                    },
+                                    "if_action": {
+                                        "type": "origins:set_block",
+                                        "block": "melon"
+                                    }
+                                },
+                                "z": 1
+                            }
+                        },
+                        {
+                            "weight": 1,
+                            "element": {
+                                "type": "origins:offset",
+                                "action": {
+                                    "type": "origins:if_else",
+                                    "condition": {
+                                        "type": "origins:and",
+                                        "conditions": [
+                                            {
+                                                "type": "origins:block",
+                                                "block": "air"
+                                            },
+                                            {
+                                                "type": "origins:offset",
+                                                "condition": {
+                                                    "type": "origins:in_tag",
+                                                    "tag": "minecraft:dirt"
+                                                },
+                                                "y": -1
+                                            }
+                                        ]
+                                    },
+                                    "if_action": {
+                                        "type": "origins:set_block",
+                                        "block": "melon"
+                                    }
+                                },
+                                "z": -1
+                            }
+                        }
+                    ]
+                }
+            ]
+        },
+        "block_condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:block",
+                    "block": "melon_stem"
+                },
+                {
+                    "type": "origins:block_state",
+                    "property": "age",
+                    "comparison": "==",
+                    "compare_to": 7
+                },
+                {
+                    "type": "origins:adjacent",
+                    "adjacent_condition": {
+                        "type": "origins:block",
+                        "block": "melon"
+                    },
+                    "comparison": "==",
+                    "compare_to": 0
+                }
+            ]
+        },
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:sneaking"
+                },
+                {
+                    "type": "origins:food_level",
+                    "comparison": ">",
+                    "compare_to": 0
+                }
+            ]
+        }
+    }
+}

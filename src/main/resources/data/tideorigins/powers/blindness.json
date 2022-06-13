@@ -1,0 +1,14 @@
+{
+    "name": "Nearsight",
+    "description": "You have very poor vision and can only see your immediate surroundings.",
+    "type": "origins:stacking_status_effect",
+    "min_stacks": 0,
+    "max_stacks": 1,
+    "duration_per_stack": 100,
+    "effect": {
+        "effect": "minecraft:blindness",
+        "is_ambient": true,
+        "show_particles": false,
+        "show_icon": false
+    }
+}

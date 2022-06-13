@@ -1,0 +1,23 @@
+{
+    "replace": false,
+    "values": [
+        "minecraft:wooden_shovel",
+        "minecraft:stone_shovel",
+        "minecraft:iron_shovel",
+        "minecraft:golden_shovel",
+        "minecraft:diamond_shovel",
+        "minecraft:netherite_shovel",
+        "additionaladditions:rose_gold_shovel",
+        "additionaladditions:gilded_netherite_sword",
+        "additionaladditions:gilded_netherite_shovel",
+        "betternether:cincinnasite_shovel",
+        "betternether:cincinnasite_shovel_diamond",
+        "betternether:nether_ruby_shovel",
+        "emerald_tools:emerald_shovel",
+        "emerald_tools:ruby_shovel",
+        "emerald_tools:amethyst_shovel",
+        "emerald_tools:steel_shovel",
+        "emerald_tools:obsidian_shovel",
+        "emerald_tools:copper_shovel"
+    ]
+}

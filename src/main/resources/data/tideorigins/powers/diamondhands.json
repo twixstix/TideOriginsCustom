@@ -1,0 +1,21 @@
+{
+    "name": "Diamond Hands",
+    "description": "You mine a bit faster and can collect ores and gems with any level tool - even your bare hands.",
+    "type": "origins:multiple",
+    "harvest": {
+        "type": "origins:modify_harvest",
+        "allow": true,
+        "block_condition": {
+            "type": "origins:in_tag",
+            "tag": "tideorigins:gemsandores"
+        }
+    },
+    "breakspeed": {
+        "type": "origins:modify_break_speed",
+        "modifier": {
+            "name": "Break speed bonus",
+            "value": 0.01,
+            "operation": "addition"
+        }
+    }
+}

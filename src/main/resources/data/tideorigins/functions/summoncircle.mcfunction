@@ -1,0 +1,2 @@
+kill @e[tag=summoncircle]
+summon area_effect_cloud ~ ~ ~ {Particle:"glow",Radius:0.2f,RadiusPerTick:0f,RadiusOnUse:0f,Duration:100000000,DurationOnUse:0f,Tags:["summoncircle"],Potion:"minecraft:empty"}

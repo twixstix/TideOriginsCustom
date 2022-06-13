@@ -1,0 +1,62 @@
+{
+    "name": "Pixie Size",
+    "description": "You're exceptionally small and only have 6 hearts.",
+    "type": "origins:multiple",
+    "attribs": {
+        "type": "origins:attribute",
+        "modifiers": [
+        {
+            "name": "health reduction",
+            "attribute": "minecraft:generic.max_health",
+            "value": -8.0,
+            "operation": "addition"
+        },
+        {
+            "name": "attkrange",
+            "attribute": "reach-entity-attributes:attack_range",
+            "operation": "addition",
+            "value": -0.5
+        },
+        {
+            "name": "buildrange",
+            "attribute": "reach-entity-attributes:reach",
+            "operation": "addition",
+            "value": -1.25
+        }
+        ]
+    },
+    "shrink": {
+        "type": "origins:action_on_callback",
+        "entity_action_chosen": {
+            "type": "origins:and",
+                "actions": [
+                    {
+                        "type": "origins:execute_command",
+                        "command": "scale set pehkui:height 0.2 @s"
+                    },
+                    {
+                        "type": "origins:execute_command",
+                        "command": "scale set pehkui:width 0.2 @s"
+                    },
+                    {    
+                        "type": "origins:execute_command",
+                        "command": "scale persist set true @s"
+                    }
+                ]
+            },
+        "entity_action_lost": {
+            "type": "origins:execute_command",
+            "command": "scale reset @s"
+        },
+        "execute_chosen_when_orb": true
+    },
+    "speed": {
+        "type": "origins:attribute",
+        "modifier": {
+            "name": "fast",
+            "attribute": "minecraft:generic.movement_speed",
+            "value": 0.1,
+            "operation": "multiply_base"
+        }
+    }
+}

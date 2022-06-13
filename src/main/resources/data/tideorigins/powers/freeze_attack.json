@@ -1,0 +1,22 @@
+{
+    "name": "Glacial Touch",
+    "description": "Attacking an enemy numbs them, inflicting slowness and mining fatigue on them.",
+    "type": "origins:target_action_on_hit",
+    "entity_action": {
+        "type": "origins:apply_effect",
+        "effects": [
+        {
+            "effect": "minecraft:slowness",
+            "duration": 60
+        },
+        {
+            "effect": "minecraft:mining_fatigue",
+            "duration": 60
+        }
+        ]
+    },
+    "cooldown": 80,
+    "hud_render": {
+        "should_render": false
+    }
+}

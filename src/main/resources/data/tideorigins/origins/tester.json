@@ -1,0 +1,13 @@
+{
+	"powers": [
+     
+        "tideorigins:test",
+        "tideorigins:test2"
+	],
+	"icon": "minecraft:debug_stick",
+    "order": 99,
+	"impact": 3,
+	"name": "TEST",
+	"description": "Testing.",
+	"unchoosable": true
+}

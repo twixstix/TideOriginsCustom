@@ -1,0 +1,14 @@
+{
+	"powers": [
+        "tideorigins:blindness",
+        "tideorigins:petite",
+        "tideorigins:fly_bat",
+        "tideorigins:nimble",
+        "tideorigins:echolocate"
+	],
+	"icon": "minecraft:black_wool",
+    "order": 4,
+	"impact": 3,
+	"name": "Bat",
+	"description": "Despite being mostly blind, Bats are agile creatures of the night that make their homes in caves deep underground."
+}

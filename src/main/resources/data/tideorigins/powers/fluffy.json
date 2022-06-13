@@ -1,0 +1,45 @@
+{
+    "name": "Fluffy",
+    "description": "Your fluffy fur weighs you down in water, and you take double damage from fire. At least you're immune to the cold.",
+    "type": "origins:multiple",
+    "warm": {
+        "type": "origins:invulnerability",
+        "damage_condition": {
+            "type": "origins:name",
+            "name": "freeze"
+        }
+    },
+    "damp": {
+        "type": "origins:stacking_status_effect",
+        "min_stacks": 0,
+        "max_stacks": 1,
+        "duration_per_stack": 20,
+        "effect": {
+            "effect": "minecraft:slowness",
+            "is_ambient": true,
+            "show_particles": false,
+            "show_icon": false,
+            "amplifier": 1
+        },
+        "condition": {
+            "type": "origins:in_rain"
+        }
+    },
+    "soggy": {
+        "type": "origins:modify_swim_speed",
+        "modifier": {
+            "operation": "multiply_base",
+            "value": -0.20
+        }
+    },
+    "flammable": {
+        "type": "origins:modify_damage_taken",
+        "damage_condition": {
+            "type": "origins:fire"
+        },
+        "modifier": {
+            "operation": "multiply_base",
+            "value": 1
+        }
+    }
+}

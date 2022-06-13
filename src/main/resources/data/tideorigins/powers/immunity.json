@@ -1,0 +1,9 @@
+{
+    "name": "Immunity",
+    "description": "Your body is made of pure steel, making you immune to poison and wither.",
+    "type": "origins:effect_immunity",
+    "effects": [
+        "minecraft:wither",
+        "minecraft:poison"
+    ]
+}

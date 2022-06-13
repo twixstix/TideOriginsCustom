@@ -1,0 +1,16 @@
+{
+	"powers": [
+        "tideorigins:fly",
+        "origins:slow_falling",
+        "origins:like_air",
+        "tideorigins:detect",
+        "tideorigins:parrotdiet",
+        "origins:fragile",
+        "tideorigins:nogapple"
+	],
+	"icon": "minecraft:music_disc_chirp",
+    "order": 4,
+	"impact": 1,
+	"name": "Parrot",
+	"description": "These nimble avians have excellent hearing, allowing them to detect other creatures nearby to them."
+}

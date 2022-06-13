@@ -1,0 +1,19 @@
+{
+    "name": "Undeath",
+    "description": "You have been brought back from the grave, causing a myriad of effects. Healing and Harming effects are reversed on you, and you're immune to the touch of Wither. However, Smite is extra effective on you.",
+    "type": "origins:multiple",
+    "grouping": {
+        "type": "origins:entity_group",
+        "group": "undead"
+    },
+    "wither": {
+        "type": "origins:effect_immunity",
+        "effects": [
+            "minecraft:wither"
+        ]
+    },
+    "trans": {
+        "type": "origins:model_color",
+        "alpha": 0.7
+    }
+}

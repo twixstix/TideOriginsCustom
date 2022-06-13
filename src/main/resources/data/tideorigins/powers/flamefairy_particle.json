@@ -1,0 +1,6 @@
+{
+    "type": "origins:particle",
+    "particle": "minecraft:wax_on",
+    "frequency": 20,
+    "hidden": true
+  }

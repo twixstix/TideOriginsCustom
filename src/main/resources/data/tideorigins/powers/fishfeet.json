@@ -1,0 +1,9 @@
+{
+    "name": "Fishy Feet",
+    "description": "Your feet don't resemble human feet enough to wear boots anymore.",
+    "type": "origins:restrict_armor",
+    "feet": {
+        "type": "origins:constant",
+        "value": true
+    }
+}

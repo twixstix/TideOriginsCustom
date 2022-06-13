@@ -1,0 +1,10 @@
+{
+  "replace": false,
+  "values": [
+    "minecraft:sugar",
+    "minecraft:paper",
+    "minecraft:string",
+    "minecraft:leather",
+    "minecraft:white_wool"
+  ]
+}

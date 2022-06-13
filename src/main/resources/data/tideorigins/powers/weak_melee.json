@@ -1,0 +1,10 @@
+{
+    "type": "origins:modify_damage_dealt",
+    "name": "Weak Arms",
+    "description": "You're not made for physical combat. Your melee attacks do less damage.",
+    "modifier": {
+        "name": "reduced melee damage",
+        "operation": "multiply_total",
+        "value": -0.5
+    }
+}

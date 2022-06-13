@@ -1,0 +1,26 @@
+{
+	"powers": [
+        "tideorigins:lightweight",
+        "tideorigins:sweettooth",
+        "tideorigins:highmetabolism",
+        "tideorigins:naturebless",
+        "tideorigins:summoning",
+        "tideorigins:lifeshare",
+        "tideorigins:invisibility",
+        "tideorigins:fairydust",
+        "tideorigins:kindness",
+        "origins:vegetarian",
+        "tideorigins:petite",
+        "tideorigins:grabbable",
+        "tideorigins:flammable",
+        "tideorigins:metalweakness",
+        "tideorigins:faetoken",
+        "tideorigins:relic_fairy"
+
+	],
+	"icon": "minecraft:glowstone_dust",
+    "order": 4,
+	"impact": 3,
+	"name": "Nature Fairy",
+	"description": "Nature Fairies are magical creatures of the forest; small in size, big in heart, but in no way are they pushovers."
+}

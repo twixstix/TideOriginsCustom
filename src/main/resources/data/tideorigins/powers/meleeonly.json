@@ -1,0 +1,31 @@
+{
+    "name": "Melee Combatant",
+    "description": "Your training makes melee attacks do more damage, but as a result you cannot use ranged weapons.",
+    "type": "origins:multiple",
+    "moredmg": {
+        "type": "origins:attribute",
+        "modifier": {
+            "name": "stronk",
+            "attribute": "minecraft:generic.attack_damage",
+            "value": 2,
+            "operation": "addition"
+        }
+    },
+    "nobows": {
+        "type": "origins:prevent_item_use",
+        "item_condition": {
+            "type": "origins:ingredient",
+            "ingredient": [
+                {
+                    "item": "minecraft:bow"
+                },
+                {
+                    "item": "minecraft:crossbow"
+                },
+                {
+                    "item": "minecraft:trident"
+                }
+            ]
+        }
+    }
+}

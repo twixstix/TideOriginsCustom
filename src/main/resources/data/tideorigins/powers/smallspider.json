@@ -1,0 +1,44 @@
+{
+    "name": "Compact Size",
+    "description": "You're smaller than the common Arachnid, but as a result you're too light to take fall damage.",
+    "type": "origins:multiple",
+    "health": {
+        "type": "origins:attribute",
+        "modifier": {
+            "name": "Fragile health reduction",
+            "attribute": "minecraft:generic.max_health",
+            "value": -8.0,
+            "operation": "addition"
+        }
+    },
+    "fallimmune": {
+        "type": "origins:modify_falling",
+        "velocity": 0.08,
+        "take_fall_damage": false
+    },
+    "shrink": {
+        "type": "origins:action_on_callback",
+        "entity_action_chosen": {
+            "type": "origins:and",
+                "actions": [
+                    {
+                        "type": "origins:execute_command",
+                        "command": "scale set pehkui:height 0.8 @s"
+                    },
+                    {
+                        "type": "origins:execute_command",
+                        "command": "scale set pehkui:width 0.8 @s"
+                    },
+                    {    
+                        "type": "origins:execute_command",
+                        "command": "scale persist set true @s"
+                    }
+                ]
+            },
+        "entity_action_lost": {
+            "type": "origins:execute_command",
+            "command": "scale reset @s"
+        },
+        "execute_chosen_when_orb": true
+    }
+}

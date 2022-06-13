@@ -1,0 +1,11 @@
+{
+    "name": "Golden Skin",
+    "description": "Your curse has begun to turn your very flesh into gold. You have increased defense, even without armor.",
+    "type": "origins:attribute",
+    "modifier": {
+      "name": "Natural Armor health bonus",
+      "attribute": "minecraft:generic.armor",
+      "value": 8.0,
+      "operation": "addition"
+    }
+}

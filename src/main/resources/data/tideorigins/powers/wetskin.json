@@ -1,0 +1,39 @@
+{
+    "name": "Wet Skin",
+    "description": "Being in hot, arid conditions for too long dries you out, giving you slowness.",
+    "type": "origins:stacking_status_effect",
+    "min_stacks": -29,
+    "max_stacks": 1,
+    "duration_per_stack": 100,
+    "tick_rate": 20,
+    "effect": {
+        "effect": "minecraft:slowness",
+        "is_ambient": true,
+        "show_particles": true,
+        "show_icon": true,
+        "amplifier": 1
+    },
+    "condition": {
+        "type": "origins:and",
+        "conditions": [
+            {
+                "type": "origins:biome",
+                    "condition": {
+                        "type": "origins:temperature",
+                        "comparison": ">=",
+                        "compare_to": 1.5
+                    }
+            },
+            {
+                        "type": "origins:in_block_anywhere",
+                        "block_condition": {
+                            "type": "origins:block",
+                            "block": "minecraft:water"
+                        },
+                        "comparison": ">=",
+                        "compare_to": 1,
+                        "inverted": true
+            }
+        ]
+    }
+}

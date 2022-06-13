@@ -1,0 +1,28 @@
+{
+    "name": "Oxidized Steel",
+    "description": "Being exposed to water causes you to rust, reducing your speed significantly.",
+    "type": "origins:multiple",
+    "land": {
+        "type": "origins:stacking_status_effect",
+        "min_stacks": 0,
+        "max_stacks": 1,
+        "duration_per_stack": 20,
+        "effect": {
+            "effect": "minecraft:slowness",
+            "is_ambient": true,
+            "show_particles": false,
+            "show_icon": false,
+            "amplifier": 1
+        },
+        "condition": {
+            "type": "origins:in_rain"
+        }
+    },
+    "water": {
+        "type": "origins:modify_swim_speed",
+        "modifier": {
+            "operation": "multiply_base",
+            "value": -0.3
+        }
+    }
+}

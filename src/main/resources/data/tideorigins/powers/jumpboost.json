@@ -1,0 +1,27 @@
+{
+    "name": "Acrobatic",
+    "description": "You have natural jump boost and don't take fall damage.",
+    "type": "origins:multiple",
+    "boost": {
+        "type": "origins:stacking_status_effect",
+        "min_stacks": 0,
+        "max_stacks": 1,
+        "duration_per_stack": 20,
+        "tick_rate": 5,
+        "effect": {
+            "effect": "minecraft:jump_boost",
+            "is_ambient": true,
+            "show_particles": false,
+            "show_icon": false
+        },
+        "condition": {
+            "type": "origins:sneaking",
+            "inverted": true
+        }
+    },
+    "fallimmune": {
+        "type": "origins:modify_falling",
+        "velocity": 0.08,
+        "take_fall_damage": false
+    }
+}

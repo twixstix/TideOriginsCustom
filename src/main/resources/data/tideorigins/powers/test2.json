@@ -1,0 +1,8 @@
+{
+    "name": "TEST POWER 2",
+    "type": "origins:action_over_time",
+    "entity_action": {
+        "type": "moborigins:summon_fangs"
+    },
+    "interval": 20
+}

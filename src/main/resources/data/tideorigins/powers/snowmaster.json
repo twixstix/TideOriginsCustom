@@ -1,0 +1,30 @@
+{
+    "name": "Snow Master",
+    "description": "You're immune to freezing and can convert regular snow into powdered snow.",
+    "type": "origins:multiple",
+    "warm": {
+        "type": "origins:invulnerability",
+        "damage_condition": {
+            "type": "origins:name",
+            "name": "freeze"
+        }
+    },
+    "powdercraft": {
+        "type": "origins:recipe",
+        "recipe": {
+            "id": "tideorigins:snowmaster/powdersnow",
+            "type": "minecraft:crafting_shapeless",
+            "ingredients": [
+                {
+                    "item": "minecraft:bucket"
+                },
+                {
+                    "item": "minecraft:snow_block"
+                }
+            ],
+            "result": {
+                "item": "minecraft:powder_snow_bucket"
+            }
+        }
+    }
+}

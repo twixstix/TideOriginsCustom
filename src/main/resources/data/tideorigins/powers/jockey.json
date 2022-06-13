@@ -1,0 +1,8 @@
+{
+    "name": "Jockey",
+    "description": "You can hop on other people's shoulders.",
+    "type": "extraorigins:start_riding",
+    "key": {
+      "key": "key.saveToolbarActivator"
+    }
+}

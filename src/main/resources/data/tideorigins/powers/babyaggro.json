@@ -1,0 +1,57 @@
+{
+    "name": "Infant Aura",
+    "description": "Most creatures prefer to leave baby turtles alone. Zombified creatures, however, are hostile to you at all times.",
+    "type": "origins:multiple",
+    "pigaggro": {
+        "type": "origins:action_over_time",
+        "interval": 20,
+        "entity_action": {
+            "type": "origins:execute_command",
+            "command": "/data modify entity @e[type=minecraft:zombified_piglin,limit=1,sort=nearest] AngryAt set from entity @s UUID"
+        }
+    },
+    "createteam": {
+        "type": "origins:action_on_callback",
+        "entity_action_chosen": {
+            "type": "origins:execute_command",
+            "command": "team add TurtlePassive"
+        },
+        "execute_chosen_when_orb": true
+    },
+    "addplayer": {
+        "type": "origins:action_on_callback",
+        "entity_action_chosen": {
+            "type": "origins:execute_command",
+            "command": "team join TurtlePassive @s"
+        },
+        "entity_action_lost": {
+            "type": "origins:execute_command",
+            "command": "team leave @s"
+        },
+        "execute_chosen_when_orb": true
+    },
+    "addenemies": {
+        "type": "origins:action_over_time",
+        "interval": 5,
+        "entity_action": {
+            "type": "origins:execute_command",
+            "command": "team join TurtlePassive @e[tag=!InTurtleTeam,type=!minecraft:player,type=!minecraft:ender_dragon,type=!minecraft:wither,type=!minecraft:zombie,type=!minecraft:zombified_piglin,distance=..50]"
+        }
+    },
+    "tagset": {
+        "type": "origins:action_over_time",
+        "interval": 5,
+        "entity_action": {
+            "type": "origins:execute_command",
+            "command": "tag @e[team=TurtlePassive] add InTurtleTeam"
+        }
+    },
+    "removeenemies": {
+        "type": "origins:target_action_on_hit",
+        "entity_action": {
+            "type": "origins:execute_command",
+            "command": "team leave @s[type=!minecraft:player]"
+        },
+        "cooldown": 2
+    }
+}

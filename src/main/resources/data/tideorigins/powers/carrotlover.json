@@ -1,0 +1,43 @@
+{
+    "name": "Carrot Lover",
+    "description": "Naturally, bunnies love carrots. Normal carrots give double saturation, and golden carrots restore even more.",
+    "type": "origins:multiple",
+    "carrot": {
+        "type": "origins:modify_food",
+        "item_condition": {
+            "type": "origins:ingredient",
+            "ingredient": {
+                "item": "minecraft:carrot"
+            }
+        },
+        "food_modifier": {
+            "name": "x2",
+            "operation": "addition",
+            "value": 3
+        },
+        "saturation_modifier": {
+            "name": "x2",
+            "operation": "addition",
+            "value": 4
+        }
+    },    
+    "golden": {
+        "type": "origins:modify_food",
+        "item_condition": {
+            "type": "origins:ingredient",
+            "ingredient": {
+                "item": "minecraft:golden_carrot"
+            }
+        },
+        "food_modifier": {
+            "name": "boost",
+            "operation": "addition",
+            "value": 4
+        },
+        "saturation_modifier": {
+            "name": "boost",
+            "operation": "addition",
+            "value": 4
+        }
+    }
+}

@@ -1,0 +1,98 @@
+{
+    "name": "Flame Heart",
+    "description": "You need fire to restore your body, so you cannot regenerate naturally without being in contact with it.",
+    "type": "origins:multiple",
+    "disable": {
+        "type": "origins:disable_regen"
+    },
+    "heals": {
+        "type": "origins:action_over_time",
+        "entity_action": {
+            "type": "origins:if_else_list",
+            "actions": [
+                {
+                    "condition": {
+                        "type": "origins:and",
+                        "conditions": [
+                            {
+                                "type": "origins:food_level",
+                                "comparison": "<=",
+                                "compare_to": 17
+                            },
+                            {    "type": "origins:relative_health",
+                                "comparison": "<",
+                                "compare_to": 1
+                            }
+                        ]
+                    },
+                    "action": {
+                        "type": "origins:heal",
+                        "amount": 0
+                    }
+                },
+                {
+                    "condition": {
+                        "type": "origins:and",
+                        "conditions": [
+                            {
+                                "type": "origins:food_level",
+                                "comparison": "<=",
+                                "compare_to": 19
+                            },
+                            {    "type": "origins:relative_health",
+                                "comparison": "<",
+                                "compare_to": 1
+                            }
+                        ]
+                    },
+                    "action": {
+                        "type": "origins:and",
+                        "actions": [
+                            {
+                                "type": "origins:heal",
+                                "amount": 0.25
+                            },
+                            {
+                                "type": "origins:exhaust",
+                                "amount": 1
+                            }
+                        ]
+                    }
+                },
+                {
+                    "condition": {
+                        "type": "origins:and",
+                        "conditions": [
+                            {
+                                "type": "origins:food_level",
+                                "comparison": "==",
+                                "compare_to": 20
+                            },
+                            {    "type": "origins:relative_health",
+                                "comparison": "<",
+                                "compare_to": 1
+                            }
+                        ]
+                    },
+                    "action": {
+                        "type": "origins:and",
+                        "actions": [
+                            {
+                                "type": "origins:heal",
+                                "amount": 1
+                            },
+                            {
+                                "type": "origins:exhaust",
+                                "amount": 6
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
+        "interval": 10,
+        "condition": {
+            "type": "origins:on_fire"
+        }
+    }
+}

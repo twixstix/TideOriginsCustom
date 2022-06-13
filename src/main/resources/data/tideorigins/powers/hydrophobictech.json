@@ -1,0 +1,37 @@
+{
+    "name": "Hydrophobic Tech",
+    "description": "You get along with water very badly. You cannot swim well, and being in contact with water will damage you rapidly.",
+    "type": "origins:multiple",
+    "swimspeed": {
+        "type": "origins:modify_swim_speed",
+        "modifier": {
+            "operation": "multiply_base",
+            "value": -0.5
+        }
+    },
+    "dmg": {
+        "type": "origins:damage_over_time",
+        "interval": 20,
+        "onset_delay": 1,
+        "damage": 2,
+        "damage_source": {
+            "name": "hurt_by_water",
+            "unblockable": true,
+            "bypasses_armor": true
+        },
+        "protection_enchantment": "origins:water_protection",
+        "protection_effectiveness": 1.0,
+        "condition": {
+            "type": "origins:fluid_height",
+            "fluid": "minecraft:water",
+            "comparison": ">",
+            "compare_to": 0.0
+        }
+    },
+    "nodolphin": {
+        "type": "origins:effect_immunity",
+        "effects": [
+            "minecraft:dolphins_grace"
+        ]
+    }
+}

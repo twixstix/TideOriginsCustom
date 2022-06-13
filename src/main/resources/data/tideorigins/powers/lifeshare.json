@@ -1,0 +1,190 @@
+{
+    "name": "Inspiration",
+    "description": "Attacking enemies inspires your allies, granting you and them a brief amount of regen and resistance.",
+    "type": "origins:multiple",
+    "combat": {
+        "type": "origins:self_action_on_hit",
+        "entity_action": {
+            "type": "origins:area_of_effect",
+            "radius": 15,
+            "bientity_action": {
+                "type": "origins:and",
+                "actions": [
+                    {
+                        "type": "origins:actor_action",
+                        "action": {
+                            "type": "origins:and",
+                            "actions": [
+                                {
+                                    "type": "origins:apply_effect",
+                                    "effects": [
+                                        {
+                                            "effect": "minecraft:regeneration",
+                                            "duration": 100,
+                                            "is_ambient": true,
+                                            "show_particles": false,
+                                            "show_icon": true
+                                        },
+                                        {
+                                            "effect": "minecraft:resistance",
+                                            "duration": 40,
+                                            "is_ambient": true,
+                                            "show_particles": false,
+                                            "show_icon": true
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "origins:execute_command",
+                                    "command": "particle electric_spark ~ ~0.5 ~ 0.3 0.3 0.3 0.009 4 normal @a"
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "type": "origins:target_action",
+                        "action": {
+                            "type": "origins:and",
+                            "actions": [
+                                {
+                                    "type": "origins:apply_effect",
+                                    "effects": [
+                                        {
+                                            "effect": "minecraft:regeneration",
+                                            "duration": 100,
+                                            "is_ambient": true,
+                                            "show_particles": false,
+                                            "show_icon": true
+                                        },
+                                        {
+                                            "effect": "minecraft:resistance",
+                                            "duration": 40,
+                                            "is_ambient": true,
+                                            "show_particles": false,
+                                            "show_icon": true
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "origins:execute_command",
+                                    "command": "particle electric_spark ~ ~0.5 ~ 0.3 0.3 0.3 0.009 4 normal @a"
+                                }
+                            ]
+                        }
+                    }
+                ]
+            },
+            "bientity_condition": {
+                "type": "origins:target_condition",
+                "condition": {
+                    "type": "origins:or",
+                    "conditions": [
+                        {
+                            "type": "origins:in_tag",
+                            "tag": "tideorigins:passive"
+                        },
+                        {
+                            "type": "origins:nbt",
+                            "nbt": "{Tags: ['fairy_ally']}"
+                        }
+                    ]
+                }
+            }
+        },
+        "cooldown": 1
+    },
+    "kill": {
+        "type": "origins:self_action_on_kill",
+        "entity_action": {
+            "type": "origins:area_of_effect",
+            "radius": 15,
+            "bientity_action": {
+                "type": "origins:and",
+                "actions": [
+                    {
+                        "type": "origins:actor_action",
+                        "action": {
+                            "type": "origins:and",
+                            "actions": [
+                                {
+                                    "type": "origins:apply_effect",
+                                    "effects": [
+                                        {
+                                            "effect": "minecraft:regeneration",
+                                            "duration": 100,
+                                            "is_ambient": true,
+                                            "show_particles": false,
+                                            "show_icon": true
+                                        },
+                                        {
+                                            "effect": "minecraft:resistance",
+                                            "duration": 40,
+                                            "is_ambient": true,
+                                            "show_particles": false,
+                                            "show_icon": true
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "origins:execute_command",
+                                    "command": "particle electric_spark ~ ~0.5 ~ 0.3 0.3 0.3 0.009 4 normal @a"
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "type": "origins:target_action",
+                        "action": {
+                            "type": "origins:and",
+                            "actions": [
+                                {
+                                    "type": "origins:apply_effect",
+                                    "effects": [
+                                        {
+                                            "effect": "minecraft:regeneration",
+                                            "duration": 200,
+                                            "is_ambient": true,
+                                            "show_particles": false,
+                                            "show_icon": true
+                                        },
+                                        {
+                                            "effect": "minecraft:resistance",
+                                            "duration": 200,
+                                            "is_ambient": true,
+                                            "show_particles": false,
+                                            "show_icon": true
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "origins:execute_command",
+                                    "command": "particle electric_spark ~ ~0.5 ~ 0.3 0.3 0.3 0.009 4 normal @a"
+                                }
+                            ]
+                        }
+                    }
+                ]
+            },
+            "bientity_condition": {
+                "type": "origins:target_condition",
+                "condition": {
+                    "type": "origins:or",
+                    "conditions": [
+                        {
+                            "type": "origins:in_tag",
+                            "tag": "tideorigins:passive"
+                        },
+                        {
+                            "type": "origins:nbt",
+                            "nbt": "{Tags: ['fairy_ally']}"
+                        }
+                    ]
+                }
+            }
+        },
+        "cooldown": 20,
+        "hud_render": {
+            "should_render": false
+        }
+    }
+}

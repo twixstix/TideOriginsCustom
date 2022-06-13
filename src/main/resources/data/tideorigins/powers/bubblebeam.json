@@ -1,0 +1,36 @@
+{
+    "name": "Bubblebeam",
+    "description": "Hold to fire a beam of bubbles in front of you, harmlessly knocking back foes.",
+    "type": "origins:multiple",
+    "raycast": {
+        "type": "origins:active_self",
+        "entity_action": {
+            "type": "origins:raycast",
+            "distance": 10,
+            "shape_type": "outline",
+            "bientity_action": {
+                "type": "origins:add_velocity",
+                "z": 0.2
+            },
+            "hit_action": {
+                "type": "origins:play_sound",
+                "sound": "minecraft:block.bubble_column.bubble_pop"
+            },
+            "miss_action": {
+                "type": "origins:play_sound",
+                "sound": "minecraft:block.bubble_column.bubble_pop"
+            },
+            "command_along_ray": "/particle minecraft:bubble ~ ~ ~ 0 0 0 1 1 normal"
+        },
+        "cooldown": 1,
+        "key": {
+            "key": "key.origins.secondary_active",
+            "continuous": true
+        },
+        "hud_render": {
+            "should_render": false,
+            "sprite_location": "origins:textures/gui/community/spiderkolo/resource_bar_02.png",
+            "bar_index": 8
+        }
+    }
+}

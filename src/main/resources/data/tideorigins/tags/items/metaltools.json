@@ -1,0 +1,20 @@
+{
+    "replace": false,
+    "values": [
+      "minecraft:iron_sword",
+      "minecraft:golden_sword",
+      "minecraft:iron_shovel",
+      "minecraft:golden_shovel",
+      "minecraft:iron_axe",
+      "minecraft:golden_axe",
+      "minecraft:iron_pickaxe",
+      "minecraft:golden_pickaxe",
+      "minecraft:iron_hoe",
+      "minecraft:golden_hoe",
+      "additionaladditions:rose_gold_sword",
+      "additionaladditions:rose_gold_shovel",
+      "additionaladditions:rose_gold_axe",
+      "additionaladditions:rose_gold_pickaxe",
+      "additionaladditions:rose_gold_hoe"
+    ]
+  }

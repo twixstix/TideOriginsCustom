@@ -1,0 +1,10 @@
+{
+	"powers": [
+        "tideorigins:nogapple"
+	],
+	"icon": "minecraft:firework_rocket",
+    "order": 4,
+	"impact": 2,
+	"name": "Sparkling",
+	"description": "Gunpowder runs through the veins of Sparklings, granting them explosive power."
+}

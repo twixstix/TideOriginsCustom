@@ -1,0 +1,81 @@
+{
+    "name": "Mushroom Master",
+    "description": "You can always collect mushroom blocks, even without Silk Touch.",
+    "type": "origins:multiple",
+    "removedrop": {
+        "type": "origins:modify_harvest",
+        "block_condition": {
+            "type": "origins:in_tag",
+            "tag": "tideorigins:mushblocks"
+        },
+        "allow": false
+    },
+    "summonred": {
+        "type": "origins:action_on_block_break",
+        "block_action": {
+            "type": "origins:execute_command",
+            "command": "/summon item ~ ~ ~ {Item:{id:'minecraft:red_mushroom_block',Count:1b}}"                    
+        },
+        "block_condition": {
+            "type": "origins:block",
+            "block": "minecraft:red_mushroom_block"
+        },
+        "only_when_harvested": false
+    },
+    "summonbrown": {
+        "type": "origins:action_on_block_break",
+        "block_action": {
+            "type": "origins:execute_command",
+            "command": "/summon item ~ ~ ~ {Item:{id:'minecraft:brown_mushroom_block',Count:1b}}"                    
+        },
+        "block_condition": {
+            "type": "origins:block",
+            "block": "minecraft:brown_mushroom_block"
+        },
+        "only_when_harvested": false
+    },
+    "summonstem": {
+        "type": "origins:action_on_block_break",
+        "block_action": {
+            "type": "origins:execute_command",
+            "command": "/summon item ~ ~ ~ {Item:{id:'minecraft:mushroom_stem',Count:1b}}"                    
+        },
+        "block_condition": {
+            "type": "origins:block",
+            "block": "minecraft:mushroom_stem"
+        },
+        "only_when_harvested": false
+    },
+    "redmushcraft": {
+        "type": "origins:recipe",
+        "recipe": {
+            "id": "tideorigins:mushmaster/redmush",
+            "type": "minecraft:crafting_shapeless",
+            "ingredients": [
+                {
+                    "item": "minecraft:red_mushroom_block"
+                }
+            ],
+            "result": {
+                "item": "minecraft:red_mushroom",
+                "count": 2
+            }
+        }
+    },
+    "brownmushcraft": {
+        "type": "origins:recipe",
+        "recipe": {
+            "id": "tideorigins:mushmaster/brownmush",
+            "type": "minecraft:crafting_shapeless",
+            "ingredients": [
+                {
+                    "item": "minecraft:brown_mushroom_block"
+                }
+            ],
+            "result": {
+                "item": "minecraft:brown_mushroom",
+                "count": 2
+            }
+        }
+    }
+}

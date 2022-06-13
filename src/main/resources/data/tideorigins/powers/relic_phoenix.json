@@ -1,0 +1,10 @@
+{
+    "hidden": true,
+    "type": "origins:starting_equipment",
+        "stacks": [
+            {
+                "item": "tideorigins:phoenix_necklace",
+                "tag": "{display:{Lore:['{\"text\":\"A memento of the fallen.\"}']},Enchantments:[{}]}"
+            }
+        ]
+}

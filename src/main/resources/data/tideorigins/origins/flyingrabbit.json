@@ -1,0 +1,19 @@
+{
+	"powers": [
+        "tideorigins:jumpboost",
+		"origins:elytra",
+		"tideorigins:elytra_propel",
+		"origins:vegetarian",
+        "tideorigins:carrotlover",
+        "tideorigins:petite",
+		"origins:light_armor",
+		"tideorigins:grabbable"
+	],
+	"icon": {
+		"item": "minecraft:rabbit_foot"
+	},
+	"order": 3,
+	"impact": 1,
+    "name": "Winged Rabbit",
+	"description": "Ancient tales tell of rabbits that knew how to fly. Though thought to be lost, this rabbit has kept their ability and hopes to find more of their kind."
+}

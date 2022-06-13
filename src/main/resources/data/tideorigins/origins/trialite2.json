@@ -1,0 +1,25 @@
+{
+	"powers": [
+		"tideorigins:roboenhancements",
+		"tideorigins:relic_clock",
+        "tideorigins:smalltrialite",
+		"tideorigins:anvil",
+		"tideorigins:emp",
+        "tideorigins:copperbeacon",
+        "tideorigins:instantfood",
+        "tideorigins:ally_ender2",
+        "tideorigins:instantfood",
+        "tideorigins:toolwise",
+        "tideorigins:novillageeffects",
+        "tideorigins:fingerless",
+        "tideorigins:nohorse",
+        "tideorigins:norevive",
+        "tideorigins:hydrophobictech",
+        "tideorigins:noconduit"
+	],
+	"icon": "minecraft:clock",
+    "order": 4,
+	"impact": 2,
+	"name": "Time Spirit",
+    "unchoosable": true
+}

@@ -1,0 +1,19 @@
+{
+    "name": "Trident Master",
+    "description": "Tridents deal extra damage when wielded by you.",
+    "type": "origins:modify_damage_dealt",
+    "condition": {
+        "type": "origins:equipped_item",
+        "equipment_slot": "mainhand",
+        "item_condition": {
+            "type": "origins:ingredient",
+            "ingredient": {
+                "item": "minecraft:trident"
+            }
+        }
+    },
+    "modifier": {
+        "operation": "multiply_base",
+        "value": 0.5
+    }
+}

@@ -1,0 +1,37 @@
+{
+    "name": "Turtle Shell",
+    "description": "Your shell protects you, giving you extra resistance. However, it also makes you incredibly slow.",
+    "type": "origins:multiple",
+    "land": {
+        "type": "origins:stacking_status_effect",
+        "min_stacks": 0,
+        "max_stacks": 1,
+        "duration_per_stack": 40,
+        "effects": [
+            {
+                "effect": "minecraft:resistance",
+                "is_ambient": true,
+                "show_particles": false,
+                "show_icon": false,
+                "amplifier": 1
+            },
+            {
+                "effect": "minecraft:slowness",
+                "is_ambient": true,
+                "show_particles": false,
+                "show_icon": false,
+                "amplifier": 5
+            }
+        ],
+        "condition": {
+            "type": "origins:in_block_anywhere",
+            "block_condition": {
+                "type": "origins:block",
+                "block": "minecraft:water"
+            },
+            "comparison": ">=",
+            "compare_to": 1,
+            "inverted": true
+        }
+    }
+}

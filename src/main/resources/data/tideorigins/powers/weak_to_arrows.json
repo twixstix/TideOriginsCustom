@@ -1,0 +1,12 @@
+{
+    "type": "origins:modify_damage_taken",
+    "name": "Easy Target",
+    "description": "Projectiles do double damage to you.",
+    "damage_condition": {
+        "type": "origins:projectile"
+    },
+    "modifier": {
+        "operation": "multiply_base",
+        "value": 1
+    }
+}

@@ -1,0 +1,7 @@
+{
+    "name": "Insomnia",
+    "description": "A curse has been laid upon you, preventing you from sleeping.",
+    "type": "origins:prevent_sleep",
+    "message": "No rest for the wicked.",
+    "set_spawn_point": true
+}

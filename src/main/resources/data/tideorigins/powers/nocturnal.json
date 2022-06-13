@@ -1,0 +1,6 @@
+{
+    "name": "Nocturnal",
+    "description": "You can see perfectly in the dark.",
+        "type": "origins:night_vision",
+        "strength": 1
+}

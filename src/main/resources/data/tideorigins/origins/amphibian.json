@@ -1,0 +1,15 @@
+{
+	"powers": [
+		"tideorigins:froglegs",
+		"tideorigins:jumpboost",
+		"tideorigins:moreair",
+		"tideorigins:wetskin",
+        "origins:carnivore",
+        "tideorigins:nogapple"
+	],
+	"icon": "minecraft:lily_pad",
+    "order": 4,
+	"impact": 1,
+	"name": "Amphibian",
+	"description": "With their leaping abilities and aquatic proficiency, Amphibians maneuver both the land and seas with ease."
+}

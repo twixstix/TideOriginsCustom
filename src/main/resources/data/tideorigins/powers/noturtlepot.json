@@ -1,0 +1,22 @@
+{
+    "name": "Anti-Turtle Potion",
+    "description": "You refuse to use potions made from the shells of your people.",
+    "type": "origins:prevent_item_use",
+    "item_condition": {
+        "type": "origins:or",
+        "conditions": [
+            {
+                "type": "origins:nbt",
+                "nbt": "{Potion: \"minecraft:turtle_master\"}"
+            },
+            {
+                "type": "origins:nbt",
+                "nbt": "{Potion: \"minecraft:long_turtle_master\"}"
+            },
+            {
+                "type": "origins:nbt",
+                "nbt": "{Potion: \"minecraft:strong_turtle_master\"}"
+            }
+        ]
+    }
+}

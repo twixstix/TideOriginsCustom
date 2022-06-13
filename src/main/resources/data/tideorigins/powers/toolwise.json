@@ -1,0 +1,15 @@
+{
+    "name": "Tool Expertise",
+    "description": "You have mastered the use of common tools such as swords and pickaxes, giving them a natural durability increase upon crafting.",
+    "type": "origins:modify_crafting",
+    "item_condition": {
+        "type": "origins:ingredient",
+        "ingredient": {
+            "tag": "tideorigins:trialite_basic"
+        }
+    },
+    "item_action": {
+        "type": "origins:modify",
+        "modifier": "tideorigins:unbreaking"
+    }
+}

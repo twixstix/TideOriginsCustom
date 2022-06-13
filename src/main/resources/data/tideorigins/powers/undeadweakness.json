@@ -1,0 +1,33 @@
+{
+    "name": "Undead Hatred",
+    "description": "Your pure powers are at odds with the undead. They do more damage to you, but you equally do more damage to them.",
+    "type": "origins:multiple",
+    "dealt": {
+        "type": "origins:modify_damage_dealt",
+        "bientity_condition": {
+            "type": "origins:target_condition",
+            "condition": {
+                "type": "origins:entity_group",
+                "group": "undead"
+            }
+        },
+        "modifier": {
+            "operation": "multiply_base",
+            "value": 1
+        }
+    },
+    "taken": {
+        "type": "origins:modify_damage_taken",
+        "damage_condition": {
+            "type": "origins:attacker",
+            "entity_condition": {
+                "type": "origins:entity_group",
+                "group": "undead"
+            }
+        },
+        "modifier": {
+            "operation": "multiply_base",
+            "value": 1
+        }
+    }
+}

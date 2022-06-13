@@ -1,0 +1,109 @@
+{
+    "name": "Baby Size",
+    "description": "Your species is ancient and can grow to great sizes- but not yet. You're only a quarter of a block tall and quite fragile, yet very nimble.",
+    "type": "origins:multiple",
+    "attribs": {
+        "type": "origins:attribute",
+        "modifiers": [
+        {
+            "name": "health reduction",
+            "attribute": "minecraft:generic.max_health",
+            "value": -10.0,
+            "operation": "addition"
+        },
+        {
+            "name": "attackspeed",
+            "attribute": "generic.attack_speed",
+            "operation": "addition",
+            "value": 0.5
+        },
+        {
+            "name": "movespeed",
+            "attribute": "generic.movement_speed",
+            "operation": "addition",
+            "value": -0.015
+        },
+        {
+            "name": "attkrange",
+            "attribute": "reach-entity-attributes:attack_range",
+            "operation": "addition",
+            "value": -0.25
+        },
+        {
+            "name": "buildrange",
+            "attribute": "reach-entity-attributes:reach",
+            "operation": "addition",
+            "value": -1
+        }
+        ]
+    },
+    "immunity": {
+        "type": "origins:invulnerability",
+        "damage_condition": {
+            "type": "origins:or",
+            "conditions": [
+              {
+                "type": "origins:name",
+                "name": "fall"
+              },
+              {
+                "type": "origins:name",
+                "name": "flyIntoWall"
+              },
+              {
+                "type": "origins:name",
+                "name": "cactus"
+              },
+              {
+                "type": "origins:name",
+                "name": "sweetBerryBush"
+              },
+              {
+                "type": "origins:name",
+                "name": "thorns"
+              }
+            ]
+        }
+    },
+    "shrink": {
+        "type": "origins:action_on_callback",
+        "entity_action_chosen": {
+            "type": "origins:and",
+                "actions": [
+                    {
+                        "type": "origins:execute_command",
+                        "command": "scale set pehkui:height 0.25 @s"
+                    },
+                    {
+                        "type": "origins:execute_command",
+                        "command": "scale set pehkui:width 0.25 @s"
+                    },
+                    {    
+                        "type": "origins:execute_command",
+                        "command": "scale persist set true @s"
+                    }
+                ]
+            },
+        "entity_action_lost": {
+            "type": "origins:execute_command",
+            "command": "scale reset @s"
+        },
+        "execute_chosen_when_orb": true
+    },
+    "jump_modifier": {
+        "type": "origins:modify_jump",
+        "modifier": {
+          "name": "Origin modifier",
+          "operation": "multiply_total",
+          "value": -0.3333
+        }
+    },
+    "lessfood": {
+        "type": "origins:modify_exhaustion",
+        "modifier": {
+            "name": "Origin modifier",
+            "operation": "multiply_base",
+            "value": -0.75
+        }
+    }
+}

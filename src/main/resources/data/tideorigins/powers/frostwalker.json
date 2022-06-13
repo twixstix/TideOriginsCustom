@@ -1,0 +1,44 @@
+{
+    "name": "Frost Walker",
+    "description": "The water around your feet converts into ice, allowing you to walk on water.",
+    "type": "origins:action_over_time",
+    "interval": 3,
+    "entity_action": {
+        "type": "origins:execute_command",
+        "command": "/fill ~-2 ~-1 ~-2 ~2 ~-1 ~2 minecraft:frosted_ice replace minecraft:water[level=0]"
+    },
+    "condition": {
+        "type": "origins:and",
+        "conditions": [
+            {
+                "type": "origins:in_block",
+                "block_condition": {
+                    "type": "origins:block",
+                    "block": "minecraft:water"
+                },
+                "inverted": true
+            },
+            {
+                "type": "origins:in_block",
+                "block_condition": {
+                    "type": "origins:water_loggable"
+                },
+                "inverted": true
+            },
+            {
+                "type": "origins:submerged_in",
+                "fluid": "minecraft:water",
+                "inverted": "true"
+            },
+            {
+                "type": "origins:moving"
+            },
+            {
+                "type": "origins:fall_distance",
+                "comparison": ">",
+                "compare_to": 1,
+                "inverted": true
+            }
+        ]
+    }
+}

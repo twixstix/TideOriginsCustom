@@ -1,0 +1,1 @@
+advancement revoke @p only tideorigins:riolu_evolve

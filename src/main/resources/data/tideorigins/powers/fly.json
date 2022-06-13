@@ -1,0 +1,24 @@
+{
+    "type": "origins:active_self",
+    "name": "Flight",
+    "description": "You can gently fly by holding down your jump button.",
+    "entity_action": {
+        "type": "origins:apply_effect",
+            "effect": {
+                "effect": "minecraft:levitation",
+                "duration": 2,
+                "amplifier": 1,
+                "is_ambient": true,
+                "show_particles": false,
+                "show_icon": false
+            }
+    },
+    "key": {
+        "key": "key.jump",
+        "continuous": true
+    },
+    "cooldown": 0,
+    "hud_render": {
+        "should_render": false
+    }
+}

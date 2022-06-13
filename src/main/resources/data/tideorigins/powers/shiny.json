@@ -1,0 +1,116 @@
+{
+    "name": "Ooh, Shiny",
+    "description": "You have a habit of picking up trinkets and shiny objects you come across in your travels.",
+    "hidden": true,
+    "type": "origins:action_over_time",
+    "entity_action": {
+        "type": "origins:chance",
+        "action": {
+            "type": "origins:choice",
+            "actions": [
+                {
+                    "element": {
+                        "type": "origins:give",
+                        "stack": {
+                            "item": "minecraft:iron_nugget",
+                            "amount": 1
+                        }
+                    },
+                    "weight": 20
+                },
+                {
+                    "element": {
+                        "type": "origins:give",
+                        "stack": {
+                            "item": "minecraft:gold_nugget",
+                            "amount": 1
+                        }
+                    },
+                    "weight": 20
+                },
+                {
+                    "element": {
+                        "type": "origins:give",
+                        "stack": {
+                            "item": "minecraft:chain",
+                            "amount": 1
+                        }
+                    },
+                    "weight": 8
+                },
+                {
+                    "element": {
+                        "type": "origins:give",
+                        "stack": {
+                            "item": "minecraft:stone_button",
+                            "amount": 1
+                        }
+                    },
+                    "weight": 10
+                },
+                {
+                    "element": {
+                        "type": "origins:give",
+                        "stack": {
+                            "item": "minecraft:string",
+                            "amount": 1
+                        }
+                    },
+                    "weight": 10
+                },
+                {
+                    "element": {
+                        "type": "origins:give",
+                        "stack": {
+                            "item": "minecraft:prismarine_crystals",
+                            "amount": 1
+                        }
+                    },
+                    "weight": 5
+                },
+                {
+                    "element": {
+                        "type": "origins:give",
+                        "stack": {
+                            "item": "minecraft:prismarine_shard",
+                            "amount": 1
+                        }
+                    },
+                    "weight": 5
+                },
+                {
+                    "element": {
+                        "type": "origins:give",
+                        "stack": {
+                            "item": "minecraft:flint",
+                            "amount": 1
+                        }
+                    },
+                    "weight": 10
+                },
+                {
+                    "element": {
+                        "type": "origins:give",
+                        "stack": {
+                            "item": "minecraft:tripwire_hook",
+                            "amount": 1
+                        }
+                    },
+                    "weight": 10
+                },
+                {
+                    "element": {
+                        "type": "origins:give",
+                        "stack": {
+                            "item": "minecraft:diamond",
+                            "amount": 1
+                        }
+                    },
+                    "weight": 2
+                }
+            ]
+        },
+        "chance": 0.2
+    },
+    "interval": 1200
+}

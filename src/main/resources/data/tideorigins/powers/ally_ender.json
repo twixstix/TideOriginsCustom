@@ -1,0 +1,8 @@
+{
+    "name": "Ender Ally",
+    "description": "Endermen view you as an ally and will not be provoked by your gaze.",
+    "type": "extraorigins:mob_neutrality",
+    "entity_types": [
+        "minecraft:enderman"
+    ]
+}

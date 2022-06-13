@@ -1,0 +1,39 @@
+{
+    "name": "Moderate Height",
+    "description": "You're slightly smaller than most creatures and have slightly less health.",
+    "type": "origins:multiple",
+    "health": {
+        "type": "origins:attribute",
+        "modifier": {
+            "name": "Fragile health reduction",
+            "attribute": "minecraft:generic.max_health",
+            "value": -4.0,
+            "operation": "addition"
+        }
+    },
+    "shrink": {
+        "type": "origins:action_on_callback",
+        "entity_action_chosen": {
+            "type": "origins:and",
+                "actions": [
+                    {
+                        "type": "origins:execute_command",
+                        "command": "scale set pehkui:height 0.75 @s"
+                    },
+                    {
+                        "type": "origins:execute_command",
+                        "command": "scale set pehkui:width 0.75 @s"
+                    },
+                    {    
+                        "type": "origins:execute_command",
+                        "command": "scale persist set true @s"
+                    }
+                ]
+            },
+        "entity_action_lost": {
+            "type": "origins:execute_command",
+            "command": "scale reset @s"
+        },
+        "execute_chosen_when_orb": true
+    }
+}

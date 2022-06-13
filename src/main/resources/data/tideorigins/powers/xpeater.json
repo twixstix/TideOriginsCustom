@@ -1,0 +1,55 @@
+{
+    "name": "Consumer Of Knowledge",
+    "description": "You cannot eat any type of food, and instead consume experience over time.",
+    "type": "origins:multiple",
+    "no_cake": {
+        "type": "origins:prevent_block_use",
+        "block_condition": {
+            "type": "origins:block",
+            "block": "minecraft:cake"
+        }
+    },
+    "no_food": {
+        "type": "origins:prevent_item_use",
+        "item_condition": {
+            "type": "origins:food"
+        }
+    },
+    "consume_experience": {
+        "type": "origins:action_over_time",
+        "interval": 60,
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:xp_levels",
+                    "comparison": ">=",
+                    "compare_to": 1
+                },
+                {
+                    "type": "origins:food_level",
+                    "comparison": "<=",
+                    "compare_to": 17
+                }
+            ]
+        },
+        "entity_action": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:feed",
+                    "food": 3,
+                    "saturation": 2
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "xp add @s -7 points"
+                },
+                {
+                    "type": "origins:play_sound",
+                    "sound": "minecraft:entity.generic.eat"
+                }
+            ]
+        }
+    }
+}

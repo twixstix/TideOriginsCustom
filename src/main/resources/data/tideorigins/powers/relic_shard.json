@@ -1,0 +1,10 @@
+{
+    "hidden": true,
+    "type": "origins:starting_equipment",
+        "stacks": [
+            {
+                "item": "tideorigins:shard_of_the_sea",
+                "tag": "{Enchantments:[{}]}"
+            }
+        ]
+}

@@ -1,0 +1,19 @@
+{
+	"powers": [
+        "tideorigins:petite",
+        "tideorigins:fly_moth",
+        "tideorigins:clingy",
+        "tideorigins:nocturnal",
+        "tideorigins:fluffy",
+        "tideorigins:mothdiet",
+        "tideorigins:lamp",
+        "tideorigins:ally_arthropod",
+        "origins:arthropod",
+        "tideorigins:nogapple"
+	],
+	"icon": "minecraft:white_wool",
+    "order": 4,
+	"impact": 2,
+	"name": "Moth",
+	"description": "These fluffy winged invertebrates are often seen flitting around the night sky and towards the nearest light source."
+}

@@ -1,0 +1,16 @@
+{
+	"powers": [
+		"tideorigins:alchemy",
+		"tideorigins:goldskin",
+        "tideorigins:goldtouch",
+        "tideorigins:avarice",
+        "tideorigins:goldcurse",
+        "tideorigins:hungercurse"
+
+	],
+	"icon": "minecraft:gold_block",
+    "order": 4,
+	"impact": 3,
+	"name": "Midas",
+	"description": "Long ago, you wished for the power to turn all you touch into gold. You got your wish, but it has come with some significant drawbacks..."
+}

@@ -1,0 +1,11 @@
+{
+    "name": "Brutal Strength",
+    "description": "You hit harder than most people.",
+    "type": "origins:attribute",
+    "modifier": {
+        "name": "stronk",
+        "attribute": "minecraft:generic.attack_damage",
+        "value": 2,
+        "operation": "addition"
+    }
+}

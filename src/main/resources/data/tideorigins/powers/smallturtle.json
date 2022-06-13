@@ -1,0 +1,68 @@
+{
+    "name": "Baby Size",
+    "description": "You are just a hatchling, so you are very small and have only 4 hearts.",
+    "type": "origins:multiple",
+    "attribs": {
+        "type": "origins:attribute",
+        "modifiers": [
+        {
+            "name": "health reduction",
+            "attribute": "minecraft:generic.max_health",
+            "value": -14.0,
+            "operation": "addition"
+        },
+        {
+            "name": "attkrange",
+            "attribute": "reach-entity-attributes:attack_range",
+            "operation": "addition",
+            "value": -1
+        },
+        {
+            "name": "buildrange",
+            "attribute": "reach-entity-attributes:reach",
+            "operation": "addition",
+            "value": -2
+        }
+        ]
+    },
+    "shrink": {
+        "type": "origins:action_on_callback",
+        "entity_action_chosen": {
+            "type": "origins:and",
+                "actions": [
+                    {
+                        "type": "origins:execute_command",
+                        "command": "scale set pehkui:height 0.15 @s"
+                    },
+                    {
+                        "type": "origins:execute_command",
+                        "command": "scale set pehkui:width 0.15 @s"
+                    },
+                    {
+                        "type": "origins:execute_command",
+                        "command": "scale set pehkui:hitbox_width 1.2 @s"
+                    },
+                    {
+                        "type": "origins:execute_command",
+                        "command": "scale set pehkui:hitbox_height 1.1 @s"
+                    },
+                    {    
+                        "type": "origins:execute_command",
+                        "command": "scale persist set true @s"
+                    }
+                ]
+            },
+        "entity_action_lost": {
+            "type": "origins:execute_command",
+            "command": "scale reset @s"
+        },
+        "execute_chosen_when_orb": true
+    },
+    "jump": {
+        "type": "origins:modify_air_speed",
+        "modifier": {
+            "operation": "multiply_total",
+            "value": -0.95
+        }
+    }
+}

@@ -1,0 +1,20 @@
+{
+	"powers": [
+		"tideorigins:infiniteair",
+		"origins:swim_speed",
+		"origins:aqua_affinity",
+		"origins:aquatic",
+        "tideorigins:shell",
+        "tideorigins:bubblebeam",
+        "tideorigins:riptide",
+        "tideorigins:moderateheight",
+        "origins:vegetarian"
+	],
+	"icon": {
+		"item": "minecraft:scute"
+	},
+	"order": 4,
+	"impact": 1,
+    "name": "Squirtle",
+	"description": "Squirtle are defensive masters, utilising their hard shell, water spouts, and swim speed to disengage from any kind of combat."
+}

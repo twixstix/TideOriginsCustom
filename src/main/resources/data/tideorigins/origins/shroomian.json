@@ -1,0 +1,17 @@
+{
+	"powers": [
+        "tideorigins:sporeatk",
+        "tideorigins:fungify",
+        "tideorigins:mushmaster",
+        "tideorigins:mushtoxin",
+        "tideorigins:mycelium",
+        "tideorigins:cavedweller",
+        "tideorigins:spore_particle",
+        "tideorigins:nogapple"
+	],
+	"icon": "minecraft:red_mushroom_block",
+    "order": 4,
+	"impact": 2,
+	"name": "Shroomian",
+	"description": "Shroomians may be pacifistic by nature, but when aggravated these funky fungi folk can be deadly."
+}

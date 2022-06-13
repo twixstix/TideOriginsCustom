@@ -1,0 +1,39 @@
+{
+    "name": "Eternal Fuel",
+    "description": "You can superheat your body, generating enough heat to smelt items directly from your inventory at the cost of some hunger.",
+    "type": "origins:item_on_item",
+    "on_item_condition": {
+        "type": "origins:smeltable"
+    },
+    "using_item_condition": {
+        "type": "origins:ingredient",
+        "ingredient": {
+            "item": "minecraft:furnace"
+        }
+    },
+    "result_from_on_stack": 1,
+    "result_item_action": {
+        "type": "origins:modify",
+        "modifier": "tideorigins:furnace_smelt"
+    },
+    "entity_action": {
+        "type": "origins:and",
+        "actions": [
+            {
+                "type": "origins:exhaust",
+                "amount": 5
+            },
+            {
+                "type": "origins:play_sound",
+                "sound": "minecraft:entity.blaze.shoot",
+                "pitch": 0.5
+            }
+        ]
+    },
+    "badges": [
+        {
+            "sprite": "origins:textures/gui/badge/info.png",
+            "text": "Pick up a furnace in your inventory and right-click on a smeltable item."
+        }
+    ]
+}

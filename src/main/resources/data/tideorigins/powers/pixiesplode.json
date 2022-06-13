@@ -1,0 +1,58 @@
+{
+    "name": "Sparkly Death",
+    "description": "You explode into pixie dust upon your death.",
+    "type": "origins:multiple",
+    "toggle": {
+        "type": "origins:resource",
+        "min": 0,
+        "max": 1,
+        "hud_render": {
+            "should_render": false
+        }
+    },
+    "prevent": {
+        "type": "origins:prevent_death",
+        "entity_action": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:clear_effect"
+                },
+                {
+                    "type": "origins:change_resource",
+                    "resource": "tideorigins:pixiesplode_toggle",
+                    "change": 1,
+                    "operation": "set"
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "/summon firework_rocket ~ ~ ~ {FireworksItem:{id:firework_rocket,Count:1,tag:{Fireworks:{Explosions:[{Type:0,Colors:[I;16753626]}]}}}}"
+                },
+                {
+                    "type": "origins:damage",
+                    "amount": 99,
+                    "source": {
+                        "name": "fireworks",
+                        "bypasses_armor": true,
+                        "unblockable": true
+                    }
+                }
+            ]
+        },
+        "condition": {
+            "type": "origins:resource",
+            "resource": "tideorigins:pixiesplode_toggle",
+            "comparison": "==",
+            "compare_to": 0
+        }
+    },
+    "reset": {
+        "type": "origins:action_on_callback",
+        "entity_action_respawned": {
+            "type": "origins:change_resource",
+            "resource": "tideorigins:pixiesplode_toggle",
+            "change": 0,
+            "operation": "set"
+        }
+    }
+}

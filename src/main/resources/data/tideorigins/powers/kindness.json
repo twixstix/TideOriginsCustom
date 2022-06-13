@@ -1,0 +1,31 @@
+{
+    "name": "Kindness",
+    "description": "Your kind nature prevents you from damaging innocent creatures. Villagers recognise this and treat you well.",
+    "type": "origins:multiple",
+    "nodamage": {
+        "type": "origins:modify_damage_dealt",
+        "bientity_condition": {
+            "type": "origins:target_condition",
+            "condition": {
+                "type": "origins:in_tag",
+                "tag": "tideorigins:passive"
+            }
+        },
+        "modifier": {
+            "operation": "multiply_total",
+            "value": -1
+        }
+    },
+    "hero": {
+        "type": "origins:stacking_status_effect",
+        "min_stacks": 0,
+        "max_stacks": 1,
+        "duration_per_stack": 100,
+        "effect": {
+            "effect": "minecraft:hero_of_the_village",
+            "is_ambient": true,
+            "show_particles": false,
+            "show_icon": false
+        }
+    }
+}

@@ -1,0 +1,9 @@
+{
+    "name": "Toxin Immunity",
+    "description": "The toxins that run through your body make you immune to poison and nausea.",
+    "type": "origins:effect_immunity",
+    "effects": [
+        "minecraft:nausea",
+        "minecraft:poison"
+    ]
+}

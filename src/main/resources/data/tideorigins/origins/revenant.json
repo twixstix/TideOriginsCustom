@@ -1,0 +1,15 @@
+{
+	"powers": [
+		"tideorigins:trueinvis",
+		"tideorigins:levitation",
+		"tideorigins:physbarrier",
+        "tideorigins:ghostneutral",
+		"tideorigins:undead",
+        "tideorigins:insomnia_jav"
+	],
+	"icon": "minecraft:glass_pane",
+    "order": 4,
+	"impact": 1,
+	"name": "Revenant",
+	"description": "After meeting their untimely demise, Revenants are souls cursed to wander the earth in their undeath."
+}

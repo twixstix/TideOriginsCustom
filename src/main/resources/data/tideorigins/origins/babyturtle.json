@@ -1,0 +1,27 @@
+{
+	"powers": [
+		"tideorigins:infiniteair",
+		"tideorigins:water_sight",
+		"origins:swim_speed",
+        "origins:like_water",
+		"origins:aqua_affinity",
+        "tideorigins:tridentmaster",
+		"tideorigins:babyaggro",
+        "tideorigins:smallturtle",
+        "tideorigins:turtleshell",
+		"origins:aquatic",
+        "tideorigins:riptide",
+        "origins:no_shield",
+        "tideorigins:flammable",
+        "tideorigins:turtlediet",
+		"tideorigins:nogapple",
+		"tideorigins:noturtlepot"
+	],
+	"icon": {
+		"item": "minecraft:scute"
+	},
+	"order": 4,
+	"impact": 3,
+    "name": "Baby Turtle",
+	"description": "These tiny newborn sea turtles can squeeze through every corner of the ocean."
+}

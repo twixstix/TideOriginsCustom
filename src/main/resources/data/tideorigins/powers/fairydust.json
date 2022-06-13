@@ -1,0 +1,91 @@
+{
+    "name": "Fairy Dust",
+    "description": "Holding Glowstone Dust or Redstone Dust and attacking someone converts it into Fairy Dust, causing them to glow or levitate for a few seconds.",
+    "type": "origins:multiple",
+    "glow": {
+        "type": "origins:action_on_hit",
+        "damage_condition": {
+            "type": "origins:attacker",
+            "entity_condition": {
+                "type": "origins:equipped_item",
+                "equipment_slot": "mainhand",
+                "item_condition": {
+                    "type": "origins:ingredient",
+                    "ingredient": {
+                        "item": "minecraft:glowstone_dust"
+                    }
+                }
+            }
+        },
+        "bientity_action": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:target_action",
+                    "action": {
+                        "type": "origins:apply_effect",
+                        "effect": {
+                            "effect": "minecraft:glowing",
+                            "duration": 80
+                        }
+                    }
+                },
+                {
+                    "type": "origins:actor_action",
+                    "action": {
+                        "type": "origins:equipped_item_action",
+                        "equipment_slot": "mainhand",
+                        "action": {
+                            "type": "origins:consume",
+                            "amount": 1
+                        }
+                    }
+                }
+            ]
+        },
+        "cooldown": 100
+    },
+    "float": {
+        "type": "origins:action_on_hit",
+        "damage_condition": {
+            "type": "origins:attacker",
+            "entity_condition": {
+                "type": "origins:equipped_item",
+                "equipment_slot": "mainhand",
+                "item_condition": {
+                    "type": "origins:ingredient",
+                    "ingredient": {
+                        "item": "minecraft:redstone"
+                    }
+                }
+            }
+        },
+        "bientity_action": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:target_action",
+                    "action": {
+                        "type": "origins:apply_effect",
+                        "effect": {
+                            "effect": "minecraft:levitation",
+                            "duration": 80
+                        }
+                    }
+                },
+                {
+                    "type": "origins:actor_action",
+                    "action": {
+                        "type": "origins:equipped_item_action",
+                        "equipment_slot": "mainhand",
+                        "action": {
+                            "type": "origins:consume",
+                            "amount": 1
+                        }
+                    }
+                }
+            ]
+        },
+        "cooldown": 100
+    }
+}

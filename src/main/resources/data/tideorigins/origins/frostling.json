@@ -1,0 +1,17 @@
+{
+	"powers": [
+        "tideorigins:r_temperature",
+        "tideorigins:r_overheat",
+        "tideorigins:r_melting",
+        "tideorigins:meltable",
+        "tideorigins:freeze_attack",
+        "tideorigins:snowmaster",
+        "tideorigins:frostwalker",
+        "tideorigins:snow_particle"
+	],
+	"icon": "minecraft:ice",
+    "order": 4,
+	"impact": 3,
+	"name": "Frostling",
+	"description": "Frostlings are crystalline creatures with power over all things icy. They prefer to stick to tundras and frozen biomes, as the heat will make them quickly begin to melt."
+}

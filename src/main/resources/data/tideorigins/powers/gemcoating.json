@@ -1,0 +1,118 @@
+{
+    "name": "Defensive Coating",
+    "description": "Your body is covered with a protective shield of gems that reduces damage and makes you immune to knockback. Taking damage reduces this coating, and when fully shattered you'll take increased damage. The coating regenerates out of combat.",
+    "type": "origins:multiple",
+    "coatingbar": {
+        "type": "origins:resource",
+        "min": 0,
+        "max": 3,
+        "start_value": 3,
+        "hud_render": {
+            "should_render": true,
+            "sprite_location": "origins:textures/gui/community/spiderkolo/resource_bar_03.png",
+		    "bar_index": 12
+        }
+    },
+    "timerbar": {
+        "type": "origins:resource",
+        "min": 0,
+        "max": 200,
+        "hud_render": {
+            "should_render": false
+        }
+    },
+    "knockback": {
+        "type": "origins:conditioned_attribute",
+        "modifier": {
+            "attribute": "minecraft:generic.knockback_resistance",
+            "operation": "addition",
+            "value": 1
+        },
+        "tick_rate": 5,
+        "condition": {
+            "type": "origins:resource",
+            "resource": "tideorigins:gemcoating_coatingbar",
+            "comparison": ">",
+            "compare_to": 0 
+        }
+    },
+    "defense": {
+        "type": "origins:modify_damage_taken",
+        "modifier": {
+            "operation": "multiply_base",
+            "value": -0.5
+        },
+        "condition": {
+            "type": "origins:resource",
+            "resource": "tideorigins:gemcoating_coatingbar",
+            "comparison": ">",
+            "compare_to": 0
+        }
+    },
+    "restorecoating": {
+        "type": "origins:action_over_time",
+        "entity_action": {
+            "type": "origins:change_resource",
+            "resource": "tideorigins:gemcoating_coatingbar",
+            "change": 1
+        },
+        "interval": 20,
+        "condition": {
+            "type": "origins:resource",
+            "resource": "tideorigins:gemcoating_timerbar",
+            "comparison": "==",
+            "compare_to": 200 
+        }
+    },
+    "combattimer": {
+        "type": "origins:action_over_time",
+        "entity_action": {
+            "type": "origins:change_resource",
+            "resource": "tideorigins:gemcoating_timerbar",
+            "change": 5
+        },
+        "interval": 5
+    },
+    "timerreset_onhit": {
+        "type": "origins:action_when_damage_taken",
+        "entity_action": {
+            "type": "origins:change_resource",
+            "resource": "tideorigins:gemcoating_timerbar",
+            "change": 0,
+            "operation": "set"
+        },
+        "cooldown": 1
+    },
+    "timerreset_onatk": {
+        "type": "origins:self_action_on_hit",
+        "entity_action": {
+            "type": "origins:change_resource",
+            "resource": "tideorigins:gemcoating_timerbar",
+            "change": 0,
+            "operation": "set"
+        },
+        "cooldown": 1
+    },
+    "reducecoating": {
+        "type": "origins:self_action_when_hit",
+        "entity_action": {
+            "type": "origins:change_resource",
+            "resource": "tideorigins:gemcoating_coatingbar",
+            "change": -1
+        },
+        "cooldown": 1
+    },
+    "increasedmg": {
+        "type": "origins:modify_damage_taken",
+        "modifier": {
+            "operation": "multiply_base",
+            "value": 0.5
+        },
+        "condition": {
+            "type": "origins:resource",
+            "resource": "tideorigins:gemcoating_coatingbar",
+            "comparison": "==",
+            "compare_to": 0
+        }
+    }
+}

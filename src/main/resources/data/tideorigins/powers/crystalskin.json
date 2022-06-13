@@ -1,0 +1,7 @@
+{
+    "name": "Crystal Skin",
+    "hidden": true,
+    "type": "origins:particle",
+    "particle": "minecraft:wax_off",
+    "frequency": 20
+}

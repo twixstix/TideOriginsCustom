@@ -1,0 +1,27 @@
+{
+  "replace": false,
+  "origins": [
+    "tideorigins:parrot",
+    "tideorigins:cavespider",
+    "tideorigins:ghast",
+    "tideorigins:babyturtle",
+    "tideorigins:babyevoker",
+    "tideorigins:moth",
+    "tideorigins:frostling",
+    "tideorigins:bat",
+    "tideorigins:shroomian",
+    "tideorigins:amphibian",
+    "tideorigins:crystalline",
+    "tideorigins:naturefairy",
+    "tideorigins:firefairy",
+    "tideorigins:flyingrabbit",
+    "tideorigins:crow",
+    "tideorigins:slayer",
+    "tideorigins:revenant",
+    "tideorigins:merling_marty",
+    "tideorigins:trialite",
+    "tideorigins:trialite2",
+    "tideorigins:werewolf",
+    "tideorigins:midas"
+  ]
+}

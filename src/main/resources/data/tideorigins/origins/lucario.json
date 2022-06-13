@@ -1,0 +1,20 @@
+{
+	"powers": [
+		"tideorigins:meleeonly2",
+		"tideorigins:swift2",	
+        "tideorigins:aurasphere",
+        "tideorigins:auraspherepvp",
+        "tideorigins:immunity",
+        "tideorigins:stab",
+        "tideorigins:moderateheight",
+        "tideorigins:flammable",
+        "tideorigins:rusty",
+        "tideorigins:grabbable"
+	],
+	"icon": "minecraft:iron_ingot",
+    "order": 4,
+	"impact": 2,
+	"name": "Lucario",
+	"description": "Not only can Lucario detect auras, they have gained the power to control them for use in combat.",
+    "unchoosable": true
+}

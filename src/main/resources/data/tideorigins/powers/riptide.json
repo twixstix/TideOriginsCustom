@@ -1,0 +1,46 @@
+{
+    "type": "origins:active_self",
+    "name": "Riptide",
+    "description": "You can dash through the water with your active ability.",
+    "entity_action": {
+        "type": "origins:and",
+        "actions": [
+            {
+                "type": "origins:add_velocity",
+                "space": "local",
+                "z": 1.5
+            },
+            {
+                "type": "origins:play_sound",
+                "sound": "minecraft:item.trident.riptide_1"
+            },
+            {
+                "type": "origins:exhaust",
+                "amount": 0.4
+            }
+        ]
+    },
+    "cooldown": 20,
+    "condition": {
+        "type": "origins:or",
+        "conditions": [
+            {
+                "type": "origins:in_block_anywhere",
+                "block_condition": {
+                    "type": "origins:block",
+                    "block": "minecraft:water"
+                },
+                "comparison": ">=",
+                "compare_to": 1
+            },
+            {
+                "type": "origins:in_rain"
+            }
+        ]
+    },
+    "hud_render": {
+        "should_render": true,
+        "sprite_location": "origins:textures/gui/resource_bar.png",
+        "bar_index": 1
+    }
+}

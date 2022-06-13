@@ -1,0 +1,27 @@
+{
+    "name": "Tension",
+    "description": "You enjoy the high of tense combat, granting you bonus strength when under half health, but it slows you down as well.",
+    "type": "origins:stacking_status_effect",
+    "min_stacks": 0,
+    "max_stacks": 1,
+    "duration_per_stack": 20,
+    "effects": [
+        {
+            "effect": "minecraft:strength",
+            "is_ambient": true,
+            "show_particles": false,
+            "show_icon": true
+        },
+        {
+            "effect": "minecraft:slowness",
+            "is_ambient": true,
+            "show_particles": false,
+            "show_icon": true
+        }
+    ],
+    "condition": {
+        "type": "origins:relative_health",
+        "comparison": "<=",
+        "compare_to": 0.5
+    }
+}

@@ -1,0 +1,92 @@
+{
+    "name": "Fairy Allies",
+    "description": "Clicking any flower on another flower generates a special token. Give it to another player, and they can right-click on you to become your ally.",
+    "type": "origins:multiple",
+    "jointeam": {
+        "type": "origins:action_on_callback",
+        "entity_action_chosen": {
+            "type": "origins:execute_command",
+            "command": "tag @s add fairy"
+        },
+        "entity_action_lost": {
+            "type": "origins:execute_command",
+            "command": "tag @s remove fairy"
+        },
+        "execute_chosen_when_orb": true
+    },
+    "createtoken": {
+        "type": "origins:item_on_item",
+        "on_item_condition": {
+            "type": "origins:ingredient",
+            "ingredient": {
+                "tag": "minecraft:flowers"
+            }
+        },
+        "using_item_condition": {
+            "type": "origins:ingredient",
+            "ingredient": {
+                "tag": "minecraft:flowers"
+            }
+        },
+        "result": {
+            "item": "minecraft:sunflower",
+            "tag": "{display:{Name:'{\"text\":\"Alliance Token\"}',Lore:['{\"text\":\"Using this token on a Fairy binds you to an alliance with the Fairies.\"}','{\"text\":\"With it comes boons, but beware, they are known for being mischievous...\"}']},Enchantments:[{}]}"
+        },
+        "result_from_on_stack": 1,
+        "using_item_action": {
+            "type": "origins:consume",
+            "amount": 1
+        },
+        "on_item_action": {
+            "type": "origins:consume",
+            "amount": 1
+        },
+        "entity_action": {
+            "type": "origins:play_sound",
+            "sound": "minecraft:block.beacon.power_select",
+            "pitch": 1.5
+        }
+    },
+    "becomeallies": {
+        "type": "origins:action_on_being_used",
+        "bientity_action": {
+            "type": "origins:actor_action",
+            "action": {
+                "type": "origins:execute_command",
+                "command": "/function tideorigins:fairyjoin"
+            }
+        },
+        "hands": [
+            "main_hand"
+        ],
+        "item_condition": {
+            "type": "origins:nbt",
+            "nbt": "{display:{Name:'{\"text\":\"Alliance Token\"}',Lore:['{\"text\":\"Using this token on a Fairy binds you to an alliance with the Fairies.\"}','{\"text\":\"With it comes boons, but beware, they are known for being mischievous...\"}']},Enchantments:[{}]}"
+        },
+        "held_item_action": {
+            "type": "origins:consume",
+            "amount": 1
+        }
+    },
+    "revokeally": {
+        "type": "origins:action_on_entity_use",
+        "bientity_action": {
+            "type": "origins:target_action",
+            "action": {
+                "type": "origins:execute_command",
+                "command": "/function tideorigins:fairyleave"
+            }
+        },
+        "item_condition": {
+            "type": "origins:nbt",
+            "nbt": "{display:{Name:'{\"text\":\"Alliance Token\"}',Lore:['{\"text\":\"Using this token on a Fairy binds you to an alliance with the Fairies.\"}','{\"text\":\"With it comes boons, but beware, they are known for being mischievous...\"}']},Enchantments:[{}]}"
+        },
+        "hands": [
+            "main_hand"
+        ],
+        "held_item_action": {
+            "type": "origins:consume",
+            "amount": 1
+        }
+    }
+}

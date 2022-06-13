@@ -1,0 +1,62 @@
+{
+    "name": "Totem of Undying",
+    "description": "The power of a Totem of Undying is imbued within you, allowing you to prevent your own death once every 10 minutes.",
+    "type": "origins:multiple",
+    "prevent": {
+        "type": "origins:prevent_death",
+        "entity_action": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:clear_effect"
+                },
+                {
+                    "type": "origins:apply_effect",
+                    "effects": [
+                        {
+                            "effect": "minecraft:regeneration",
+                            "amplifier": 1,
+                            "duration": 900
+                        },
+                        {
+                            "effect": "minecraft:fire_resistance",
+                            "duration": 800
+                        },
+                        {
+                            "effect": "minecraft:absorption",
+                            "amplifier": 1,
+                            "duration": 100
+                        }
+                    ]
+                },
+                {
+                    "type": "origins:trigger_cooldown",
+                    "power": "tideorigins:totemofundying_cooldown"
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "/particle minecraft:totem_of_undying ~ ~ ~ .5 .5 .5 0.5 100 normal @a"
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "playsound minecraft:item.totem.use player @a[distance=..32] ~ ~ ~ .5 1"
+                }
+            ]
+        },
+        "condition": {
+            "type": "origins:resource",
+            "resource": "tideorigins:totemofundying_cooldown",
+            "comparison": "==",
+            "compare_to": 0
+        }
+    },
+    "cooldown": {
+        "type": "origins:cooldown",
+        "cooldown": 12000,
+        "hud_render": {
+            "should_render": true,
+            "sprite_location": "origins:textures/gui/community/huang/resource_bar_01.png",
+            "bar_index": 6
+        }
+    }
+}

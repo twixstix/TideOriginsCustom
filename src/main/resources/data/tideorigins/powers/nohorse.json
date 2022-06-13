@@ -1,0 +1,19 @@
+{
+    "name": "Horse Repellant",
+    "description": "Horses are scared of you, preventing you from riding them.",
+    "type": "origins:prevent_entity_use",
+    "bientity_action": {
+        "type": "origins:actor_action",
+        "action": {
+            "type": "origins:execute_command",
+            "command": "title @s actionbar {\"text\": \"You cannot ride horses!\", \"color\": \"red\"}"
+        }
+    },
+    "bientity_condition": {
+        "type": "origins:target_condition",
+        "condition": {
+            "type": "origins:entity_type",
+            "entity_type": "minecraft:horse"
+        }
+    }
+}

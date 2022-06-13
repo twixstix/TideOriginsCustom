@@ -1,0 +1,22 @@
+{
+    "replace": false,
+    "values": [
+        "minecraft:wooden_axe",
+        "minecraft:stone_axe",
+        "minecraft:iron_axe",
+        "minecraft:golden_axe",
+        "minecraft:diamond_axe",
+        "minecraft:netherite_axe",
+        "additionaladditions:rose_gold_axe",
+        "additionaladditions:gilded_netherite_axe",
+        "betternether:cincinnasite_axe",
+        "betternether:cincinnasite_axe_diamond",
+        "betternether:nether_ruby_axe",
+        "emerald_tools:emerald_axe",
+        "emerald_tools:ruby_axe",
+        "emerald_tools:amethyst_axe",
+        "emerald_tools:steel_axe",
+        "emerald_tools:obsidian_axe",
+        "emerald_tools:copper_axe"
+    ]
+}

@@ -1,0 +1,17 @@
+{
+    "name": "Lava Dweller",
+    "description": "Lava poses no challenge to you. You can swim and see through it freely.",
+    "type": "origins:multiple",
+    "lavaswim": {
+        "type": "origins:modify_lava_speed",
+        "modifier": {
+            "operation": "addition",
+            "value": 0.4
+        }
+    },
+    "vision": {
+        "type": "origins:lava_vision",
+        "s": 0,
+        "v": 20
+    }
+}

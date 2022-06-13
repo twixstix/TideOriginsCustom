@@ -1,0 +1,27 @@
+{
+    "type": "origins:multiple",
+    "name": "Flammable",
+    "description": "Lava and fire do increased damage to you and rapidly increase your temperature.",
+    "fire": {
+        "type": "origins:modify_damage_taken",
+        "damage_condition": {
+            "type": "origins:name",
+            "name": "onFire"
+        },
+        "modifier": {
+            "operation": "addition",
+            "value": 0.5
+        }
+    },
+    "lava": {
+        "type": "origins:modify_damage_taken",
+        "damage_condition": {
+            "type": "origins:name",
+            "name": "lava"
+        },
+        "modifier": {
+            "operation": "addition",
+            "value": 1
+        }
+    }
+}

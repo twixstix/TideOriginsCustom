@@ -1,0 +1,40 @@
+{
+    "name": "Crystalline Interior",
+    "description": "Your body does not contain a stomach, so you do not experience hunger. However, this means you cannot heal via food.",
+    "type": "origins:multiple",
+    "nofood": {
+        "type": "origins:prevent_item_use",
+        "item_condition": {
+            "type": "origins:and",
+            "conditions": [
+            {
+                "type": "origins:food"
+            },
+            {
+                "type": "origins:ingredient",
+                "ingredient": {
+                    "tag": "origins:ignore_diet"
+                },
+                "inverted": true
+            }
+            ]
+        }
+    },
+    "noexhaust": {
+        "type": "origins:modify_exhaustion",
+        "modifier": {
+            "name": "No exhaustion",
+            "operation": "multiply_base",
+            "value": -1
+        }
+    },
+    "hungerimmune": {
+        "type": "origins:effect_immunity",
+        "effects": [
+            "minecraft:hunger"
+        ]
+    },
+    "noregen": {
+        "type": "origins:disable_regen"
+    }
+}

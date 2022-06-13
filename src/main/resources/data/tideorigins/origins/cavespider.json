@@ -1,0 +1,17 @@
+{
+	"powers": [
+        "origins:climbing",
+		"origins:master_of_webs",
+        "tideorigins:venom",
+		"tideorigins:smallspider",
+		"origins:carnivore",
+		"origins:arthropod",
+		"tideorigins:ally_arthropod",
+        "tideorigins:cavedweller"
+	],
+	"icon": "minecraft:spider_eye",
+    "order": 4,
+	"impact": 1,
+	"name": "Cave Arachnid",
+	"description": "Smaller cousin to the standard Arachnid, they trade off their size for a powerful venom."
+}
