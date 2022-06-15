@@ -9,6 +9,7 @@ public class TideOriginsClient implements ClientModInitializer {
     @Override
     public void onInitializeClient() {
         BlockRenderLayerMap.INSTANCE.putBlock(TideOriginsMod.EMBERBLOOM, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(TideOriginsMod.HEARTFRUIT_BUSH, RenderLayer.getCutout());
     }
 
 }

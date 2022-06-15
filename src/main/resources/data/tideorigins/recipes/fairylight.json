@@ -1,0 +1,19 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        " # ",
+        "#G#",
+        " # "
+    ],
+    "key": {
+        "#": {
+            "tag": "minecraft:flowers"
+        },
+        "G": {
+            "item": "minecraft:glowstone"
+        }
+    },
+    "result": {
+        "item": "tideorigins:fairylight"
+    }
+}
