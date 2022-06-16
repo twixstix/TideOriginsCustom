@@ -1,0 +1,20 @@
+{
+    "name": "Lungless",
+    "description": "You do not have lungs, so you cannot suffocate or drown.",
+    "type": "origins:multiple",
+    "wall": {
+        "type": "origins:invulnerability",
+        "damage_condition": {
+            "type": "origins:name",
+            "name": "inWall"
+        }
+    },
+    "air": {
+        "type": "origins:action_over_time",
+        "entity_action": {
+            "type": "origins:gain_air",
+            "value": 5
+        },
+        "interval": 5
+    }
+}

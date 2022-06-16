@@ -1,0 +1,24 @@
+{
+    "name": "Alluring Aura",
+    "description": "You exude a gentle aura, causing villagers to naturally trust you and calming the aggressions of Creepers and Endermen.",
+    "type": "origins:multiple",
+    "hero": {
+        "type": "origins:stacking_status_effect",
+        "min_stacks": 0,
+        "max_stacks": 1,
+        "duration_per_stack": 100,
+        "effect": {
+            "effect": "minecraft:hero_of_the_village",
+            "is_ambient": true,
+            "show_particles": false,
+            "show_icon": false
+        }
+    },
+    "neut": {
+        "type": "extraorigins:mob_neutrality",
+        "entity_types": [
+            "minecraft:enderman",
+            "minecraft:creeper"
+        ]
+    }
+}

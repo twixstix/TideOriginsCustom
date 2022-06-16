@@ -46,7 +46,7 @@
                 },
                 {
                     "type": "origins:execute_command",
-                    "command": "/summon area_effect_cloud ~ ~ ~ {Particle:\"flame\",Radius:5f,Duration:10}"
+                    "command": "/summon area_effect_cloud ~ ~0.5 ~ {Particle:\"flame\",Radius:5f,Duration:10}"
                 },
                 {
                     "type": "origins:play_sound",

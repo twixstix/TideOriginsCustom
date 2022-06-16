@@ -1,6 +1,6 @@
 {
     "name": "Compact Size",
-    "description": "You're smaller than average, and your light body causes you to receive extra knockback.",
+    "description": "You're smaller than average, and your light body causes you to receive extra knockback. You take less kinetic damage when flying, though.",
     "type": "origins:multiple",
     "knockback": {
         "type": "origins:action_when_hit",
@@ -13,25 +13,36 @@
         "type": "origins:action_on_callback",
         "entity_action_chosen": {
             "type": "origins:and",
-                "actions": [
-                    {
-                        "type": "origins:execute_command",
-                        "command": "scale set pehkui:height 0.66 @s"
-                    },
-                    {
-                        "type": "origins:execute_command",
-                        "command": "scale set pehkui:width 0.66 @s"
-                    },
-                    {    
-                        "type": "origins:execute_command",
-                        "command": "scale persist set true @s"
-                    }
-                ]
-            },
+            "actions": [
+                {
+                    "type": "origins:execute_command",
+                    "command": "scale set pehkui:height 0.66 @s"
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "scale set pehkui:width 0.66 @s"
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "scale persist set true @s"
+                }
+            ]
+        },
         "entity_action_lost": {
             "type": "origins:execute_command",
             "command": "scale reset @s"
         },
         "execute_chosen_when_orb": true
+    },
+    "kinetic": {
+        "type": "origins:modify_damage_taken",
+        "modifier": {
+            "value": -0.5,
+            "operation": "multiply_base"
+        },
+        "damage_condition": {
+            "type": "origins:name",
+            "name": "flyIntoWall"
+        }
     }
 }

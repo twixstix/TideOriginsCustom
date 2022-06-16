@@ -1,5 +1,19 @@
 {
-    "type": "origins:entity_group",
-    "group": "undead",
-    "hidden": true
-  }
+    "name": "Mount",
+    "description": "Your small size allows you to be picked up by other players.",
+    "type": "origins:action_on_entity_use",
+    "bientity_action": {
+        "type": "origins:mount"
+    },
+    "bientity_condition": {
+        "type": "origins:distance",
+        "comparison": "<=",
+        "compare_to": 5
+    },
+    "item_condition": {
+        "type": "origins:empty"
+    },
+    "hands": [
+        "main_hand"
+    ]
+}

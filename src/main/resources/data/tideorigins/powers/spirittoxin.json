@@ -1,0 +1,96 @@
+{
+    "name": "Impurities",
+    "description": "Magical toxins such as poison and wither are more harmful to you. Poison is capable of killing you, and other negative potion effects are twice as strong.",
+    "type": "origins:multiple",
+    "poison": {
+        "type": "origins:action_over_time",
+        "entity_action": {
+            "type": "origins:damage",
+            "amount": 99,
+            "source": {
+                "name": "wither",
+                "bypasses_armor": true,
+                "unblockable": true
+            }
+        },
+        "interval": 20,
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:status_effect",
+                    "effect": "minecraft:poison"
+                },
+                {
+                    "type": "origins:health",
+                    "comparison": "<=",
+                    "compare_to": 1
+                }
+            ]
+        }
+    },
+    "wither": {
+        "type": "origins:modify_status_effect_amplifier",
+        "status_effect": "minecraft:wither",
+        "modifier": {
+            "operation": "addition",
+            "value": 1
+        }
+    },
+    "slow": {
+        "type": "origins:modify_status_effect_amplifier",
+        "status_effect": "minecraft:slowness",
+        "modifier": {
+            "operation": "addition",
+            "value": 1
+        }
+    },
+    "poisonamp": {
+        "type": "origins:modify_status_effect_amplifier",
+        "status_effect": "minecraft:poison",
+        "modifier": {
+            "operation": "addition",
+            "value": 1
+        }
+    },
+    "dmg": {
+        "type": "origins:modify_status_effect_amplifier",
+        "status_effect": "minecraft:instant_damage",
+        "modifier": {
+            "operation": "addition",
+            "value": 1
+        }
+    },
+    "weak": {
+        "type": "origins:modify_status_effect_amplifier",
+        "status_effect": "minecraft:weakness",
+        "modifier": {
+            "operation": "addition",
+            "value": 1
+        }
+    },
+    "fatigue": {
+        "type": "origins:modify_status_effect_amplifier",
+        "status_effect": "minecraft:mining_fatigue",
+        "modifier": {
+            "operation": "addition",
+            "value": 1
+        }
+    },
+    "hunger": {
+        "type": "origins:modify_status_effect_amplifier",
+        "status_effect": "minecraft:hunger",
+        "modifier": {
+            "operation": "addition",
+            "value": 1
+        }
+    },
+    "nausea": {
+        "type": "origins:modify_status_effect_amplifier",
+        "status_effect": "minecraft:nausea",
+        "modifier": {
+            "operation": "addition",
+            "value": 1
+        }
+    }
+}

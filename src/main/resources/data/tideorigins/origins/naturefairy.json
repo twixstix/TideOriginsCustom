@@ -4,18 +4,19 @@
         "tideorigins:sweettooth",
         "tideorigins:highmetabolism",
         "tideorigins:naturebless",
-        "tideorigins:summoning",
+        "tideorigins:summoning_ellie",
         "tideorigins:lifeshare",
-        "tideorigins:invisibility",
+        "tideorigins:invisibility_toggle",
         "tideorigins:fairydust",
         "tideorigins:kindness",
+        "moborigins:queen_bee",
         "origins:vegetarian",
         "tideorigins:petite",
         "tideorigins:grabbable",
         "tideorigins:flammable",
         "tideorigins:metalweakness",
         "tideorigins:faetoken",
-        "tideorigins:relic_fairy"
+        "tideorigins:relic_fairy2"
 
 	],
 	"icon": "minecraft:glowstone_dust",

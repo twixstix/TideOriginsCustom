@@ -1,0 +1,32 @@
+{
+    "name": "Upgraded Jet Leap",
+    "description": "Activate to throw yourself in the direction you are facing with a large amount of speed. However, this drains some of your hunger.",
+    "type": "origins:active_self",
+    "entity_action": {
+        "type": "origins:and",
+        "actions": [
+            {
+                "type": "origins:add_velocity",
+                "space": "local",
+                "z": 2
+            },
+            {
+                "type": "origins:play_sound",
+                "sound": "minecraft:entity.firework_rocket.launch"
+            },
+            {
+                "type": "origins:exhaust",
+                "amount": 10
+            }
+        ]
+    },
+    "cooldown": 300,
+    "hud_render": {
+        "sprite_location": "origins:textures/gui/community/spiderkolo/resource_bar_03.png",
+        "bar_index": 24
+    },
+    "key": {
+        "key": "key.origins.secondary_active",
+        "continuous": false
+    }
+}

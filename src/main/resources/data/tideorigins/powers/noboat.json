@@ -1,0 +1,31 @@
+{
+    "name": "Bad Sailor",
+    "description": "Even being in a boat is too close to water for your tastes. You cannot use boats at all.",
+    "type": "origins:multiple",
+    "entity": {
+        "type": "origins:prevent_entity_use",
+        "bientity_action": {
+            "type": "origins:actor_action",
+            "action": {
+                "type": "origins:execute_command",
+                "command": "title @s actionbar {\"text\": \"Cannot interact with boats!\", \"color\": \"red\"}"
+            }
+        },
+        "bientity_condition": {
+            "type": "origins:target_condition",
+            "condition": {
+                "type": "origins:entity_type",
+                "entity_type": "minecraft:boat"
+            }
+        }
+    },
+    "item": {
+        "type": "origins:prevent_item_use",
+        "item_condition": {
+            "type": "origins:ingredient",
+            "ingredient": {
+                "tag": "tideorigins:boats"
+            }
+        }
+    }
+}

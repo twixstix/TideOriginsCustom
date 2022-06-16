@@ -12,11 +12,12 @@
         ]
     },
     "swimspeed": {
-        "type": "origins:modify_swim_speed",
+        "type": "origins:attribute",
         "modifier": {
-            "name": "Additional swim speed",
-            "value": 0.05,
-            "operation": "addition"
+          "attribute": "additionalentityattributes:water_speed",
+          "name": "Additional swim speed",
+          "value": 1.75,
+          "operation": "multiply_base"
         }
     },
     "strength": {

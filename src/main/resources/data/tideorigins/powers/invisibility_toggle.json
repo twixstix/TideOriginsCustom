@@ -1,0 +1,43 @@
+{
+    "name": "Mischevious",
+    "description": "You can toggle the ability to become invisible. You can't hide your armour or the things you're holding, though.",
+    "type": "origins:multiple",
+    "invis": {
+        "type": "origins:invisibility",
+        "render_armor": true,
+        "condition": {
+            "type": "origins:power_active",
+            "power": "tideorigins:*_toggle"
+        }
+    },
+    "toggle": {
+        "type": "origins:toggle",
+        "active_by_default": false,
+        "key": {
+            "key": "key.origins.primary_active"
+        }
+    },
+    "exhaust": {
+        "type": "origins:exhaust",
+        "interval": 20,
+        "exhaustion": 0.05,
+        "condition": {
+            "type": "origins:power_active",
+            "power": "tideorigins:*_toggle"
+        }
+    },
+    "sparkles": {
+        "type": "origins:active_self",
+        "entity_action": {
+            "type": "origins:spawn_particles",
+            "particle": {
+                "type": "minecraft:happy_villager"
+            },
+            "count": 10
+        },
+        "cooldown": 1,
+        "hud_render": {
+            "should_render": false
+        }
+    }
+}

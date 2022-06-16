@@ -1,0 +1,630 @@
+{
+    "name": "Impersonate",
+    "description": "As a spirit, you can possess the bodies of other creatures. While in a body you lose hunger constantly, but hostile creatures will become passive towards you.",
+    "type": "origins:multiple",
+    "bool": {
+        "type": "origins:resource",
+        "min": 0,
+        "max": 1,
+        "hud_render": {
+            "should_render": false
+        }
+    },
+    "createteam": {
+        "type": "origins:action_on_callback",
+        "entity_action_chosen": {
+            "type": "origins:execute_command",
+            "command": "team add LoveSpirit"
+        },
+        "execute_chosen_when_orb": true
+    },
+    "addplayer": {
+        "type": "origins:action_on_callback",
+        "entity_action_chosen": {
+            "type": "origins:execute_command",
+            "command": "team join LoveSpirit @s"
+        },
+        "entity_action_lost": {
+            "type": "origins:execute_command",
+            "command": "team leave @s"
+        },
+        "execute_chosen_when_orb": true
+    },
+    "active": {
+        "type": "origins:action_over_time",
+        "entity_action": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:execute_command",
+                    "command": "tp @e[tag=SpiritBody,limit=1] ~ ~ ~ ~ ~"
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "team join LoveSpirit @e[type=!minecraft:player,type=!minecraft:ender_dragon,type=!minecraft:wither,distance=..8]"
+                }
+            ]
+        },
+        "interval": 1,
+        "condition": {
+            "type": "origins:resource",
+            "resource": "tideorigins:*_bool",
+            "comparison": "==",
+            "compare_to": 1
+        }
+    },
+    "starve": {
+        "type": "origins:action_over_time",
+        "entity_action": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:change_resource",
+                    "resource": "tideorigins:*_bool",
+                    "operation": "set",
+                    "change": 0
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "function tideorigins:body_leave"
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "scale reset pehkui:height @s"
+                },
+                {
+                    "type": "origins:change_resource",
+                    "resource": "tideorigins:fly_love_bool",
+                    "operation": "set",
+                    "change": 0
+                },
+                {
+                    "type": "origins:revoke_power",
+                    "power": "tideorigins:trueneutral",
+                    "source": "tideorigins:lovespirit"
+                }
+            ]
+        },
+        "interval": 10,
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:resource",
+                    "resource": "tideorigins:*_bool",
+                    "comparison": "==",
+                    "compare_to": 1
+                },
+                {
+                    "type": "origins:food_level",
+                    "comparison": "<=",
+                    "compare_to": 6
+                }
+            ]
+        }
+    },
+    "shutdown": {
+        "type": "origins:active_self",
+        "entity_action": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:change_resource",
+                    "resource": "tideorigins:*_bool",
+                    "operation": "set",
+                    "change": 0
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "function tideorigins:body_leave"
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "scale reset pehkui:height @s"
+                },
+                {
+                    "type": "origins:change_resource",
+                    "resource": "tideorigins:fly_love_bool",
+                    "operation": "set",
+                    "change": 0
+                },
+                {
+                    "type": "origins:revoke_power",
+                    "power": "tideorigins:trueneutral",
+                    "source": "tideorigins:lovespirit"
+                }
+            ]
+        },
+        "cooldown": 20,
+        "hud_render": {
+            "should_render": false
+        },
+        "condition": {
+            "type": "origins:resource",
+            "resource": "tideorigins:*_bool",
+            "comparison": "==",
+            "compare_to": 1
+        },
+        "key": {
+            "key": "key.sneak",
+            "continuous": false
+        }
+    },
+    "respawn": {
+        "type": "origins:action_on_callback",
+        "entity_action_respawned": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:change_resource",
+                    "resource": "tideorigins:*_bool",
+                    "operation": "set",
+                    "change": 0
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "function tideorigins:body_leave"
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "scale reset pehkui:height @s"
+                },
+                {
+                    "type": "origins:change_resource",
+                    "resource": "tideorigins:fly_love_bool",
+                    "operation": "set",
+                    "change": 0
+                },
+                {
+                    "type": "origins:revoke_power",
+                    "power": "tideorigins:trueneutral",
+                    "source": "tideorigins:lovespirit"
+                }
+            ]
+        }
+    },
+    "invis": {
+        "type": "origins:invisibility",
+        "render_armor": false,
+        "condition": {
+            "type": "origins:resource",
+            "resource": "tideorigins:*_bool",
+            "comparison": "==",
+            "compare_to": 1
+        }
+    },
+    "overlay": {
+        "type": "apoli:overlay",
+        "texture": "minecraft:textures/misc/nausea.png",
+        "red": 0.2,
+        "green": 0,
+        "blue": 0.06,
+        "strength": 0.7,
+        "draw_mode": "nausea",
+        "draw_phase": "above_hud",
+        "visible_in_third_person": true,
+        "hide_with_hud": true,
+        "condition": {
+            "type": "origins:resource",
+            "resource": "tideorigins:*_bool",
+            "comparison": "==",
+            "compare_to": 1
+        }
+    },
+    "nocollide": {
+        "type": "origins:prevent_entity_collision",
+        "condition": {
+            "type": "origins:resource",
+            "resource": "tideorigins:*_bool",
+            "comparison": "==",
+            "compare_to": 1
+        }
+    },
+    "hunger": {
+        "type": "origins:exhaust",
+        "interval": 20,
+        "exhaustion": 0.406,
+        "condition": {
+            "type": "origins:resource",
+            "resource": "tideorigins:*_bool",
+            "comparison": "==",
+            "compare_to": 1
+        }
+    },
+    "small": {
+        "type": "origins:active_self",
+        "entity_action": {
+            "type": "origins:raycast",
+            "distance": 5,
+            "block": false,
+            "entity": true,
+            "shape_type": "collider",
+            "fluid_handling": "none",
+            "bientity_action": {
+                "type": "origins:and",
+                "actions": [
+                    {
+                        "type": "origins:target_action",
+                        "action": {
+                            "type": "origins:and",
+                            "actions": [
+                                {
+                                    "type": "origins:execute_command",
+                                    "command": "function tideorigins:body_possess"
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "type": "origins:actor_action",
+                        "action": {
+                            "type": "origins:and",
+                            "actions": [
+                                {
+                                    "type": "origins:execute_command",
+                                    "command": "scale set pehkui:height 0.5 @s"
+                                },
+                                {
+                                    "type": "origins:execute_command",
+                                    "command": "tp @s @e[tag=SpiritBody,limit=1]"
+                                },
+                                {
+                                    "type": "origins:change_resource",
+                                    "resource": "tideorigins:*_bool",
+                                    "operation": "set",
+                                    "change": 1
+                                },
+                                {
+                                    "type": "origins:change_resource",
+                                    "resource": "tideorigins:fly_love_bool",
+                                    "operation": "set",
+                                    "change": 1
+                                },
+                                {
+                                    "type": "origins:grant_power",
+                                    "power": "tideorigins:trueneutral",
+                                    "source": "tideorigins:lovespirit"
+                                }
+                            ]
+                        }
+                    }
+                ]
+            },
+            "bientity_condition": {
+                "type": "origins:target_condition",
+                "condition": {
+                    "type": "origins:in_tag",
+                    "tag": "tideorigins:spirit_small"
+                }
+            }
+        },
+        "cooldown": 20,
+        "hud_render": {
+            "should_render": false
+        },
+        "condition": {
+            "type": "origins:resource",
+            "resource": "tideorigins:*_bool",
+            "comparison": "==",
+            "compare_to": 0
+        }
+    },
+    "flying": {
+        "type": "origins:active_self",
+        "entity_action": {
+            "type": "origins:raycast",
+            "distance": 5,
+            "block": false,
+            "entity": true,
+            "shape_type": "collider",
+            "fluid_handling": "none",
+            "bientity_action": {
+                "type": "origins:and",
+                "actions": [
+                    {
+                        "type": "origins:target_action",
+                        "action": {
+                            "type": "origins:and",
+                            "actions": [
+                                {
+                                    "type": "origins:execute_command",
+                                    "command": "function tideorigins:body_possess"
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "type": "origins:actor_action",
+                        "action": {
+                            "type": "origins:and",
+                            "actions": [
+                                {
+                                    "type": "origins:execute_command",
+                                    "command": "scale set pehkui:height 0.5 @s"
+                                },
+                                {
+                                    "type": "origins:execute_command",
+                                    "command": "tp @s @e[tag=SpiritBody,limit=1]"
+                                },
+                                {
+                                    "type": "origins:change_resource",
+                                    "resource": "tideorigins:*_bool",
+                                    "operation": "set",
+                                    "change": 1
+                                },
+                                {
+                                    "type": "origins:change_resource",
+                                    "resource": "tideorigins:fly_love_bool",
+                                    "operation": "set",
+                                    "change": 0
+                                },
+                                {
+                                    "type": "origins:grant_power",
+                                    "power": "tideorigins:trueneutral",
+                                    "source": "tideorigins:lovespirit"
+                                }
+                            ]
+                        }
+                    }
+                ]
+            },
+            "bientity_condition": {
+                "type": "origins:target_condition",
+                "condition": {
+                    "type": "origins:in_tag",
+                    "tag": "tideorigins:spirit_fly"
+                }
+            }
+        },
+        "cooldown": 20,
+        "hud_render": {
+            "should_render": false
+        },
+        "condition": {
+            "type": "origins:resource",
+            "resource": "tideorigins:*_bool",
+            "comparison": "==",
+            "compare_to": 0
+        }
+    },
+    "med": {
+        "type": "origins:active_self",
+        "entity_action": {
+            "type": "origins:raycast",
+            "distance": 5,
+            "block": false,
+            "entity": true,
+            "shape_type": "collider",
+            "fluid_handling": "none",
+            "bientity_action": {
+                "type": "origins:and",
+                "actions": [
+                    {
+                        "type": "origins:target_action",
+                        "action": {
+                            "type": "origins:and",
+                            "actions": [
+                                {
+                                    "type": "origins:execute_command",
+                                    "command": "function tideorigins:body_possess"
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "type": "origins:actor_action",
+                        "action": {
+                            "type": "origins:and",
+                            "actions": [
+                                {
+                                    "type": "origins:execute_command",
+                                    "command": "scale set pehkui:height 1 @s"
+                                },
+                                {
+                                    "type": "origins:execute_command",
+                                    "command": "tp @s @e[tag=SpiritBody,limit=1]"
+                                },
+                                {
+                                    "type": "origins:change_resource",
+                                    "resource": "tideorigins:*_bool",
+                                    "operation": "set",
+                                    "change": 1
+                                },
+                                {
+                                    "type": "origins:change_resource",
+                                    "resource": "tideorigins:fly_love_bool",
+                                    "operation": "set",
+                                    "change": 1
+                                },
+                                {
+                                    "type": "origins:grant_power",
+                                    "power": "tideorigins:trueneutral",
+                                    "source": "tideorigins:lovespirit"
+                                }
+                            ]
+                        }
+                    }
+                ]
+            },
+            "bientity_condition": {
+                "type": "origins:target_condition",
+                "condition": {
+                    "type": "origins:in_tag",
+                    "tag": "tideorigins:spirit_average"
+                }
+            }
+        },
+        "cooldown": 20,
+        "hud_render": {
+            "should_render": false
+        },
+        "condition": {
+            "type": "origins:resource",
+            "resource": "tideorigins:*_bool",
+            "comparison": "==",
+            "compare_to": 0
+        }
+    },
+    "big": {
+        "type": "origins:active_self",
+        "entity_action": {
+            "type": "origins:raycast",
+            "distance": 5,
+            "block": false,
+            "entity": true,
+            "shape_type": "collider",
+            "fluid_handling": "none",
+            "bientity_action": {
+                "type": "origins:and",
+                "actions": [
+                    {
+                        "type": "origins:target_action",
+                        "action": {
+                            "type": "origins:and",
+                            "actions": [
+                                {
+                                    "type": "origins:execute_command",
+                                    "command": "function tideorigins:body_possess"
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "type": "origins:actor_action",
+                        "action": {
+                            "type": "origins:and",
+                            "actions": [
+                                {
+                                    "type": "origins:execute_command",
+                                    "command": "scale set pehkui:height 2 @s"
+                                },
+                                {
+                                    "type": "origins:execute_command",
+                                    "command": "tp @s @e[tag=SpiritBody,limit=1]"
+                                },
+                                {
+                                    "type": "origins:change_resource",
+                                    "resource": "tideorigins:*_bool",
+                                    "operation": "set",
+                                    "change": 1
+                                },
+                                {
+                                    "type": "origins:change_resource",
+                                    "resource": "tideorigins:fly_love_bool",
+                                    "operation": "set",
+                                    "change": 1
+                                },
+                                {
+                                    "type": "origins:grant_power",
+                                    "power": "tideorigins:trueneutral",
+                                    "source": "tideorigins:lovespirit"
+                                }
+                            ]
+                        }
+                    }
+                ]
+            },
+            "bientity_condition": {
+                "type": "origins:target_condition",
+                "condition": {
+                    "type": "origins:in_tag",
+                    "tag": "tideorigins:spirit_large"
+                }
+            }
+        },
+        "cooldown": 20,
+        "hud_render": {
+            "should_render": false
+        },
+        "condition": {
+            "type": "origins:resource",
+            "resource": "tideorigins:*_bool",
+            "comparison": "==",
+            "compare_to": 0
+        }
+    },
+    "ghast": {
+        "type": "origins:active_self",
+        "entity_action": {
+            "type": "origins:raycast",
+            "distance": 5,
+            "block": false,
+            "entity": true,
+            "shape_type": "collider",
+            "fluid_handling": "none",
+            "bientity_action": {
+                "type": "origins:and",
+                "actions": [
+                    {
+                        "type": "origins:target_action",
+                        "action": {
+                            "type": "origins:and",
+                            "actions": [
+                                {
+                                    "type": "origins:execute_command",
+                                    "command": "function tideorigins:body_possess"
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "type": "origins:actor_action",
+                        "action": {
+                            "type": "origins:and",
+                            "actions": [
+                                {
+                                    "type": "origins:execute_command",
+                                    "command": "scale set pehkui:height 1.66 @s"
+                                },
+                                {
+                                    "type": "origins:execute_command",
+                                    "command": "tp @s @e[tag=SpiritBody,limit=1]"
+                                },
+                                {
+                                    "type": "origins:change_resource",
+                                    "resource": "tideorigins:*_bool",
+                                    "operation": "set",
+                                    "change": 1
+                                },
+                                {
+                                    "type": "origins:change_resource",
+                                    "resource": "tideorigins:fly_love_bool",
+                                    "operation": "set",
+                                    "change": 0
+                                },
+                                {
+                                    "type": "origins:grant_power",
+                                    "power": "tideorigins:trueneutral",
+                                    "source": "tideorigins:lovespirit"
+                                }
+                            ]
+                        }
+                    }
+                ]
+            },
+            "bientity_condition": {
+                "type": "origins:target_condition",
+                "condition": {
+                    "type": "origins:entity_type",
+                    "entity_type": "minecraft:ghast"
+                }
+            }
+        },
+        "cooldown": 20,
+        "hud_render": {
+            "should_render": false
+        },
+        "condition": {
+            "type": "origins:resource",
+            "resource": "tideorigins:*_bool",
+            "comparison": "==",
+            "compare_to": 0
+        }
+    },
+    "badges": [
+        {
+            "sprite": "origins:textures/gui/badge/info.png",
+            "text": "You lose the ability to fly while in a body, unless the body can fly. Shift to leave a body. Reaching <3 bars of hunger will also remove you from the body."
+        }
+    ]
+}

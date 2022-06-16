@@ -1,0 +1,6 @@
+{
+    "type": "origins:elytra_flight",
+    "name": "Fixed Wings",
+    "description": "You can glide using the mechanical wings on your back.",
+    "render_elytra": true
+}

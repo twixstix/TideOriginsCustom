@@ -1,0 +1,19 @@
+{
+	"powers": [
+		"tideorigins:lovemode",
+		"tideorigins:calmaura",
+		"tideorigins:healinghands",
+		"tideorigins:fly_love",
+        "tideorigins:possess",
+        "tideorigins:nolungs",
+        "tideorigins:spirittoxin",
+        "origins:more_exhaustion",
+		"tideorigins:relic_love",
+        "tideorigins:lovevfx"
+	],
+	"icon": "minecraft:magenta_dye",
+    "order": 4,
+	"impact": 1,
+	"name": "Love Spirit",
+	"description": "Spirits of love and peace trapped in the human world, they have a calming aura that soothes everyone around them."
+}

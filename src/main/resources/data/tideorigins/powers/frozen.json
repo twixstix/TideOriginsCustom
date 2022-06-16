@@ -1,0 +1,49 @@
+{
+    "hidden": "true",
+    "type": "origins:multiple",
+    "timer": {
+        "type": "origins:resource",
+        "min": 0,
+        "max": 6,
+        "start_value": 4,
+        "hud_render": {
+            "should_render": true,
+            "sprite_location": "origins:textures/gui/community/spiderkolo/resource_bar_03.png",
+            "bar_index": 0
+        },
+        "min_action": {
+            "type": "origins:revoke_power",
+            "power": "tideorigins:frozen",
+            "source": "tideorigins:frostling"
+        }
+    },
+    "damage": {
+        "type": "origins:action_over_time",
+        "entity_action": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:change_resource",
+                    "resource": "tideorigins:*_timer",
+                    "change": -1
+                }
+            ]
+        },
+        "interval": 20
+    },
+    "shiver": {
+        "type": "origins:shaking"
+    },
+    "overlay": {
+        "type": "origins:overlay",
+        "texture": "minecraft:textures/misc/powder_snow_outline.png",
+        "strength": 1.0,
+        "red": 1.0,
+        "green": 1.0,
+        "blue": 1.0,
+        "draw_mode": "texture",
+        "draw_phase": "below_hud",
+        "hide_with_hud": false,
+        "visible_in_third_person": true
+    }
+}

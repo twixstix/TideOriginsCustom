@@ -1,0 +1,10 @@
+{
+    "hidden": true,
+    "type": "origins:starting_equipment",
+        "stacks": [
+            {
+                "item": "tideorigins:jester_baton",
+                "tag": "{HideFlags:1,Enchantments:[{id:\"minecraft:knockback\",lvl:5s}]}"
+            }
+        ]
+}

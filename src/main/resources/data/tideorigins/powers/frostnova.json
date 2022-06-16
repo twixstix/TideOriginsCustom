@@ -1,0 +1,65 @@
+{
+    "name": "Frost Nova",
+    "description": "You can generate a blast of cold air around you, freezing enemies in place.",
+    "type": "origins:active_self",
+    "entity_action": {
+        "type": "origins:and",
+        "actions": [
+            {
+                "type": "origins:play_sound",
+                "sound": "minecraft:entity.player.hurt_freeze"
+            },
+            {
+                "type": "origins:execute_command",
+                "command": "/summon area_effect_cloud ~ ~0.5 ~ {Particle:\"snowflake\",Radius:5f,Duration:7}"
+            },
+            {
+                "type": "origins:area_of_effect",
+                "radius": 5,
+                "bientity_action": {
+                    "type": "origins:target_action",
+                    "action": {
+                        "type": "origins:and",
+                        "actions": [
+                            {
+                                "type": "origins:grant_power",
+                                "power": "tideorigins:frozen",
+                                "source": "tideorigins:frostling"
+                            },
+                            {
+                                "type": "origins:apply_effect",
+                                "effects": [
+                                    {
+                                        "effect": "minecraft:slowness",
+                                        "duration": 80,
+                                        "amplifier": 5,
+                                        "is_ambient": true,
+                                        "show_particles": false,
+                                        "show_icon": true
+                                    },
+                                    {
+                                        "effect": "minecraft:jump_boost",
+                                        "duration": 80,
+                                        "amplifier": 128,
+                                        "is_ambient": true,
+                                        "show_particles": false,
+                                        "show_icon": true
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                }
+            }
+        ]
+    },
+    "cooldown": 600,
+    "hud_render": {
+        "should_render": true,
+        "sprite_location": "origins:textures/gui/community/spiderkolo/resource_bar_03.png",
+        "bar_index": 0
+    },
+    "key": {
+        "key": "key.origins.primary_active"
+    }
+}

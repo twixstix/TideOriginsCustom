@@ -1,0 +1,13 @@
+{
+    "name": "Lovevision",
+    "hidden": true,
+    "type": "origins:multiple",
+    "shader": {
+        "type": "origins:shader",
+        "shader": "minecraft:shaders/post/color_convolve.json"
+    },
+    "overlay": {
+        "type": "origins:model_color",
+        "alpha": 0.6
+    }
+}

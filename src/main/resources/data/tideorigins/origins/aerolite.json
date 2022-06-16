@@ -3,15 +3,16 @@
 		"tideorigins:roboenhancements",
 		"tideorigins:relic_clock",
         "tideorigins:smalltrialite",
-		"tideorigins:anvil",
-		"tideorigins:lightningrod",
-        "tideorigins:copperbeacon",
+        "tideorigins:wingextend",
+        "tideorigins:jetleap",
+        "tideorigins:aerotech",
         "tideorigins:ally_ender2",
         "tideorigins:instantfood",
         "tideorigins:toolwise",
-        "tideorigins:novillageeffects",
         "tideorigins:fingerless",
         "tideorigins:nohorse",
+        "tideorigins:noboat",
+        "tideorigins:nokart",
         "tideorigins:norevive",
         "tideorigins:hydrophobictech",
         "tideorigins:noconduit"
@@ -19,14 +20,13 @@
 	"icon": "minecraft:clock",
     "order": 4,
 	"impact": 2,
-	"name": "Time Spirit",
-    "description": "Trialite.",
-    "unchoosable": true,
+	"name": "Time Spirit V2",
+    "description": "Trialite mkII, aka Aerolite.",
     "upgrades": [
         {
-            "condition": "nether/netherite_armor",
-            "origin": "tideorigins:trialite2",
-            "announcement": "Something in your body has reacted with the netherite, enhancing your abilities!"
+            "condition": "tideorigins:aerolite_evolve",
+            "origin": "tideorigins:aerolite2",
+            "announcement": "Upgrade complete. Permanent glider tech engaged."
         }
     ]
 }

@@ -1,0 +1,28 @@
+{
+    "name": "Dynamic Falling",
+    "description": "Your aerodynamic tech takes advantage of the denser air while below sea level (y=62), granting you slow falling while you are down there.",
+    "type": "apoli:modify_falling",
+    "velocity": 0.01,
+    "take_fall_damage": false,
+    "condition": {
+        "type": "origins:and",
+        "conditions": [
+            {
+                "type": "origins:sneaking",
+                "inverted": true
+            },
+            {
+                "type": "origins:fall_flying",
+                "inverted": true
+            },
+            {
+                "type": "origins:in_block",
+                "block_condition": {
+                    "type": "origins:height",
+                    "comparison": "<=",
+                    "compare_to": 62
+                }
+            }
+        ]
+    }
+}
