@@ -8,8 +8,15 @@
                     {
                         "items": ["minecraft:phantom_membrane"],
                         "count": {
-                            "min": 100,
-                            "max": 104
+                            "min": 64,
+                            "max": 64
+                        }
+                    },
+                    {
+                        "items": ["minecraft:phantom_membrane"],
+                        "count": {
+                            "min": 64,
+                            "max": 64
                         }
                     }
                 ]

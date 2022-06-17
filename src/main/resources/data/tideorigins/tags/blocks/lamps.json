@@ -6,81 +6,961 @@
     "minecraft:glowstone",
     "minecraft:lantern",
     "minecraft:soul_lantern",
-    "architects_palette:algal_lamp",
-    "architects_palette:wither_lamp",
-    "architects_palette:redstone_cage_lantern",
-    "architects_palette:glowstone_cage_lantern",
-    "architects_palette:algal_cage_lantern",
-    "betternether:cincinnasite_lantern",
-    "betternether:cincinnasite_lantern_small",
-    "blockus:white_redstone_lamp",
-    "blockus:orange_redstone_lamp",
-    "blockus:magenta_redstone_lamp",
-    "blockus:light_blue_redstone_lamp",
-    "blockus:yellow_redstone_lamp",
-    "blockus:lime_redstone_lamp",
-    "blockus:pink_redstone_lamp",
-    "blockus:gray_redstone_lamp",
-    "blockus:light_gray_redstone_lamp",
-    "blockus:cyan_redstone_lamp",
-    "blockus:purple_redstone_lamp",
-    "blockus:blue_redstone_lamp",
-    "blockus:brown_redstone_lamp",
-    "blockus:green_redstone_lamp",
-    "blockus:red_redstone_lamp",
-    "blockus:rainbow_lamp",
-    "blockus:redstone_lamp_lit",
-    "blockus:white_redstone_lamp_lit",
-    "blockus:orange_redstone_lamp_lit",
-    "blockus:magenta_redstone_lamp_lit",
-    "blockus:light_blue_redstone_lamp_lit",
-    "blockus:yellow_redstone_lamp_lit",
-    "blockus:lime_redstone_lamp_lit",
-    "blockus:pink_redstone_lamp_lit",
-    "blockus:gray_redstone_lamp_lit",
-    "blockus:light_gray_redstone_lamp_lit",
-    "blockus:cyan_redstone_lamp_lit",
-    "blockus:purple_redstone_lamp_lit",
-    "blockus:blue_redstone_lamp_lit",
-    "blockus:brown_redstone_lamp_lit",
-    "blockus:green_redstone_lamp_lit",
-    "blockus:red_redstone_lamp_lit",
-    "blockus:rainbow_lamp_lit",
-    "blockus:paper_lamp",
-    "blockus:blaze_lantern",
-    "blockus:lantern_block",
-    "blockus:soul_lantern_block",
-    "adorn:white_table_lamp",
-    "adorn:orange_table_lamp",
-    "adorn:magenta_table_lamp",
-    "adorn:light_blue_table_lamp",
-    "adorn:yellow_table_lamp",
-    "adorn:lime_table_lamp",
-    "adorn:pink_table_lamp",
-    "adorn:gray_table_lamp",
-    "adorn:light_gray_table_lamp",
-    "adorn:cyan_table_lamp",
-    "adorn:purple_table_lamp",
-    "adorn:blue_table_lamp",
-    "adorn:brown_table_lamp",
-    "adorn:green_table_lamp",
-    "adorn:red_table_lamp",
-    "adorn:black_table_lamp",
-    "lcsl:white_sea_lantern",
-    "lcsl:orange_sea_lantern",
-    "lcsl:magenta_sea_lantern",
-    "lcsl:light_blue_sea_lantern",
-    "lcsl:yellow_sea_lantern",
-    "lcsl:lime_sea_lantern",
-    "lcsl:pink_sea_lantern",
-    "lcsl:gray_sea_lantern",
-    "lcsl:light_gray_sea_lantern",
-    "lcsl:cyan_sea_lantern",
-    "lcsl:purple_sea_lantern",
-    "lcsl:blue_sea_lantern",
-    "lcsl:brown_sea_lantern",
-    "lcsl:green_sea_lantern",
-    "lcsl:red_sea_lantern",
-    "lcsl:black_sea_lantern"
+    {
+      "id": "architects_palette:algal_lamp",
+      "required": false
+    },
+    {
+      "id": "architects_palette:wither_lamp",
+      "required": false
+    },
+    {
+      "id": "architects_palette:redstone_cage_lantern",
+      "required": false
+    },
+    {
+      "id": "architects_palette:glowstone_cage_lantern",
+      "required": false
+    },
+    {
+      "id": "architects_palette:algal_cage_lantern",
+      "required": false
+    },
+    {
+      "id": "architects_palette:polished_glowstone",
+      "required": false
+    },
+    {
+      "id": "betternether:cincinnasite_lantern",
+      "required": false
+    },
+    {
+      "id": "betternether:cincinnasite_lantern_small",
+      "required": false
+    },
+    {
+      "id": "blockus:white_redstone_lamp",
+      "required": false
+    },
+    {
+      "id": "blockus:orange_redstone_lamp",
+      "required": false
+    },
+    {
+      "id": "blockus:magenta_redstone_lamp",
+      "required": false
+    },
+    {
+      "id": "blockus:light_blue_redstone_lamp",
+      "required": false
+    },
+    {
+      "id": "blockus:yellow_redstone_lamp",
+      "required": false
+    },
+    {
+      "id": "blockus:lime_redstone_lamp",
+      "required": false
+    },
+    {
+      "id": "blockus:pink_redstone_lamp",
+      "required": false
+    },
+    {
+      "id": "blockus:gray_redstone_lamp",
+      "required": false
+    },
+    {
+      "id": "blockus:light_gray_redstone_lamp",
+      "required": false
+    },
+    {
+      "id": "blockus:cyan_redstone_lamp",
+      "required": false
+    },
+    {
+      "id": "blockus:purple_redstone_lamp",
+      "required": false
+    },
+    {
+      "id": "blockus:blue_redstone_lamp",
+      "required": false
+    },
+    {
+      "id": "blockus:brown_redstone_lamp",
+      "required": false
+    },
+    {
+      "id": "blockus:green_redstone_lamp",
+      "required": false
+    },
+    {
+      "id": "blockus:red_redstone_lamp",
+      "required": false
+    },
+    {
+      "id": "blockus:rainbow_lamp",
+      "required": false
+    },
+    {
+      "id": "blockus:redstone_lamp_lit",
+      "required": false
+    },
+    {
+      "id": "blockus:white_redstone_lamp_lit",
+      "required": false
+    },
+    {
+      "id": "blockus:orange_redstone_lamp_lit",
+      "required": false
+    },
+    {
+      "id": "blockus:magenta_redstone_lamp_lit",
+      "required": false
+    },
+    {
+      "id": "blockus:light_blue_redstone_lamp_lit",
+      "required": false
+    },
+    {
+      "id": "blockus:yellow_redstone_lamp_lit",
+      "required": false
+    },
+    {
+      "id": "blockus:lime_redstone_lamp_lit",
+      "required": false
+    },
+    {
+      "id": "blockus:pink_redstone_lamp_lit",
+      "required": false
+    },
+    {
+      "id": "blockus:gray_redstone_lamp_lit",
+      "required": false
+    },
+    {
+      "id": "blockus:light_gray_redstone_lamp_lit",
+      "required": false
+    },
+    {
+      "id": "blockus:cyan_redstone_lamp_lit",
+      "required": false
+    },
+    {
+      "id": "blockus:purple_redstone_lamp_lit",
+      "required": false
+    },
+    {
+      "id": "blockus:blue_redstone_lamp_lit",
+      "required": false
+    },
+    {
+      "id": "blockus:brown_redstone_lamp_lit",
+      "required": false
+    },
+    {
+      "id": "blockus:green_redstone_lamp_lit",
+      "required": false
+    },
+    {
+      "id": "blockus:red_redstone_lamp_lit",
+      "required": false
+    },
+    {
+      "id": "blockus:rainbow_lamp_lit",
+      "required": false
+    },
+    {
+      "id": "blockus:paper_lamp",
+      "required": false
+    },
+    {
+      "id": "blockus:blaze_lantern",
+      "required": false
+    },
+    {
+      "id": "blockus:lantern_block",
+      "required": false
+    },
+    {
+      "id": "blockus:soul_lantern_block",
+      "required": false
+    },
+    {
+      "id": "adorn:white_table_lamp",
+      "required": false
+    },
+    {
+      "id": "adorn:orange_table_lamp",
+      "required": false
+    },
+    {
+      "id": "adorn:magenta_table_lamp",
+      "required": false
+    },
+    {
+      "id": "adorn:light_blue_table_lamp",
+      "required": false
+    },
+    {
+      "id": "adorn:yellow_table_lamp",
+      "required": false
+    },
+    {
+      "id": "adorn:lime_table_lamp",
+      "required": false
+    },
+    {
+      "id": "adorn:pink_table_lamp",
+      "required": false
+    },
+    {
+      "id": "adorn:gray_table_lamp",
+      "required": false
+    },
+    {
+      "id": "adorn:light_gray_table_lamp",
+      "required": false
+    },
+    {
+      "id": "adorn:cyan_table_lamp",
+      "required": false
+    },
+    {
+      "id": "adorn:purple_table_lamp",
+      "required": false
+    },
+    {
+      "id": "adorn:blue_table_lamp",
+      "required": false
+    },
+    {
+      "id": "adorn:brown_table_lamp",
+      "required": false
+    },
+    {
+      "id": "adorn:green_table_lamp",
+      "required": false
+    },
+    {
+      "id": "adorn:red_table_lamp",
+      "required": false
+    },
+    {
+      "id": "adorn:black_table_lamp",
+      "required": false
+    },
+    {
+      "id": "lcsl:white_sea_lantern",
+      "required": false
+    },
+    {
+      "id": "lcsl:orange_sea_lantern",
+      "required": false
+    },
+    {
+      "id": "lcsl:magenta_sea_lantern",
+      "required": false
+    },
+    {
+      "id": "lcsl:light_blue_sea_lantern",
+      "required": false
+    },
+    {
+      "id": "lcsl:yellow_sea_lantern",
+      "required": false
+    },
+    {
+      "id": "lcsl:lime_sea_lantern",
+      "required": false
+    },
+    {
+      "id": "lcsl:pink_sea_lantern",
+      "required": false
+    },
+    {
+      "id": "lcsl:gray_sea_lantern",
+      "required": false
+    },
+    {
+      "id": "lcsl:light_gray_sea_lantern",
+      "required": false
+    },
+    {
+      "id": "lcsl:cyan_sea_lantern",
+      "required": false
+    },
+    {
+      "id": "lcsl:purple_sea_lantern",
+      "required": false
+    },
+    {
+      "id": "lcsl:blue_sea_lantern",
+      "required": false
+    },
+    {
+      "id": "lcsl:brown_sea_lantern",
+      "required": false
+    },
+    {
+      "id": "lcsl:green_sea_lantern",
+      "required": false
+    },
+    {
+      "id": "lcsl:red_sea_lantern",
+      "required": false
+    },
+    {
+      "id": "lcsl:black_sea_lantern",
+      "required": false
+    },
+    {
+      "id": "chipped:redstone_lamp_1",
+      "required": false
+    },
+    {
+      "id": "chipped:redstone_lamp_2",
+      "required": false
+    },
+    {
+      "id": "chipped:redstone_lamp_3",
+      "required": false
+    },
+    {
+      "id": "chipped:redstone_lamp_4",
+      "required": false
+    },
+    {
+      "id": "chipped:redstone_lamp_5",
+      "required": false
+    },
+    {
+      "id": "chipped:redstone_lamp_6",
+      "required": false
+    },
+    {
+      "id": "chipped:redstone_lamp_7",
+      "required": false
+    },
+    {
+      "id": "chipped:redstone_lamp_8",
+      "required": false
+    },
+    {
+      "id": "chipped:redstone_lamp_9",
+      "required": false
+    },
+    {
+      "id": "chipped:redstone_lamp_10",
+      "required": false
+    },
+    {
+      "id": "chipped:redstone_lamp_11",
+      "required": false
+    },
+    {
+      "id": "chipped:redstone_lamp_12",
+      "required": false
+    },
+    {
+      "id": "chipped:redstone_lamp_13",
+      "required": false
+    },
+    {
+      "id": "chipped:redstone_lamp_14",
+      "required": false
+    },
+    {
+      "id": "chipped:redstone_lamp_15",
+      "required": false
+    },
+    {
+      "id": "chipped:redstone_lamp_16",
+      "required": false
+    },
+    {
+      "id": "chipped:redstone_lamp_17",
+      "required": false
+    },
+    {
+      "id": "chipped:redstone_lamp_18",
+      "required": false
+    },
+    {
+      "id": "chipped:special_lantern_1",
+      "required": false
+    },
+    {
+      "id": "chipped:special_lantern_2",
+      "required": false
+    },
+    {
+      "id": "chipped:special_lantern_3",
+      "required": false
+    },
+    {
+      "id": "chipped:special_lantern_4",
+      "required": false
+    },
+    {
+      "id": "chipped:special_soul_lantern_1",
+      "required": false
+    },
+    {
+      "id": "chipped:special_soul_lantern_2",
+      "required": false
+    },
+    {
+      "id": "chipped:special_soul_lantern_3",
+      "required": false
+    },
+    {
+      "id": "chipped:special_soul_lantern_4",
+      "required": false
+    },
+    {
+      "id": "chipped:lantern_1",
+      "required": false
+    },
+    {
+      "id": "chipped:lantern_2",
+      "required": false
+    },
+    {
+      "id": "chipped:lantern_3",
+      "required": false
+    },
+    {
+      "id": "chipped:lantern_4",
+      "required": false
+    },
+    {
+      "id": "chipped:lantern_6",
+      "required": false
+    },
+    {
+      "id": "chipped:lantern_9",
+      "required": false
+    },
+    {
+      "id": "chipped:lantern_10",
+      "required": false
+    },
+    {
+      "id": "chipped:lantern_11",
+      "required": false
+    },
+    {
+      "id": "chipped:lantern_12",
+      "required": false
+    },
+    {
+      "id": "chipped:lantern_13",
+      "required": false
+    },
+    {
+      "id": "chipped:lantern_14",
+      "required": false
+    },
+    {
+      "id": "chipped:soul_lantern_1",
+      "required": false
+    },
+    {
+      "id": "chipped:soul_lantern_2",
+      "required": false
+    },
+    {
+      "id": "chipped:soul_lantern_3",
+      "required": false
+    },
+    {
+      "id": "chipped:soul_lantern_5",
+      "required": false
+    },
+    {
+      "id": "chipped:soul_lantern_6",
+      "required": false
+    },
+    {
+      "id": "chipped:soul_lantern_7",
+      "required": false
+    },
+    {
+      "id": "chipped:soul_lantern_8",
+      "required": false
+    },
+    {
+      "id": "chipped:soul_lantern_9",
+      "required": false
+    },
+    {
+      "id": "chipped:soul_lantern_10",
+      "required": false
+    },
+    {
+      "id": "chipped:soul_lantern_11",
+      "required": false
+    },
+    {
+      "id": "mcwlights:white_lamp",
+      "required": false
+    },
+    {
+      "id": "mcwlights:orange_lamp",
+      "required": false
+    },
+    {
+      "id": "mcwlights:magenta_lamp",
+      "required": false
+    },
+    {
+      "id": "mcwlights:light_blue_lamp",
+      "required": false
+    },
+    {
+      "id": "mcwlights:yellow_lamp",
+      "required": false
+    },
+    {
+      "id": "mcwlights:lime_lamp",
+      "required": false
+    },
+    {
+      "id": "mcwlights:pink_lamp",
+      "required": false
+    },
+    {
+      "id": "mcwlights:gray_lamp",
+      "required": false
+    },
+    {
+      "id": "mcwlights:light_gray_lamp",
+      "required": false
+    },
+    {
+      "id": "mcwlights:cyan_lamp",
+      "required": false
+    },
+    {
+      "id": "mcwlights:purple_lamp",
+      "required": false
+    },
+    {
+      "id": "mcwlights:blue_lamp",
+      "required": false
+    },
+    {
+      "id": "mcwlights:brown_lamp",
+      "required": false
+    },
+    {
+      "id": "mcwlights:green_lamp",
+      "required": false
+    },
+    {
+      "id": "mcwlights:red_lamp",
+      "required": false
+    },
+    {
+      "id": "mcwlights:black_lamp",
+      "required": false
+    },
+    {
+      "id": "mcwlights:white_ceiling_lamp",
+      "required": false
+    },
+    {
+      "id": "mcwlights:orange_ceiling_lamp",
+      "required": false
+    },
+    {
+      "id": "mcwlights:magenta_ceiling_lamp",
+      "required": false
+    },
+    {
+      "id": "mcwlights:light_ceiling_blue_ceiling_lamp",
+      "required": false
+    },
+    {
+      "id": "mcwlights:yellow_ceiling_lamp",
+      "required": false
+    },
+    {
+      "id": "mcwlights:lime_ceiling_lamp",
+      "required": false
+    },
+    {
+      "id": "mcwlights:pink_ceiling_lamp",
+      "required": false
+    },
+    {
+      "id": "mcwlights:gray_ceiling_lamp",
+      "required": false
+    },
+    {
+      "id": "mcwlights:light_ceiling_gray_ceiling_lamp",
+      "required": false
+    },
+    {
+      "id": "mcwlights:cyan_ceiling_lamp",
+      "required": false
+    },
+    {
+      "id": "mcwlights:purple_ceiling_lamp",
+      "required": false
+    },
+    {
+      "id": "mcwlights:blue_ceiling_lamp",
+      "required": false
+    },
+    {
+      "id": "mcwlights:brown_ceiling_lamp",
+      "required": false
+    },
+    {
+      "id": "mcwlights:green_ceiling_lamp",
+      "required": false
+    },
+    {
+      "id": "mcwlights:red_ceiling_lamp",
+      "required": false
+    },
+    {
+      "id": "mcwlights:black_ceiling_lamp",
+      "required": false
+    },
+    {
+      "id": "mcwlights:classic_street_lamp",
+      "required": false
+    },
+    {
+      "id": "mcwlights:double_street_lamp",
+      "required": false
+    },
+    {
+      "id": "mcwlights:soul_classic_street_lamp",
+      "required": false
+    },
+    {
+      "id": "mcwlights:soul_double_street_lamp",
+      "required": false
+    },
+    {
+      "id": "mcwlights:lava_lamp",
+      "required": false
+    },
+    {
+      "id": "mcwlights:garden_light",
+      "required": false
+    },
+    {
+      "id": "twigs:lamp",
+      "required": false
+    },
+    {
+      "id": "twigs:soul_lamp",
+      "required": false
+    },
+    {
+      "id": "twigs:warped_shroomlamp",
+      "required": false
+    },
+    {
+      "id": "twigs:crimson_shroomlamp",
+      "required": false
+    },
+    {
+      "id": "betterend:thallasium_bulb_lantern",
+      "required": false
+    },
+    {
+      "id": "betterend:thallasium_bulb_lantern_white",
+      "required": false
+    },
+    {
+      "id": "betterend:thallasium_bulb_lantern_gray",
+      "required": false
+    },
+    {
+      "id": "betterend:thallasium_bulb_lantern_light_gray",
+      "required": false
+    },
+    {
+      "id": "betterend:thallasium_bulb_lantern_black",
+      "required": false
+    },
+    {
+      "id": "betterend:thallasium_bulb_lantern_blue",
+      "required": false
+    },
+    {
+      "id": "betterend:thallasium_bulb_lantern_lime",
+      "required": false
+    },
+    {
+      "id": "betterend:thallasium_bulb_lantern_magenta",
+      "required": false
+    },
+    {
+      "id": "betterend:thallasium_bulb_lantern_red",
+      "required": false
+    },
+    {
+      "id": "betterend:thallasium_bulb_lantern_orange",
+      "required": false
+    },
+    {
+      "id": "betterend:thallasium_bulb_lantern_purple",
+      "required": false
+    },
+    {
+      "id": "betterend:thallasium_bulb_lantern_cyan",
+      "required": false
+    },
+    {
+      "id": "betterend:thallasium_bulb_lantern_brown",
+      "required": false
+    },
+    {
+      "id": "betterend:thallasium_bulb_lantern_green",
+      "required": false
+    },
+    {
+      "id": "betterend:thallasium_bulb_lantern_yellow",
+      "required": false
+    },
+    {
+      "id": "betterend:thallasium_bulb_lantern_pink",
+      "required": false
+    },
+    {
+      "id": "betterend:thallasium_bulb_lantern_light_blue",
+      "required": false
+    },
+    {
+      "id": "betterend:terminite_bulb_lantern",
+      "required": false
+    },
+    {
+      "id": "betterend:terminite_bulb_lantern_white",
+      "required": false
+    },
+    {
+      "id": "betterend:terminite_bulb_lantern_gray",
+      "required": false
+    },
+    {
+      "id": "betterend:terminite_bulb_lantern_light_gray",
+      "required": false
+    },
+    {
+      "id": "betterend:terminite_bulb_lantern_black",
+      "required": false
+    },
+    {
+      "id": "betterend:terminite_bulb_lantern_blue",
+      "required": false
+    },
+    {
+      "id": "betterend:terminite_bulb_lantern_lime",
+      "required": false
+    },
+    {
+      "id": "betterend:terminite_bulb_lantern_magenta",
+      "required": false
+    },
+    {
+      "id": "betterend:terminite_bulb_lantern_red",
+      "required": false
+    },
+    {
+      "id": "betterend:terminite_bulb_lantern_orange",
+      "required": false
+    },
+    {
+      "id": "betterend:terminite_bulb_lantern_purple",
+      "required": false
+    },
+    {
+      "id": "betterend:terminite_bulb_lantern_cyan",
+      "required": false
+    },
+    {
+      "id": "betterend:terminite_bulb_lantern_brown",
+      "required": false
+    },
+    {
+      "id": "betterend:terminite_bulb_lantern_green",
+      "required": false
+    },
+    {
+      "id": "betterend:terminite_bulb_lantern_yellow",
+      "required": false
+    },
+    {
+      "id": "betterend:terminite_bulb_lantern_pink",
+      "required": false
+    },
+    {
+      "id": "betterend:terminite_bulb_lantern_light_blue",
+      "required": false
+    },
+    {
+      "id": "betterend:iron_bulb_lantern",
+      "required": false
+    },
+    {
+      "id": "betterend:iron_bulb_lantern_white",
+      "required": false
+    },
+    {
+      "id": "betterend:iron_bulb_lantern_gray",
+      "required": false
+    },
+    {
+      "id": "betterend:iron_bulb_lantern_light_gray",
+      "required": false
+    },
+    {
+      "id": "betterend:iron_bulb_lantern_black",
+      "required": false
+    },
+    {
+      "id": "betterend:iron_bulb_lantern_blue",
+      "required": false
+    },
+    {
+      "id": "betterend:iron_bulb_lantern_lime",
+      "required": false
+    },
+    {
+      "id": "betterend:iron_bulb_lantern_magenta",
+      "required": false
+    },
+    {
+      "id": "betterend:iron_bulb_lantern_red",
+      "required": false
+    },
+    {
+      "id": "betterend:iron_bulb_lantern_orange",
+      "required": false
+    },
+    {
+      "id": "betterend:iron_bulb_lantern_purple",
+      "required": false
+    },
+    {
+      "id": "betterend:iron_bulb_lantern_cyan",
+      "required": false
+    },
+    {
+      "id": "betterend:iron_bulb_lantern_brown",
+      "required": false
+    },
+    {
+      "id": "betterend:iron_bulb_lantern_green",
+      "required": false
+    },
+    {
+      "id": "betterend:iron_bulb_lantern_yellow",
+      "required": false
+    },
+    {
+      "id": "betterend:iron_bulb_lantern_pink",
+      "required": false
+    },
+    {
+      "id": "betterend:iron_bulb_lantern_light_blue",
+      "required": false
+    },
+    {
+      "id": "betterend:flavolite_lantern",
+      "required": false
+    },
+    {
+      "id": "betterend:violecite_lantern",
+      "required": false
+    },
+    {
+      "id": "betterend:sulphuric_rock_lantern",
+      "required": false
+    },
+    {
+      "id": "betterend:virid_jadestone_lantern",
+      "required": false
+    },
+    {
+      "id": "betterend:azure_jadestone_lantern",
+      "required": false
+    },
+    {
+      "id": "betterend:sandy_jadestone_lantern",
+      "required": false
+    },
+    {
+      "id": "betterend:umbralith_lantern",
+      "required": false
+    },
+    {
+      "id": "betterend:filalux_lantern",
+      "required": false
+    },
+    {
+      "id": "betterend:andesite_lantern",
+      "required": false
+    },
+    {
+      "id": "betterend:diorite_lantern",
+      "required": false
+    },
+    {
+      "id": "betterend:granite_lantern",
+      "required": false
+    },
+    {
+      "id": "betterend:quartz_lantern",
+      "required": false
+    },
+    {
+      "id": "betterend:purpur_lantern",
+      "required": false
+    },
+    {
+      "id": "betterend:end_stone_lantern",
+      "required": false
+    },
+    {
+      "id": "betterend:blackstone_lantern",
+      "required": false
+    },
+    {
+      "id": "minekea:decorations/doom_lamp",
+      "required": false
+    },
+    {
+      "id": "minekea:decorations/end_lamp",
+      "required": false
+    },
+    {
+      "id": "twigs:paper_lantern",
+      "required": false
+    },
+    {
+      "id": "twigs:allium_paper_lantern",
+      "required": false
+    },
+    {
+      "id": "twigs:blue_orchid_paper_lantern",
+      "required": false
+    },
+    {
+      "id": "twigs:crimson_roots_paper_lantern",
+      "required": false
+    },
+    {
+      "id": "twigs:dandelion_paper_lantern",
+      "required": false
+    }
   ]
 }

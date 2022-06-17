@@ -19,9 +19,12 @@
       "minecraft:deepslate_emerald_ore",
       "minecraft:deepslate_lapis_ore",
       "minecraft:deepslate_diamond_ore",
-      "betternether:cincinnasite_ore",
-      "betternether:nether_ruby_ore",
-      "betternether:nether_lapis_ore",
-      "betternether:nether_redstone_ore"
+      {"id": "betternether:cincinnasite_ore", "required": false},
+      {"id": "betternether:nether_ruby_ore", "required": false},
+      {"id": "betternether:nether_lapis_ore", "required": false},
+      {"id": "betternether:nether_redstone_ore", "required": false},
+      {"id": "betterend:amber_ore", "required": false},
+      {"id": "betterend:ender_ore", "required": false},
+      {"id": "betterend:thallasium_ore", "required": false}
     ]
   }

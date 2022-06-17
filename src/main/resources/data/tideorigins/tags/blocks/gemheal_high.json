@@ -1,11 +1,18 @@
 {
-    "replace": false,
-    "values": [
-      "minecraft:amethyst_block",
-      "minecraft:diamond_block",
-      "minecraft:emerald_block",
-      "minecraft:lapis_block",
-      "minecraft:quartz_block",
-      "betternether:nether_ruby_block"
-    ]
-  }
+  "replace": false,
+  "values": [
+    "minecraft:amethyst_block",
+    "minecraft:diamond_block",
+    "minecraft:emerald_block",
+    "minecraft:lapis_block",
+    "minecraft:quartz_block",
+    {
+      "id": "betternether:nether_ruby_block",
+      "required": false
+    },
+    {
+      "id": "betterend:amber_block",
+      "required": false
+    }
+  ]
+}

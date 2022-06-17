@@ -13,10 +13,6 @@
         "minecraft:exposed_cut_copper",
         "minecraft:weathered_cut_copper",
         "minecraft:oxidized_cut_copper",
-        "twigs:copper_pillar",
-        "twigs:exposed_copper_pillar",
-        "twigs:weathered_copper_pillar",
-        "twigs:oxidized_copper_pillar",
         "minecraft:waxed_copper_block",
         "minecraft:waxed_exposed_copper",
         "minecraft:waxed_weathered_copper",
@@ -25,14 +21,22 @@
         "minecraft:waxed_exposed_cut_copper",
         "minecraft:waxed_weathered_cut_copper",
         "minecraft:waxed_oxidized_cut_copper",
-        "twigs:waxed_copper_pillar",
-        "twigs:waxed_exposed_copper_pillar",
-        "twigs:waxed_weathered_copper_pillar",
-        "twigs:waxed_oxidized_copper_pillar",
         "minecraft:emerald_block",
         "minecraft:lapis_block",
         "minecraft:redstone_block",
         "minecraft:coal_block",
-        "betternether:nether_ruby_block"
+        {"id": "twigs:copper_pillar", "required": false},
+        {"id": "twigs:exposed_copper_pillar", "required": false},
+        {"id": "twigs:weathered_copper_pillar", "required": false},
+        {"id": "twigs:oxidized_copper_pillar", "required": false},
+        {"id": "twigs:waxed_copper_pillar", "required": false},
+        {"id": "twigs:waxed_exposed_copper_pillar", "required": false},
+        {"id": "twigs:waxed_weathered_copper_pillar", "required": false},
+        {"id": "twigs:waxed_oxidized_copper_pillar", "required": false},
+        {"id": "betternether:nether_ruby_block", "required": false},
+        {"id": "betternether:cincinnasite_block", "required": false},
+        {"id": "betterend:amber_block", "required": false},
+        {"id": "betterend:thallasium_block", "required": false}
+
     ]
 }
