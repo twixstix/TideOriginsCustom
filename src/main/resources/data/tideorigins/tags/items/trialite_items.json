@@ -2,25 +2,15 @@
     "replace": false,
     "values": [
         "minecraft:crossbow",
-        "additionaladditions:crossbow_with_spyglass",
         "minecraft:fishing_rod",
-        "gofish:blaze_rod",
-        "gofish:skeletal_rod",
-        "gofish:diamond_reinforced_rod",
-        "gofish:ender_rod",
-        "gofish:frosted_rod",
-        "gofish:slime_rod",
-        "gofish:soul_rod",
-        "gofish:matrix_rod",
-        "gofish:celestial_rod",
         "minecraft:shears",
-        "betternether:cincinnasite_shears",
-        "emerald_tools:copper_shears",
         "minecraft:spyglass",
         "minecraft:trident",
         "minecraft:firework_rocket",
         "minecraft:fire_charge",
         "minecraft:ender_eye",
-        "minecraft:debug_stick"
+        "minecraft:debug_stick",
+        {"id": "additionaladditions:crossbow_with_spyglass", "required": false},
+        {"id": "betternether:cincinnasite_shears", "required": false}
     ]
 }
