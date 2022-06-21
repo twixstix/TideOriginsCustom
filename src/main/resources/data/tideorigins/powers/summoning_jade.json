@@ -91,7 +91,7 @@
                             },
                             {
                                 "type": "origins:trigger_cooldown",
-                                "power": "tideorigins:summoning_cooldown"
+                                "power": "tideorigins:*_cooldown"
                             },
                             {
                                 "type": "origins:execute_command",
@@ -147,7 +147,7 @@
             "conditions": [
                 {
                     "type": "origins:resource",
-                    "resource": "tideorigins:summoning_cooldown",
+                    "resource": "tideorigins:*_cooldown",
                     "comparison": "==",
                     "compare_to": 0
                 },
@@ -170,7 +170,7 @@
                 },
                 {
                     "type": "origins:trigger_cooldown",
-                    "power": "tideorigins:summoning_cooldown"
+                    "power": "tideorigins:*_cooldown"
                 },
                 {
                     "type": "origins:execute_command",
@@ -200,7 +200,7 @@
             "conditions": [
                 {
                     "type": "origins:resource",
-                    "resource": "tideorigins:summoning_cooldown",
+                    "resource": "tideorigins:*_cooldown",
                     "comparison": "==",
                     "compare_to": 0
                 },

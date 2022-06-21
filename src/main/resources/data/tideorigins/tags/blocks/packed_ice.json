@@ -1,0 +1,62 @@
+{
+    "replace": false,
+    "values": [
+        "minecraft:packed_ice",
+        {
+            "id": "architects_palette:polished_packed_ice",
+            "required": false
+        },
+        {
+            "id": "architects_palette:polished_packed_ice_slab",
+            "required": false
+        },
+        {
+            "id": "architects_palette:polished_packed_ice_vertical_slab",
+            "required": false
+        },
+        {
+            "id": "architects_palette:polished_packed_ice_stairs",
+            "required": false
+        },
+        {
+            "id": "architects_palette:polished_packed_ice_wall",
+            "required": false
+        },
+        {
+            "id": "architects_palette:chiseled_packed_ice",
+            "required": false
+        },
+        {
+            "id": "architects_palette:packed_ice_pillar",
+            "required": false
+        },
+        {
+            "id": "blockus:ice_bricks",
+            "required": false
+        },
+        {
+            "id": "blockus:ice_brick_wall",
+            "required": false
+        },
+        {
+            "id": "blockus:ice_pillar",
+            "required": false
+        },
+        {
+            "id": "ecologics:ice_bricks",
+            "required": false
+        },
+        {
+            "id": "ecologics:ice_brick_stairs",
+            "required": false
+        },
+        {
+            "id": "ecologics:ice_brick_slab",
+            "required": false
+        },
+        {
+            "id": "ecologics:ice_brick_wall",
+            "required": false
+        }
+    ]
+}

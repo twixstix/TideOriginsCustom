@@ -1,0 +1,9 @@
+{
+    "name": "Creeper Ally",
+    "hidden": true,
+    "type": "moborigins:remove_mob_hostility",
+    "entity_condition": {
+        "type": "origins:entity_type",
+        "entity_type": "minecraft:creeper"
+    }
+}

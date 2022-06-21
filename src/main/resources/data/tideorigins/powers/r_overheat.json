@@ -1,25 +1,26 @@
 {
 	"name": "Heat Sensitive",
 	"description": "You have a temperature bar that is affected by being in warm locations.",
-	"type": "apoli:multiple",
+	"type": "origins:multiple",
 	"normal_heat": {
-		"type": "apoli:action_over_time",
+		"type": "origins:action_over_time",
 		"interval": 20,
 		"entity_action": {
-			"type": "apoli:if_else_list",
+			"type": "origins:if_else_list",
 			"actions": [
-                {
+				{
 					"condition": {
-						"type": "apoli:biome",
+						"type": "origins:biome",
 						"condition": {
-							"type": "apoli:temperature",
+							"type": "origins:temperature",
 							"comparison": ">=",
 							"compare_to": 2
 						}
 					},
 					"action": {
-						"type": "apoli:if_else_list",
-						"actions": [{
+						"type": "origins:if_else_list",
+						"actions": [
+							{
 								"condition": {
 									"type": "origins:enchantment",
 									"enchantment": "moborigins:heat_protection",
@@ -28,7 +29,7 @@
 									"compare_to": 0
 								},
 								"action": {
-									"type": "apoli:change_resource",
+									"type": "origins:change_resource",
 									"resource": "tideorigins:r_temperature",
 									"change": 8
 								}
@@ -42,7 +43,7 @@
 									"compare_to": 1
 								},
 								"action": {
-									"type": "apoli:change_resource",
+									"type": "origins:change_resource",
 									"resource": "tideorigins:r_temperature",
 									"change": 6
 								}
@@ -56,7 +57,7 @@
 									"compare_to": 2
 								},
 								"action": {
-									"type": "apoli:change_resource",
+									"type": "origins:change_resource",
 									"resource": "tideorigins:r_temperature",
 									"change": 4
 								}
@@ -70,7 +71,7 @@
 									"compare_to": 3
 								},
 								"action": {
-									"type": "apoli:change_resource",
+									"type": "origins:change_resource",
 									"resource": "tideorigins:r_temperature",
 									"change": 2
 								}
@@ -84,7 +85,7 @@
 									"compare_to": 4
 								},
 								"action": {
-									"type": "apoli:change_resource",
+									"type": "origins:change_resource",
 									"resource": "tideorigins:r_temperature",
 									"change": 0
 								}
@@ -94,16 +95,17 @@
 				},
 				{
 					"condition": {
-						"type": "apoli:biome",
+						"type": "origins:biome",
 						"condition": {
-							"type": "apoli:temperature",
+							"type": "origins:temperature",
 							"comparison": ">=",
 							"compare_to": 0.95
 						}
 					},
 					"action": {
-						"type": "apoli:if_else_list",
-						"actions": [{
+						"type": "origins:if_else_list",
+						"actions": [
+							{
 								"condition": {
 									"type": "origins:enchantment",
 									"enchantment": "moborigins:heat_protection",
@@ -112,7 +114,7 @@
 									"compare_to": 0
 								},
 								"action": {
-									"type": "apoli:change_resource",
+									"type": "origins:change_resource",
 									"resource": "tideorigins:r_temperature",
 									"change": 4
 								}
@@ -126,7 +128,7 @@
 									"compare_to": 1
 								},
 								"action": {
-									"type": "apoli:change_resource",
+									"type": "origins:change_resource",
 									"resource": "tideorigins:r_temperature",
 									"change": 3
 								}
@@ -140,7 +142,7 @@
 									"compare_to": 2
 								},
 								"action": {
-									"type": "apoli:change_resource",
+									"type": "origins:change_resource",
 									"resource": "tideorigins:r_temperature",
 									"change": 2
 								}
@@ -154,7 +156,7 @@
 									"compare_to": 3
 								},
 								"action": {
-									"type": "apoli:change_resource",
+									"type": "origins:change_resource",
 									"resource": "tideorigins:r_temperature",
 									"change": 1
 								}
@@ -168,7 +170,7 @@
 									"compare_to": 4
 								},
 								"action": {
-									"type": "apoli:change_resource",
+									"type": "origins:change_resource",
 									"resource": "tideorigins:r_temperature",
 									"change": 0
 								}
@@ -176,32 +178,32 @@
 						]
 					}
 				},
-                {
+				{
 					"condition": {
-						"type": "apoli:biome",
+						"type": "origins:biome",
 						"condition": {
-							"type": "apoli:temperature",
+							"type": "origins:temperature",
 							"comparison": ">",
 							"compare_to": 0.3
 						}
 					},
 					"action": {
-						"type": "apoli:change_resource",
+						"type": "origins:change_resource",
 						"resource": "tideorigins:r_temperature",
 						"change": -4
 					}
 				},
 				{
 					"condition": {
-						"type": "apoli:biome",
+						"type": "origins:biome",
 						"condition": {
-							"type": "apoli:temperature",
+							"type": "origins:temperature",
 							"comparison": "<=",
 							"compare_to": 0.3
 						}
 					},
 					"action": {
-						"type": "apoli:change_resource",
+						"type": "origins:change_resource",
 						"resource": "tideorigins:r_temperature",
 						"change": -8
 					}
@@ -209,26 +211,67 @@
 			]
 		}
 	},
-	"on_ice": {
-		"type": "apoli:action_over_time",
+	"reg_ice": {
+		"type": "origins:action_over_time",
 		"interval": 20,
 		"entity_action": {
-			"type": "apoli:change_resource",
+			"type": "origins:change_resource",
 			"resource": "tideorigins:r_temperature",
 			"change": -8
 		},
 		"condition": {
-			"type": "apoli:on_block",
+			"type": "origins:on_block",
 			"block_condition": {
-				"type": "apoli:in_tag",
-				"tag": "minecraft:ice"
+				"type": "origins:or",
+				"conditions": [
+					{
+						"type": "origins:block",
+						"block": "minecraft:ice"
+					},
+					{
+						"type": "origins:block",
+						"block": "minecraft:frosted_ice"
+					}
+				]
+			}
+		}
+	},
+	"packed_ice": {
+		"type": "origins:action_over_time",
+		"interval": 20,
+		"entity_action": {
+			"type": "origins:change_resource",
+			"resource": "tideorigins:r_temperature",
+			"change": -9
+		},
+		"condition": {
+			"type": "origins:on_block",
+			"block_condition": {
+                "type": "origins:in_tag",
+                "tag": "tideorigins:packed_ice"
+			}
+		}
+	},
+	"blue_ice": {
+		"type": "origins:action_over_time",
+		"interval": 20,
+		"entity_action": {
+			"type": "origins:change_resource",
+			"resource": "tideorigins:r_temperature",
+			"change": -10
+		},
+		"condition": {
+			"type": "origins:on_block",
+			"block_condition": {
+				"type": "origins:block",
+				"block": "minecraft:blue_ice"
 			}
 		}
 	},
 	"burning": {
 		"type": "origins:action_over_time",
 		"entity_action": {
-			"type": "apoli:change_resource",
+			"type": "origins:change_resource",
 			"resource": "tideorigins:r_temperature",
 			"change": 10
 		},
@@ -238,12 +281,11 @@
 		}
 	},
 	"on_death": {
-		"type": "apoli:action_on_callback",
+		"type": "origins:action_on_callback",
 		"entity_action_respawned": {
-			"type": "apoli:change_resource",
+			"type": "origins:change_resource",
 			"resource": "tideorigins:r_temperature",
 			"change": -400
-
 		}
 	}
 }

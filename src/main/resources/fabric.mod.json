@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "id": "tideorigins",
-  "version": "1.1.0",
+  "version": "1.1.1",
 
   "name": "TideOrigins",
   "description": "Adds a handful of Origins specially made for the DD Origins Server.",

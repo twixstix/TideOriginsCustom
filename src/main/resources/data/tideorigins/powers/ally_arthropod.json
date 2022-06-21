@@ -1,8 +1,9 @@
 {
     "name": "Arthropod Ally",
     "description": "As a fellow arthropod, the common Spider will not attack you unless provoked.",
-    "type": "extraorigins:mob_neutrality",
-    "entity_types": [
-        "minecraft:spider"
-    ]
+    "type": "moborigins:remove_mob_hostility",
+    "entity_condition": {
+        "type": "origins:entity_type",
+        "entity_type": "minecraft:spider"
+    }
 }

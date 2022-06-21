@@ -9,6 +9,16 @@
             "name": "freeze"
         }
     },
+    "bracken": {
+        "type": "origins:effect_immunity",
+        "effects": [
+            "minecraft:wither"
+        ],
+        "condition": {
+            "type": "origins:dimension",
+            "dimension": "bracken:glacium"
+        }
+    },
     "powdercraft": {
         "type": "origins:recipe",
         "recipe": {

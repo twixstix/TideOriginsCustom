@@ -1,0 +1,54 @@
+{
+    "replace": false,
+    "values": [
+        "minecraft:zombie",
+        "minecraft:zombie_villager",
+        "minecraft:skeleton",
+        "minecraft:creeper",
+        "minecraft:hoglin",
+        "minecraft:zoglin",
+        "minecraft:wither_skeleton",
+        "minecraft:blaze",
+        "minecraft:drowned",
+        "minecraft:elder_guardian",
+        "minecraft:evoker",
+        "minecraft:endermite",
+        "minecraft:enderman",
+        "minecraft:ghast",
+        "minecraft:guardian",
+        "minecraft:husk",
+        "minecraft:magma_cube",
+        "minecraft:piglin_brute",
+        "minecraft:piglin",
+        "minecraft:pillager",
+        "minecraft:ravager",
+        "minecraft:shulker",
+        "minecraft:silverfish",
+        "minecraft:slime",
+        "minecraft:stray",
+        "minecraft:vex",
+        "minecraft:vindicator",
+        "minecraft:witch",
+        "minecraft:phantom",
+        {
+            "id": "betteranimalsplus:moose",
+            "required": false
+        },
+        {
+            "id": "betteranimalsplus:feralwolf",
+            "required": false
+        },
+        {
+            "id": "betteranimalsplus:boar",
+            "required": false
+        },
+        {
+            "id": "betteranimalsplus:coyote",
+            "required": false
+        },
+        {
+            "id": "betternether:naga",
+            "required": false
+        }
+    ]
+}

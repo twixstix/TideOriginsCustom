@@ -14,11 +14,17 @@
             "show_icon": false
         }
     },
-    "neut": {
+    "ender": {
         "type": "extraorigins:mob_neutrality",
         "entity_types": [
-            "minecraft:enderman",
-            "minecraft:creeper"
+            "minecraft:enderman"
         ]
+    },
+    "creeper": {
+        "type": "moborigins:remove_mob_hostility",
+        "entity_condition": {
+            "type": "origins:entity_type",
+            "entity_type": "minecraft:creeper"
+        }
     }
 }
