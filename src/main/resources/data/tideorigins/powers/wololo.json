@@ -8,7 +8,7 @@
         "actions": [
             {
                 "type": "origins:execute_command",
-                "command": "/data merge entity @s {Color:14}"
+                "command": "data merge entity @s {Color:14}"
             },
             {
                 "type": "origins:play_sound",

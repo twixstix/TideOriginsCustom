@@ -1,7 +1,6 @@
 {
     "name": "Ooh, Shiny",
     "description": "You have a habit of picking up trinkets and shiny objects you come across in your travels.",
-    "hidden": true,
     "type": "origins:action_over_time",
     "entity_action": {
         "type": "origins:chance",

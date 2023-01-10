@@ -1,0 +1,10 @@
+{
+    "name": "Bag of Holding",
+    "description": "You can conjure a pocket space that holds up to 9 items that will not be lost upon death.",
+    "type": "origins:inventory",
+    "container_type": "dropper",
+    "drop_on_death": false,
+    "key": {
+        "key": "key.saveToolbarActivator"
+    }
+}

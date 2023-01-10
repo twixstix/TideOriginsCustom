@@ -1,28 +1,31 @@
 {
     "name": "Levitation",
     "description": "You can toggle the ability to levitate.",
-    "type": "origins:multiple",
-    "toggle": {
-        "type": "origins:toggle",
-        "key": {
-            "key": "key.origins.secondary_active",
-            "continuous": false
+    "type": "origins:active_self",
+    "entity_action": {
+        "type": "origins:if_else",
+        "condition": {
+            "type": "origins:status_effect",
+            "effect": "minecraft:levitation",
+            "min_amplifier": 0
+        },
+        "if_action": {
+            "type": "origins:clear_effect",
+            "effect": "minecraft:levitation"
+        },
+        "else_action": {
+            "type": "origins:apply_effect",
+            "effect": {
+                "effect": "minecraft:levitation",
+                "is_ambient": true,
+                "show_particles": false,
+                "show_icon": false,
+                "duration": 12000
+            }
         }
     },
-    "weak": {
-        "type": "origins:stacking_status_effect",
-        "min_stacks": 0,
-        "max_stacks": 1,
-        "duration_per_stack": 20,
-        "effect": {
-            "effect": "minecraft:levitation",
-            "is_ambient": true,
-            "show_particles": false,
-            "show_icon": false
-        },
-        "condition": {
-            "type": "origins:power_active",
-            "power": "tideorigins:levitation_toggle"
-        }
+    "cooldown": 5,
+    "hud_render": {
+        "should_render": false
     }
 }

@@ -1,0 +1,9 @@
+{
+    "name": "Nullifier",
+    "description": "Your body does not react to effects properly, making them last only a fraction of the time they normally would.",
+    "type": "origins:modify_status_effect_duration",
+    "modifier": {
+        "operation": "multiply_base_multiplicative",
+        "value": -0.90
+    }
+}

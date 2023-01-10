@@ -247,8 +247,8 @@
 		"condition": {
 			"type": "origins:on_block",
 			"block_condition": {
-                "type": "origins:in_tag",
-                "tag": "tideorigins:packed_ice"
+				"type": "origins:in_tag",
+				"tag": "tideorigins:packed_ice"
 			}
 		}
 	},
@@ -265,6 +265,22 @@
 			"block_condition": {
 				"type": "origins:block",
 				"block": "minecraft:blue_ice"
+			}
+		}
+	},
+	"powdersnow": {
+		"type": "origins:action_over_time",
+		"interval": 20,
+		"entity_action": {
+			"type": "origins:change_resource",
+			"resource": "tideorigins:r_temperature",
+			"change": -8
+		},
+		"condition": {
+			"type": "origins:in_block",
+			"block_condition": {
+				"type": "origins:block",
+				"block": "minecraft:powder_snow"
 			}
 		}
 	},

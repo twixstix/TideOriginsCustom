@@ -1,0 +1,48 @@
+{
+    "name": "Mana Absorb",
+    "description": "Holding rare enchanted artifacts like Nether Stars and Enchanted Golden Apples lets you absorb their power, granting Regeneration.",
+    "type": "origins:stacking_status_effect",
+    "min_stacks": 0,
+    "max_stacks": 1,
+    "duration_per_stack": 60,
+    "tick_rate": 20,
+    "effects": [
+        {
+            "effect": "minecraft:regeneration",
+            "is_ambient": true,
+            "show_particles": true,
+            "show_icon": true
+        },
+        {
+            "effect": "minecraft:haste",
+            "is_ambient": true,
+            "show_particles": true,
+            "show_icon": true
+        }
+    ],
+    "condition": {
+        "type": "origins:or",
+        "conditions": [
+            {
+                "type": "origins:equipped_item",
+                "equipment_slot": "mainhand",
+                "item_condition": {
+                    "type": "origins:ingredient",
+                    "ingredient": {
+                        "tag": "tideorigins:rare"
+                    }
+                }
+            },
+            {
+                "type": "origins:equipped_item",
+                "equipment_slot": "offhand",
+                "item_condition": {
+                    "type": "origins:ingredient",
+                    "ingredient": {
+                        "tag": "tideorigins:rare"
+                    }
+                }
+            }
+        ]
+    }
+}

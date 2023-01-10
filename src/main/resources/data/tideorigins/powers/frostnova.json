@@ -11,7 +11,7 @@
             },
             {
                 "type": "origins:execute_command",
-                "command": "/summon area_effect_cloud ~ ~0.5 ~ {Particle:\"snowflake\",Radius:5f,Duration:7}"
+                "command": "summon area_effect_cloud ~ ~0.5 ~ {Particle:\"snowflake\",Radius:5f,Duration:7}"
             },
             {
                 "type": "origins:area_of_effect",

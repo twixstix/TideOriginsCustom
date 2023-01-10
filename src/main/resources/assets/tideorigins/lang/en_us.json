@@ -1,6 +1,7 @@
 {
 	"death.attack.tideorigins.chocolate": "%s discovered they were allergic to chocolate",
     "death.attack.tideorigins.spore": "%s encountered the wrong mushroom",
+    "death.attack.tideorigins.laser": "%s was lasered to death",
     "block.tideorigins.emberbloom": "Emberbloom",
     "block.tideorigins.fairylight": "Fairylight",
     "block.tideorigins.heartfruit_bush": "Heartfruit Bush",

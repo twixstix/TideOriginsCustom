@@ -32,67 +32,253 @@
         "minecraft:diamond_sword",
         "minecraft:netherite_sword",
         "minecraft:bow",
-        "additionaladditions:rose_gold_sword",
-        "additionaladditions:rose_gold_shovel",
-        "additionaladditions:rose_gold_axe",
-        "additionaladditions:rose_gold_pickaxe",
-        "additionaladditions:rose_gold_hoe",
-        "additionaladditions:gilded_netherite_sword",
-        "additionaladditions:gilded_netherite_shovel",
-        "additionaladditions:gilded_netherite_axe",
-        "additionaladditions:gilded_netherite_pickaxe",
-        "additionaladditions:gilded_netherite_hoe",
-        "betternether:cincinnasite_sword",
-        "betternether:cincinnasite_sword_diamond",
-        "betternether:nether_ruby_sword",
-        "betternether:cincinnasite_shovel",
-        "betternether:cincinnasite_shovel_diamond",
-        "betternether:nether_ruby_shovel",
-        "betternether:cincinnasite_axe",
-        "betternether:cincinnasite_axe_diamond",
-        "betternether:nether_ruby_axe",
-        "betternether:cincinnasite_pickaxe",
-        "betternether:cincinnasite_pickaxe_diamond",
-        "betternether:nether_ruby_pickaxe",
-        "betternether:cincinnasite_hoe",
-        "betternether:cincinnasite_hoe_diamond",
-        "betternether:nether_ruby_hoe",
-        "emerald_tools:emerald_bow",
-        "emerald_tools:ruby_bow",
-        "emerald_tools:amethyst_bow",
-        "emerald_tools:steel_bow",
-        "emerald_tools:obsidian_bow",
-        "emerald_tools:copper_bow",
-        "emerald_tools:emerald_sword",
-        "emerald_tools:ruby_sword",
-        "emerald_tools:ruby_steel_sword",
-        "emerald_tools:amethyst_sword",
-        "emerald_tools:steel_sword",
-        "emerald_tools:obsidian_sword",
-        "emerald_tools:copper_sword",
-        "emerald_tools:emerald_pickaxe",
-        "emerald_tools:ruby_pickaxe",
-        "emerald_tools:amethyst_pickaxe",
-        "emerald_tools:steel_pickaxe",
-        "emerald_tools:obsidian_pickaxe",
-        "emerald_tools:copper_pickaxe",
-        "emerald_tools:emerald_axe",
-        "emerald_tools:ruby_axe",
-        "emerald_tools:amethyst_axe",
-        "emerald_tools:steel_axe",
-        "emerald_tools:obsidian_axe",
-        "emerald_tools:copper_axe",
-        "emerald_tools:emerald_shovel",
-        "emerald_tools:ruby_shovel",
-        "emerald_tools:amethyst_shovel",
-        "emerald_tools:steel_shovel",
-        "emerald_tools:obsidian_shovel",
-        "emerald_tools:copper_shovel",
-        "emerald_tools:emerald_hoe",
-        "emerald_tools:ruby_hoe",
-        "emerald_tools:amethyst_hoe",
-        "emerald_tools:steel_hoe",
-        "emerald_tools:obsidian_hoe",
-        "emerald_tools:copper_hoe"
+        {
+            "id": "additionaladditions:rose_gold_sword",
+            "required": false
+        },
+        {
+            "id": "additionaladditions:rose_gold_shovel",
+            "required": false
+        },
+        {
+            "id": "additionaladditions:rose_gold_axe",
+            "required": false
+        },
+        {
+            "id": "additionaladditions:rose_gold_pickaxe",
+            "required": false
+        },
+        {
+            "id": "additionaladditions:rose_gold_hoe",
+            "required": false
+        },
+        {
+            "id": "additionaladditions:gilded_netherite_sword",
+            "required": false
+        },
+        {
+            "id": "additionaladditions:gilded_netherite_shovel",
+            "required": false
+        },
+        {
+            "id": "additionaladditions:gilded_netherite_axe",
+            "required": false
+        },
+        {
+            "id": "additionaladditions:gilded_netherite_pickaxe",
+            "required": false
+        },
+        {
+            "id": "additionaladditions:gilded_netherite_hoe",
+            "required": false
+        },
+        {
+            "id": "betternether:cincinnasite_sword",
+            "required": false
+        },
+        {
+            "id": "betternether:cincinnasite_sword_diamond",
+            "required": false
+        },
+        {
+            "id": "betternether:nether_ruby_sword",
+            "required": false
+        },
+        {
+            "id": "betternether:cincinnasite_shovel",
+            "required": false
+        },
+        {
+            "id": "betternether:cincinnasite_shovel_diamond",
+            "required": false
+        },
+        {
+            "id": "betternether:nether_ruby_shovel",
+            "required": false
+        },
+        {
+            "id": "betternether:cincinnasite_axe",
+            "required": false
+        },
+        {
+            "id": "betternether:cincinnasite_axe_diamond",
+            "required": false
+        },
+        {
+            "id": "betternether:nether_ruby_axe",
+            "required": false
+        },
+        {
+            "id": "betternether:cincinnasite_pickaxe",
+            "required": false
+        },
+        {
+            "id": "betternether:cincinnasite_pickaxe_diamond",
+            "required": false
+        },
+        {
+            "id": "betternether:nether_ruby_pickaxe",
+            "required": false
+        },
+        {
+            "id": "betternether:cincinnasite_hoe",
+            "required": false
+        },
+        {
+            "id": "betternether:cincinnasite_hoe_diamond",
+            "required": false
+        },
+        {
+            "id": "betternether:nether_ruby_hoe",
+            "required": false
+        },
+        {
+            "id": "emerald_tools:emerald_bow",
+            "required": false
+        },
+        {
+            "id": "emerald_tools:ruby_bow",
+            "required": false
+        },
+        {
+            "id": "emerald_tools:amethyst_bow",
+            "required": false
+        },
+        {
+            "id": "emerald_tools:steel_bow",
+            "required": false
+        },
+        {
+            "id": "emerald_tools:obsidian_bow",
+            "required": false
+        },
+        {
+            "id": "emerald_tools:copper_bow",
+            "required": false
+        },
+        {
+            "id": "emerald_tools:emerald_sword",
+            "required": false
+        },
+        {
+            "id": "emerald_tools:ruby_sword",
+            "required": false
+        },
+        {
+            "id": "emerald_tools:ruby_steel_sword",
+            "required": false
+        },
+        {
+            "id": "emerald_tools:amethyst_sword",
+            "required": false
+        },
+        {
+            "id": "emerald_tools:steel_sword",
+            "required": false
+        },
+        {
+            "id": "emerald_tools:obsidian_sword",
+            "required": false
+        },
+        {
+            "id": "emerald_tools:copper_sword",
+            "required": false
+        },
+        {
+            "id": "emerald_tools:emerald_pickaxe",
+            "required": false
+        },
+        {
+            "id": "emerald_tools:ruby_pickaxe",
+            "required": false
+        },
+        {
+            "id": "emerald_tools:amethyst_pickaxe",
+            "required": false
+        },
+        {
+            "id": "emerald_tools:steel_pickaxe",
+            "required": false
+        },
+        {
+            "id": "emerald_tools:obsidian_pickaxe",
+            "required": false
+        },
+        {
+            "id": "emerald_tools:copper_pickaxe",
+            "required": false
+        },
+        {
+            "id": "emerald_tools:emerald_axe",
+            "required": false
+        },
+        {
+            "id": "emerald_tools:ruby_axe",
+            "required": false
+        },
+        {
+            "id": "emerald_tools:amethyst_axe",
+            "required": false
+        },
+        {
+            "id": "emerald_tools:steel_axe",
+            "required": false
+        },
+        {
+            "id": "emerald_tools:obsidian_axe",
+            "required": false
+        },
+        {
+            "id": "emerald_tools:copper_axe",
+            "required": false
+        },
+        {
+            "id": "emerald_tools:emerald_shovel",
+            "required": false
+        },
+        {
+            "id": "emerald_tools:ruby_shovel",
+            "required": false
+        },
+        {
+            "id": "emerald_tools:amethyst_shovel",
+            "required": false
+        },
+        {
+            "id": "emerald_tools:steel_shovel",
+            "required": false
+        },
+        {
+            "id": "emerald_tools:obsidian_shovel",
+            "required": false
+        },
+        {
+            "id": "emerald_tools:copper_shovel",
+            "required": false
+        },
+        {
+            "id": "emerald_tools:emerald_hoe",
+            "required": false
+        },
+        {
+            "id": "emerald_tools:ruby_hoe",
+            "required": false
+        },
+        {
+            "id": "emerald_tools:amethyst_hoe",
+            "required": false
+        },
+        {
+            "id": "emerald_tools:steel_hoe",
+            "required": false
+        },
+        {
+            "id": "emerald_tools:obsidian_hoe",
+            "required": false
+        },
+        {
+            "id": "emerald_tools:copper_hoe",
+            "required": false
+        }
     ]
 }

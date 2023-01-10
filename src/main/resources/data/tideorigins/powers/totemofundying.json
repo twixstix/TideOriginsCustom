@@ -35,7 +35,7 @@
                 },
                 {
                     "type": "origins:execute_command",
-                    "command": "/particle minecraft:totem_of_undying ~ ~ ~ .5 .5 .5 0.5 100 normal @a"
+                    "command": "particle minecraft:totem_of_undying ~ ~ ~ .5 .5 .5 0.5 100 normal @a"
                 },
                 {
                     "type": "origins:execute_command",

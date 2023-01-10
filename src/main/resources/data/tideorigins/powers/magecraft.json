@@ -1,0 +1,662 @@
+{
+    "name": "Magecraft",
+    "description": "Using a variety of items, you can break them down into their essence and use them to cast different spells depending on the item.",
+    "type": "origins:multiple",
+    "book": {
+        "type": "origins:action_on_callback",
+        "entity_action_chosen": {
+            "type": "origins:execute_command",
+            "command": "function tideorigins:wizard_book"
+        },
+        "execute_chosen_when_orb": true
+    },
+    "spell": {
+        "type": "origins:active_self",
+        "cooldown": 160,
+        "hud_render": {
+            "should_render": true,
+            "sprite_location": "origins:textures/gui/community/huang/resource_bar_01.png",
+            "bar_index": 19
+        },
+        "condition": {
+            "type": "origins:equipped_item",
+            "equipment_slot": "mainhand",
+            "item_condition": {
+                "type": "origins:ingredient",
+                "ingredient": {
+                    "tag": "tideorigins:wizard_catalysts"
+                }
+            }
+        },
+        "entity_action": {
+            "type": "origins:if_else_list",
+            "actions": [
+                {
+                    "condition": {
+                        "type": "origins:equipped_item",
+                        "equipment_slot": "mainhand",
+                        "item_condition": {
+                            "type": "origins:ingredient",
+                            "ingredient": {
+                                "tag": "tideorigins:wizard_flare"
+                            }
+                        }
+                    },
+                    "action": {
+                        "type": "origins:and",
+                        "actions": [
+                            {
+                                "type": "origins:area_of_effect",
+                                "radius": 5,
+                                "bientity_action": {
+                                    "type": "origins:target_action",
+                                    "action": {
+                                        "type": "origins:set_on_fire",
+                                        "duration": 5
+                                    }
+                                },
+                                "bientity_condition": {
+                                    "type": "origins:can_see"
+                                }
+                            },
+                            {
+                                "type": "origins:execute_command",
+                                "command": "summon area_effect_cloud ~ ~0.5 ~ {Particle:\"flame\",Radius:5f,Duration:10}"
+                            },
+                            {
+                                "type": "origins:apply_effect",
+                                "effect": {
+                                    "effect": "minecraft:fire_resistance",
+                                    "duration": 1200
+                                }
+                            },
+                            {
+                                "type": "origins:equipped_item_action",
+                                "equipment_slot": "mainhand",
+                                "action": {
+                                    "type": "origins:consume",
+                                    "amount": 1
+                                }
+                            },
+                            {
+                                "type": "origins:play_sound",
+                                "sound": "minecraft:entity.blaze.shoot",
+                                "pitch": 0.8
+                            }
+                        ]
+                    }
+                },
+                {
+                    "condition": {
+                        "type": "origins:equipped_item",
+                        "equipment_slot": "mainhand",
+                        "item_condition": {
+                            "type": "origins:ingredient",
+                            "ingredient": {
+                                "tag": "tideorigins:wizard_douse"
+                            }
+                        }
+                    },
+                    "action": {
+                        "type": "origins:and",
+                        "actions": [
+                            {
+                                "type": "origins:execute_command",
+                                "command": "function tideorigins:wizard_douse"
+                            },
+                            {
+                                "type": "origins:apply_effect",
+                                "effect": {
+                                    "effect": "minecraft:water_breathing",
+                                    "duration": 1200
+                                }
+                            },
+                            {
+                                "type": "origins:equipped_item_action",
+                                "equipment_slot": "mainhand",
+                                "action": {
+                                    "type": "origins:consume",
+                                    "amount": 1
+                                }
+                            },
+                            {
+                                "type": "origins:play_sound",
+                                "sound": "minecraft:item.bucket.fill",
+                                "pitch": 0.8
+                            }
+                        ]
+                    }
+                },
+                {
+                    "condition": {
+                        "type": "origins:equipped_item",
+                        "equipment_slot": "mainhand",
+                        "item_condition": {
+                            "type": "origins:ingredient",
+                            "ingredient": {
+                                "tag": "tideorigins:wizard_aerate"
+                            }
+                        }
+                    },
+                    "action": {
+                        "type": "origins:and",
+                        "actions": [
+                            {
+                                "type": "origins:area_of_effect",
+                                "radius": 3,
+                                "bientity_action": {
+                                    "type": "origins:add_velocity",
+                                    "z": 2
+                                },
+                                "bientity_condition": {
+                                    "type": "origins:can_see"
+                                }
+                            },
+                            {
+                                "type": "origins:add_velocity",
+                                "y": 1
+                            },
+                            {
+                                "type": "origins:spawn_particles",
+                                "particle": {
+                                    "type": "minecraft:cloud"
+                                },
+                                "count": 16
+                            },
+                            {
+                                "type": "origins:apply_effect",
+                                "effects": [
+                                    {
+                                        "effect": "minecraft:slow_falling",
+                                        "duration": 320
+                                    },
+                                    {
+                                        "effect": "minecraft:jump_boost",
+                                        "duration": 320,
+                                        "amplifier": 1
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "origins:equipped_item_action",
+                                "equipment_slot": "mainhand",
+                                "action": {
+                                    "type": "origins:consume",
+                                    "amount": 1
+                                }
+                            },
+                            {
+                                "type": "origins:play_sound",
+                                "sound": "minecraft:entity.ender_dragon.flap",
+                                "pitch": 0.75
+                            }
+                        ]
+                    }
+                },
+                {
+                    "condition": {
+                        "type": "origins:equipped_item",
+                        "equipment_slot": "mainhand",
+                        "item_condition": {
+                            "type": "origins:ingredient",
+                            "ingredient": {
+                                "tag": "tideorigins:wizard_overgrow"
+                            }
+                        }
+                    },
+                    "action": {
+                        "type": "origins:and",
+                        "actions": [
+                            {
+                                "type": "origins:raycast",
+                                "distance": 6,
+                                "block": true,
+                                "entity": false,
+                                "shape_type": "outline",
+                                "fluid_handling": "any",
+                                "block_action": {
+                                    "type": "origins:and",
+                                    "actions": [
+                                        {
+                                            "type": "origins:execute_command",
+                                            "command": "function tideorigins:wizard_overgrow"
+                                        },
+                                        {
+                                            "type": "origins:delay",
+                                            "ticks": 2,
+                                            "action": {
+                                                "type": "origins:and",
+                                                "actions": [
+                                                    {
+                                                        "type": "origins:bonemeal"
+                                                    },
+                                                    {
+                                                        "type": "origins:offset",
+                                                        "action": {
+                                                            "type": "origins:bonemeal"
+                                                        },
+                                                        "x": 1
+                                                    },
+                                                    {
+                                                        "type": "origins:offset",
+                                                        "action": {
+                                                            "type": "origins:bonemeal"
+                                                        },
+                                                        "x": -1
+                                                    },
+                                                    {
+                                                        "type": "origins:offset",
+                                                        "action": {
+                                                            "type": "origins:bonemeal"
+                                                        },
+                                                        "z": 1
+                                                    },
+                                                    {
+                                                        "type": "origins:offset",
+                                                        "action": {
+                                                            "type": "origins:bonemeal"
+                                                        },
+                                                        "z": -1
+                                                    },
+                                                    {
+                                                        "type": "origins:offset",
+                                                        "action": {
+                                                            "type": "origins:bonemeal"
+                                                        },
+                                                        "x": 1,
+                                                        "z": 1
+                                                    },
+                                                    {
+                                                        "type": "origins:offset",
+                                                        "action": {
+                                                            "type": "origins:bonemeal"
+                                                        },
+                                                        "x": -1,
+                                                        "z": 1
+                                                    },
+                                                    {
+                                                        "type": "origins:offset",
+                                                        "action": {
+                                                            "type": "origins:bonemeal"
+                                                        },
+                                                        "x": -1,
+                                                        "z": -1
+                                                    },
+                                                    {
+                                                        "type": "origins:offset",
+                                                        "action": {
+                                                            "type": "origins:bonemeal"
+                                                        },
+                                                        "x": 1,
+                                                        "z": -1
+                                                    }
+                                                ]
+                                            }
+                                        }
+                                    ]
+                                }
+                            },
+                            {
+                                "type": "origins:spawn_particles",
+                                "particle": {
+                                    "type": "minecraft:happy_villager"
+                                },
+                                "count": 16
+                            },
+                            {
+                                "type": "origins:feed",
+                                "food": 1,
+                                "saturation": 1
+                            },
+                            {
+                                "type": "origins:delay",
+                                "ticks": 20,
+                                "action": {
+                                    "type": "origins:feed",
+                                    "food": 1,
+                                    "saturation": 1
+                                }
+                            },
+                            {
+                                "type": "origins:delay",
+                                "ticks": 40,
+                                "action": {
+                                    "type": "origins:feed",
+                                    "food": 1,
+                                    "saturation": 1
+                                }
+                            },
+                            {
+                                "type": "origins:delay",
+                                "ticks": 60,
+                                "action": {
+                                    "type": "origins:feed",
+                                    "food": 1,
+                                    "saturation": 1
+                                }
+                            },
+                            {
+                                "type": "origins:equipped_item_action",
+                                "equipment_slot": "mainhand",
+                                "action": {
+                                    "type": "origins:consume",
+                                    "amount": 1
+                                }
+                            },
+                            {
+                                "type": "origins:play_sound",
+                                "sound": "minecraft:entity.player.levelup",
+                                "pitch": 0.5
+                            }
+                        ]
+                    }
+                },
+                {
+                    "condition": {
+                        "type": "origins:equipped_item",
+                        "equipment_slot": "mainhand",
+                        "item_condition": {
+                            "type": "origins:ingredient",
+                            "ingredient": {
+                                "tag": "tideorigins:wizard_freeze"
+                            }
+                        }
+                    },
+                    "action": {
+                        "type": "origins:and",
+                        "actions": [
+                            {
+                                "type": "origins:play_sound",
+                                "sound": "minecraft:entity.player.hurt_freeze"
+                            },
+                            {
+                                "type": "origins:execute_command",
+                                "command": "summon area_effect_cloud ~ ~0.5 ~ {Particle:\"snowflake\",Radius:4f,Duration:7}"
+                            },
+                            {
+                                "type": "origins:area_of_effect",
+                                "radius": 4,
+                                "bientity_action": {
+                                    "type": "origins:target_action",
+                                    "action": {
+                                        "type": "origins:and",
+                                        "actions": [
+                                            {
+                                                "type": "origins:grant_power",
+                                                "power": "tideorigins:frozen_weak",
+                                                "source": "tideorigins:wizard"
+                                            },
+                                            {
+                                                "type": "origins:apply_effect",
+                                                "effects": [
+                                                    {
+                                                        "effect": "minecraft:slowness",
+                                                        "duration": 60,
+                                                        "amplifier": 6,
+                                                        "is_ambient": true,
+                                                        "show_particles": false,
+                                                        "show_icon": true
+                                                    },
+                                                    {
+                                                        "effect": "minecraft:jump_boost",
+                                                        "duration": 60,
+                                                        "amplifier": 128,
+                                                        "is_ambient": true,
+                                                        "show_particles": false,
+                                                        "show_icon": true
+                                                    }
+                                                ]
+                                            }
+                                        ]
+                                    }
+                                }
+                            },
+                            {
+                                "type": "origins:equipped_item_action",
+                                "equipment_slot": "mainhand",
+                                "action": {
+                                    "type": "origins:consume",
+                                    "amount": 1
+                                }
+                            }
+                        ]
+                    }
+                },
+                {
+                    "condition": {
+                        "type": "origins:and",
+                        "conditions": [
+                            {
+                                "type": "origins:equipped_item",
+                                "equipment_slot": "mainhand",
+                                "item_condition": {
+                                    "type": "origins:ingredient",
+                                    "ingredient": {
+                                        "tag": "tideorigins:wizard_meteor"
+                                    }
+                                }
+                            }
+                        ]
+                    },
+                    "action": {
+                        "type": "origins:and",
+                        "actions": [
+                            {
+                                "type": "origins:raycast",
+                                "distance": 20,
+                                "block": true,
+                                "entity": true,
+                                "shape_type": "collider",
+                                "fluid_handling": "none",
+                                "hit_action": {
+                                    "type": "origins:and",
+                                    "actions": [
+                                        {
+                                            "type": "origins:explode",
+                                            "power": 1,
+                                            "destruction_type": "none",
+                                            "damage_self": false,
+                                            "create_fire": false
+                                        },
+                                        {
+                                            "type": "origins:equipped_item_action",
+                                            "equipment_slot": "mainhand",
+                                            "action": {
+                                                "type": "origins:consume",
+                                                "amount": 1
+                                            }
+                                        }
+                                    ]
+                                },
+                                "miss_action": {
+                                    "type": "origins:execute_command",
+                                    "command": "title @s actionbar {\"text\": \"Out of range!\", \"color\": \"red\"}"
+                                },
+                                "command_at_hit": "summon firework_rocket ~ ~1 ~ {FireworksItem:{id:firework_rocket,Count:1,tag:{Fireworks:{Explosions:[{Type:2,Trail:1b,Colors:[I;10032066,8201983,16766285],FadeColors:[I;6622353,665216,13401649]}]}}}}"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "condition": {
+                        "type": "origins:equipped_item",
+                        "equipment_slot": "mainhand",
+                        "item_condition": {
+                            "type": "origins:ingredient",
+                            "ingredient": {
+                                "tag": "tideorigins:wizard_vanish"
+                            }
+                        }
+                    },
+                    "action": {
+                        "type": "origins:and",
+                        "actions": [
+                            {
+                                "type": "origins:equipped_item_action",
+                                "equipment_slot": "mainhand",
+                                "action": {
+                                    "type": "origins:consume",
+                                    "amount": 1
+                                }
+                            },
+                            {
+                                "type": "origins:play_sound",
+                                "sound": "minecraft:entity.illusioner.mirror_move"
+                            },
+                            {
+                                "type": "origins:spawn_particles",
+                                "particle": {
+                                    "type": "minecraft:witch"
+                                },
+                                "count": 16
+                            },
+                            {
+                                "type": "origins:trigger_cooldown",
+                                "power": "tideorigins:*_invistimer"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "condition": {
+                        "type": "origins:equipped_item",
+                        "equipment_slot": "mainhand",
+                        "item_condition": {
+                            "type": "origins:ingredient",
+                            "ingredient": {
+                                "tag": "tideorigins:wizard_fortify"
+                            }
+                        }
+                    },
+                    "action": {
+                        "type": "origins:and",
+                        "actions": [
+                            {
+                                "type": "origins:apply_effect",
+                                "effects": [
+                                    {
+                                        "effect": "minecraft:resistance",
+                                        "duration": 300
+                                    },
+                                    {
+                                        "effect": "minecraft:absorption",
+                                        "duration": 300
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "origins:exhaust",
+                                "amount": 40
+                            },
+                            {
+                                "type": "origins:equipped_item_action",
+                                "equipment_slot": "mainhand",
+                                "action": {
+                                    "type": "origins:consume",
+                                    "amount": 1
+                                }
+                            },
+                            {
+                                "type": "origins:spawn_particles",
+                                "particle": {
+                                    "type": "minecraft:crit"
+                                },
+                                "count": 16
+                            },
+                            {
+                                "type": "origins:play_sound",
+                                "sound": "minecraft:block.respawn_anchor.set_spawn",
+                                "pitch": 0.8
+                            }
+                        ]
+                    }
+                },
+                {
+                    "condition": {
+                        "type": "origins:equipped_item",
+                        "equipment_slot": "mainhand",
+                        "item_condition": {
+                            "type": "origins:ingredient",
+                            "ingredient": {
+                                "tag": "tideorigins:wizard_illuminate"
+                            }
+                        }
+                    },
+                    "action": {
+                        "type": "origins:and",
+                        "actions": [
+                            {
+                                "type": "origins:block_action_at",
+                                "block_action": {
+                                    "type": "origins:add_block",
+                                    "block": "minecraft:light"
+                                }
+                            },
+                            {
+                                "type": "origins:equipped_item_action",
+                                "equipment_slot": "mainhand",
+                                "action": {
+                                    "type": "origins:consume",
+                                    "amount": 1
+                                }
+                            },
+                            {
+                                "type": "origins:execute_command",
+                                "command": "effect give @e[distance=..20] minecraft:glowing 30 0 true"
+                            },
+                            {
+                                "type": "origins:spawn_particles",
+                                "particle": {
+                                    "type": "minecraft:glow"
+                                },
+                                "count": 16
+                            },
+                            {
+                                "type": "origins:play_sound",
+                                "sound": "minecraft:entity.glow_squid.ambient",
+                                "pitch": 0.8
+                            }
+                        ]
+                    }
+                }
+            ]
+        }
+    },
+    "invistimer": {
+        "type": "origins:cooldown",
+        "cooldown": 320,
+        "hud_render": {
+            "should_render": true,
+            "sprite_location": "origins:textures/gui/community/spiderkolo/resource_bar_03.png",
+            "bar_index": 14
+        }
+    },
+    "invisoverlay": {
+        "type": "apoli:overlay",
+        "texture": "minecraft:textures/misc/nausea.png",
+        "red": 0.2,
+        "green": 0.2,
+        "blue": 0.2,
+        "strength": 0.7,
+        "draw_mode": "nausea",
+        "draw_phase": "above_hud",
+        "visible_in_third_person": true,
+        "hide_with_hud": true,
+        "condition": {
+            "type": "origins:resource",
+            "resource": "tideorigins:*_invistimer",
+            "comparison": ">",
+            "compare_to": 0
+        }
+    },
+    "invis": {
+        "type": "origins:invisibility",
+        "render_armor": false,
+        "condition": {
+            "type": "origins:resource",
+            "resource": "tideorigins:*_invistimer",
+            "comparison": ">",
+            "compare_to": 0
+        }
+    }
+}

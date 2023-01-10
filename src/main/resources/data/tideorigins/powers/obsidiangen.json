@@ -1,0 +1,22 @@
+{
+    "description": "convert lava to obsidian w right click",
+    "type": "origins:action_on_block_use",
+    "block_action": {
+        "type": "origins:set_block",
+        "block": "minecraft:obsidian"
+    },
+    "block_condition": {
+        "type": "origins:fluid",
+        "fluid_condition": {
+            "type": "origins:in_tag",
+            "tag": "minecraft:lava"
+        }
+    },
+    "condition": {
+        "type": "origins:equipped_item",
+        "equipment_slot": "mainhand",
+        "item_condition": {
+            "type": "origins:empty"
+        }
+    }
+}

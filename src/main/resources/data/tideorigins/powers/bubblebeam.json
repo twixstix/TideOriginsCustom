@@ -20,7 +20,7 @@
                 "type": "origins:play_sound",
                 "sound": "minecraft:block.bubble_column.bubble_pop"
             },
-            "command_along_ray": "/particle minecraft:bubble ~ ~ ~ 0 0 0 1 1 normal"
+            "command_along_ray": "particle minecraft:bubble ~ ~ ~ 0 0 0 1 1 normal"
         },
         "cooldown": 1,
         "key": {

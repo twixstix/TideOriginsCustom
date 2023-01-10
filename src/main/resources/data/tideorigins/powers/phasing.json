@@ -1,0 +1,68 @@
+{
+    "name": "Phasing",
+    "description": "You can phase through walls as long as you are not starving.",
+    "type": "origins:multiple",
+    "toggle": {
+        "type": "origins:toggle",
+        "key": {
+            "key": "key.origins.secondary_active",
+            "continuous": false
+        },
+        "retain_state": false,
+        "condition": {
+            "type": "apoli:food_level",
+            "comparison": ">",
+            "compare_to": 6
+        }
+    },
+    "phase": {
+        "type": "origins:phasing",
+        "blacklist": true,
+        "render_type": "blindness",
+        "view_distance": 10,
+        "block_condition": {
+            "type": "origins:in_tag",
+            "tag": "origins:unphasable"
+        },
+        "phase_down_condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:sneaking"
+                },
+                {
+                    "type": "origins:on_block"
+                }
+            ]
+        },
+        "condition": {
+            "type": "origins:power_active",
+            "power": "tideorigins:*_toggle"
+        }
+    },
+    "hunger": {
+        "type": "origins:exhaust",
+        "interval": 20,
+        "exhaustion": 0.4,
+        "condition": {
+            "type": "origins:power_active",
+            "power": "tideorigins:*_toggle"
+        }
+    },
+    "overlay": {
+        "type": "apoli:overlay",
+        "texture": "minecraft:textures/misc/nausea.png",
+        "red": 0.2,
+        "green": 0.2,
+        "blue": 0.2,
+        "strength": 0.7,
+        "draw_mode": "nausea",
+        "draw_phase": "above_hud",
+        "visible_in_third_person": true,
+        "hide_with_hud": true,
+        "condition": {
+            "type": "origins:power_active",
+            "power": "tideorigins:*_toggle"
+        }
+    }
+}

@@ -11,10 +11,9 @@ import net.minecraft.screen.ScreenHandlerContext;
 import net.minecraft.screen.SimpleNamedScreenHandlerFactory;
 import net.minecraft.stat.Stats;
 import net.minecraft.text.Text;
-import net.minecraft.text.TranslatableText;
 
 public class AnvilAction {
-    private static final Text TITLE = new TranslatableText("container.repair");
+    private static final Text TITLE = Text.translatable("container.repair");
 
     public static void action(SerializableData.Instance data, Entity entity) {
         if (!(entity instanceof PlayerEntity player)) return;

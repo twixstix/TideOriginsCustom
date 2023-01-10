@@ -101,7 +101,7 @@
         "type": "origins:action_on_block_break",
         "block_action": {
             "type": "origins:execute_command",
-            "command": "/summon item ~ ~ ~ {Item:{id:'minecraft:seagrass',Count:1b}}"
+            "command": "summon item ~ ~ ~ {Item:{id:'minecraft:seagrass',Count:1b}}"
         },
         "block_condition": {
             "type": "origins:block",
@@ -113,7 +113,7 @@
         "type": "origins:action_on_block_break",
         "block_action": {
             "type": "origins:execute_command",
-            "command": "/summon item ~ ~ ~ {Item:{id:'minecraft:seagrass',Count:2b}}"
+            "command": "summon item ~ ~ ~ {Item:{id:'minecraft:seagrass',Count:2b}}"
         },
         "block_condition": {
             "type": "origins:block",

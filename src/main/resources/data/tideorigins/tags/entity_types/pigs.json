@@ -1,8 +1,11 @@
 {
-    "replace": false,
-    "values": [
-      "minecraft:pig",
-      "minecraft:hoglin",
-      "betteranimalsplus:boar"
-    ]
-  }
+  "replace": false,
+  "values": [
+    "minecraft:pig",
+    "minecraft:hoglin",
+    {
+      "id": "betteranimalsplus:boar",
+      "required": false
+    }
+  ]
+}

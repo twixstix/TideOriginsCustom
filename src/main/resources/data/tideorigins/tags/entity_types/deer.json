@@ -1,8 +1,17 @@
 {
-    "replace": false,
-    "values": [
-      "betteranimalsplus:deer",
-      "betteranimalsplus:reindeer",
-      "betteranimalsplus:moose"
-    ]
-  }
+  "replace": false,
+  "values": [
+    {
+      "id": "betteranimalsplus:deer",
+      "required": false
+    },
+    {
+      "id": "betteranimalsplus:reindeer",
+      "required": false
+    },
+    {
+      "id": "betteranimalsplus:moose",
+      "required": false
+    }
+  ]
+}

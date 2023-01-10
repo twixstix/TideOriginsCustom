@@ -1,0 +1,18 @@
+{
+	"powers": [
+        "tideorigins:enviroresist",
+        "tideorigins:survivalstate",
+        "origins:natural_armor",
+        "tideorigins:phasing",
+        "tideorigins:microscopic",
+        "tideorigins:nulleffects",
+        "tideorigins:squishable",
+        "origins:no_shield",
+        "tideorigins:insomnia"
+	],
+	"icon": "minecraft:rabbit_foot",
+    "order": 4,
+	"impact": 3,
+	"name": "Tardigrade",
+	"description": "Also known as 'water bears', Tardigrades are microscopic creatures with the ability to survive in nearly any environment."
+}

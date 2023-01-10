@@ -61,7 +61,7 @@
 				"ticks": 10,
 				"action": {
 					"type": "origins:execute_command",
-					"command": "/summon area_effect_cloud ~ ~ ~ {Particle:'dust 0.620 0.580 0.478 1',Radius:3.5f,Duration:20,Effects:[{Id:9b,Amplifier:0b,Duration:80,ShowParticles:0b,}]}"
+					"command": "summon area_effect_cloud ~ ~ ~ {Particle:'dust 0.620 0.580 0.478 1',Radius:3.5f,Duration:20,Effects:[{Id:9b,Amplifier:0b,Duration:80,ShowParticles:0b,}]}"
 				}
 			}
 		]

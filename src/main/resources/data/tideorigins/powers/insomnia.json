@@ -1,0 +1,7 @@
+{
+    "name": "Insomnia",
+    "description": "You cannot sleep.",
+    "type": "origins:prevent_sleep",
+    "message": "You can't used beds!",
+    "set_spawn_point": true
+}

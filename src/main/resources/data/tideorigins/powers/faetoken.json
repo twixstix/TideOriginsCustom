@@ -53,7 +53,7 @@
             "type": "origins:actor_action",
             "action": {
                 "type": "origins:execute_command",
-                "command": "/function tideorigins:fairyjoin"
+                "command": "function tideorigins:fairyjoin"
             }
         },
         "hands": [
@@ -74,7 +74,7 @@
             "type": "origins:target_action",
             "action": {
                 "type": "origins:execute_command",
-                "command": "/function tideorigins:fairyleave"
+                "command": "function tideorigins:fairyleave"
             }
         },
         "item_condition": {

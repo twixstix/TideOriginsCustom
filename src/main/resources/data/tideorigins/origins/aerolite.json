@@ -28,5 +28,6 @@
             "origin": "tideorigins:aerolite2",
             "announcement": "Upgrade complete. Permanent glider tech engaged."
         }
-    ]
+    ],
+    "unchoosable": true
 }

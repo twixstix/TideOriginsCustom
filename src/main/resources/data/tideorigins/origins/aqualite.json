@@ -1,0 +1,30 @@
+{
+	"powers": [
+		"tideorigins:roboenhancements",
+        "tideorigins:smalltrialite",
+        "tideorigins:aquamachinery",
+        "origins:aqua_affinity",
+        "origins:like_water",
+        "origins:swim_speed",
+        "tideorigins:tridentmaster_ranged",
+        "tideorigins:riptide_tri",
+        "tideorigins:aqualaser",
+        "tideorigins:instantfood",
+        "tideorigins:ally_ender2",
+        "tideorigins:nohorse",
+        "tideorigins:nokart",
+        "tideorigins:norevive"
+	],
+	"icon": "minecraft:clock",
+    "order": 4,
+	"impact": 2,
+	"name": "Time Spirit V3",
+    "description": "Trialite mkIII, aka Aqualite.",
+    "upgrades": [
+        {
+            "condition": "tideorigins:aqualite_evolve",
+            "origin": "tideorigins:aqualite2",
+            "announcement": "Upgrade complete. Hydrotech has been enhanced."
+        }
+    ]
+}

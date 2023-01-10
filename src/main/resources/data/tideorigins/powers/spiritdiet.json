@@ -1,0 +1,20 @@
+{
+    "name": "Spirit Diet",
+    "description": "You can only consume magical food such as Golden Carrots and Golden Apples.",
+    "type": "origins:prevent_item_use",
+    "item_condition": {
+        "type": "origins:and",
+        "conditions": [
+            {
+                "type": "origins:food"
+            },
+            {
+                "type": "origins:ingredient",
+                "ingredient": {
+                    "tag": "tideorigins:gold_food"
+                },
+                "inverted": true
+            }
+        ]
+    }
+}

@@ -1,0 +1,17 @@
+{
+	"powers": [
+        "tideorigins:effectboost",
+        "tideorigins:levitation",
+        "origins:slow_falling",
+        "tideorigins:phasing",
+        "origins:translucent",
+        "tideorigins:spiritdiet",
+        "tideorigins:sleepheal",
+        "tideorigins:smallfaeling"
+	],
+	"icon": "minecraft:sugar",
+    "order": 4,
+	"impact": 2,
+	"name": "Faeling",
+	"description": "Faelings are magical beings created as a last ditch effort to survive, containing little more than the memories of their former bodies."
+}

@@ -1,0 +1,53 @@
+{
+    "name": "Ultraresistant",
+    "description": "Your body can withstand all kinds of environmental damage.",
+    "type": "origins:multiple",
+    "wall": {
+        "type": "origins:invulnerability",
+        "damage_condition": {
+            "type": "origins:name",
+            "name": "inWall"
+        }
+    },
+    "fire": {
+        "type": "origins:invulnerability",
+        "damage_condition": {
+            "type": "origins:fire"
+        }
+    },
+    "fall": {
+        "type": "origins:invulnerability",
+        "damage_condition": {
+            "type": "origins:from_falling"
+        }
+    },
+    "cactus": {
+        "type": "origins:invulnerability",
+        "damage_condition": {
+            "type": "origins:name",
+            "name": "cactus"
+        }
+    },
+    "fly": {
+        "type": "origins:invulnerability",
+        "damage_condition": {
+            "type": "origins:name",
+            "name": "flyIntoWall"
+        }
+    },
+    "freeze": {
+        "type": "origins:invulnerability",
+        "damage_condition": {
+            "type": "origins:name",
+            "name": "freeze"
+        }
+    },
+    "air": {
+        "type": "origins:action_over_time",
+        "entity_action": {
+            "type": "origins:gain_air",
+            "value": 5
+        },
+        "interval": 5
+    }
+}

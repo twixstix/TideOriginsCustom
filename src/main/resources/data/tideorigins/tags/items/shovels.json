@@ -7,17 +7,53 @@
         "minecraft:golden_shovel",
         "minecraft:diamond_shovel",
         "minecraft:netherite_shovel",
-        "additionaladditions:rose_gold_shovel",
-        "additionaladditions:gilded_netherite_sword",
-        "additionaladditions:gilded_netherite_shovel",
-        "betternether:cincinnasite_shovel",
-        "betternether:cincinnasite_shovel_diamond",
-        "betternether:nether_ruby_shovel",
-        "emerald_tools:emerald_shovel",
-        "emerald_tools:ruby_shovel",
-        "emerald_tools:amethyst_shovel",
-        "emerald_tools:steel_shovel",
-        "emerald_tools:obsidian_shovel",
-        "emerald_tools:copper_shovel"
+        {
+            "id": "additionaladditions:rose_gold_shovel",
+            "required": false
+        },
+        {
+            "id": "additionaladditions:gilded_netherite_sword",
+            "required": false
+        },
+        {
+            "id": "additionaladditions:gilded_netherite_shovel",
+            "required": false
+        },
+        {
+            "id": "betternether:cincinnasite_shovel",
+            "required": false
+        },
+        {
+            "id": "betternether:cincinnasite_shovel_diamond",
+            "required": false
+        },
+        {
+            "id": "betternether:nether_ruby_shovel",
+            "required": false
+        },
+        {
+            "id": "emerald_tools:emerald_shovel",
+            "required": false
+        },
+        {
+            "id": "emerald_tools:ruby_shovel",
+            "required": false
+        },
+        {
+            "id": "emerald_tools:amethyst_shovel",
+            "required": false
+        },
+        {
+            "id": "emerald_tools:steel_shovel",
+            "required": false
+        },
+        {
+            "id": "emerald_tools:obsidian_shovel",
+            "required": false
+        },
+        {
+            "id": "emerald_tools:copper_shovel",
+            "required": false
+        }
     ]
 }

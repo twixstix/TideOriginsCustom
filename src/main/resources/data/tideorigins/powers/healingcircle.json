@@ -7,7 +7,7 @@
         "actions": [
             {
                 "type": "origins:execute_command",
-                "command": "/summon area_effect_cloud ~ ~0.2 ~ {Particle:\"electric_spark\",ReapplicationDelay:20,Radius:2f,RadiusPerTick:0f,RadiusOnUse:0f,Duration:100,Potion:\"minecraft:healing\"}"
+                "command": "summon area_effect_cloud ~ ~0.2 ~ {Particle:\"electric_spark\",ReapplicationDelay:20,Radius:2f,RadiusPerTick:0f,RadiusOnUse:0f,Duration:100,Potion:\"minecraft:healing\"}"
             },
             {
                 "type": "origins:exhaust",

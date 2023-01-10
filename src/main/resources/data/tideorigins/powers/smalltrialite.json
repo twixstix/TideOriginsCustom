@@ -1,12 +1,12 @@
 {
     "name": "Compact Size",
-    "description": "You're smaller than average, and your light body causes you to receive extra knockback. You take less kinetic damage when flying, though.",
+    "description": "You're smaller than average, and your light body causes you to receive extra knockback.",
     "type": "origins:multiple",
     "knockback": {
         "type": "origins:action_when_hit",
         "bientity_action": {
             "type": "origins:add_velocity",
-            "z": 1
+            "z": 3
         }
     },
     "shrink": {

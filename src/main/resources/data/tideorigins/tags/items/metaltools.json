@@ -1,20 +1,35 @@
 {
-    "replace": false,
-    "values": [
-      "minecraft:iron_sword",
-      "minecraft:golden_sword",
-      "minecraft:iron_shovel",
-      "minecraft:golden_shovel",
-      "minecraft:iron_axe",
-      "minecraft:golden_axe",
-      "minecraft:iron_pickaxe",
-      "minecraft:golden_pickaxe",
-      "minecraft:iron_hoe",
-      "minecraft:golden_hoe",
-      "additionaladditions:rose_gold_sword",
-      "additionaladditions:rose_gold_shovel",
-      "additionaladditions:rose_gold_axe",
-      "additionaladditions:rose_gold_pickaxe",
-      "additionaladditions:rose_gold_hoe"
-    ]
-  }
+  "replace": false,
+  "values": [
+    "minecraft:iron_sword",
+    "minecraft:golden_sword",
+    "minecraft:iron_shovel",
+    "minecraft:golden_shovel",
+    "minecraft:iron_axe",
+    "minecraft:golden_axe",
+    "minecraft:iron_pickaxe",
+    "minecraft:golden_pickaxe",
+    "minecraft:iron_hoe",
+    "minecraft:golden_hoe",
+    {
+      "id": "additionaladditions:rose_gold_sword",
+      "required": false
+    },
+    {
+      "id": "additionaladditions:rose_gold_shovel",
+      "required": false
+    },
+    {
+      "id": "additionaladditions:rose_gold_axe",
+      "required": false
+    },
+    {
+      "id": "additionaladditions:rose_gold_pickaxe",
+      "required": false
+    },
+    {
+      "id": "additionaladditions:rose_gold_hoe",
+      "required": false
+    }
+  ]
+}

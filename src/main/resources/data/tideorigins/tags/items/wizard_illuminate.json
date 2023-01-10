@@ -1,0 +1,13 @@
+{
+    "replace": false,
+    "values": [
+        "minecraft:glowstone",
+        "minecraft:glowstone_dust",
+        "minecraft:glow_ink_sac",
+        "minecraft:glow_berries",
+        "minecraft:lantern",
+        "minecraft:torch",
+        "minecraft:soul_lantern",
+        "minecraft:soul_torch"
+    ]
+}

@@ -28,7 +28,7 @@
                     },
                     "action": {
                         "type": "origins:execute_command",
-                        "command": "/function tideorigins:fungify"
+                        "command": "function tideorigins:fungify"
                     }
                 },
                 {
@@ -76,7 +76,7 @@
                 "type": "origins:target_action",
                 "action": {
                     "type": "origins:execute_command",
-                    "command": "/function tideorigins:mooshroom"
+                    "command": "function tideorigins:mooshroom"
                 }
             },
             "bientity_condition": {

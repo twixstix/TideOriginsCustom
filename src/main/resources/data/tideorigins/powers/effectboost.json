@@ -1,0 +1,19 @@
+{
+    "name": "Effect Boost",
+    "description": "The magic in your body resonates with potions and other effects, causing them to be stronger and last longer.",
+    "type": "origins:multiple",
+    "power": {
+        "type": "origins:modify_status_effect_amplifier",
+        "modifier": {
+            "operation": "add_base_early",
+            "value": 1
+        }
+    },
+    "length": {
+        "type": "origins:modify_status_effect_duration",
+        "modifier": {
+            "operation": "multiply_base_multiplicative",
+            "value": 0.5
+        }
+    }
+}

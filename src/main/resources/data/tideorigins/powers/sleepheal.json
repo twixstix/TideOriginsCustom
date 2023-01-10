@@ -1,0 +1,60 @@
+{
+    "name": "Sweet Dreams",
+    "description": "A good night's sleep fully restores your health and hunger.",
+    "type": "origins:action_on_block_use",
+    "block_condition": {
+        "type": "origins:in_tag",
+        "tag": "minecraft:beds"
+    },
+    "condition": {
+        "type": "origins:or",
+        "conditions": [
+            {
+                "type": "origins:and",
+                "conditions": [
+                    {
+                        "type": "origins:time_of_day",
+                        "comparison": ">=",
+                        "compare_to": 12542
+                    },
+                    {
+                        "type": "origins:predicate",
+                        "predicate": "tideorigins:is_clear"
+                    }
+                ]
+            },
+            {
+                "type": "origins:and",
+                "conditions": [
+                    {
+                        "type": "origins:time_of_day",
+                        "comparison": ">=",
+                        "compare_to": 12010
+                    },
+                    {
+                        "type": "origins:predicate",
+                        "predicate": "tideorigins:is_rainy"
+                    }
+                ]
+            },
+            {
+                "type": "origins:predicate",
+                "predicate": "tideorigins:is_thunderstorm"
+            }
+        ]
+    },
+    "entity_action": {
+        "type": "origins:and",
+        "actions": [
+            {
+                "type": "origins:heal",
+                "amount": 20
+            },
+            {
+                "type": "origins:feed",
+                "food": 20,
+                "saturation": 0.1
+            }
+        ]
+    }
+}

@@ -18,17 +18,9 @@
             "equipment_slot": "head",
             "item_condition": {
                 "type": "origins:ingredient",
-                "ingredient": [
-                    {
-                        "item": "minecraft:netherite_helmet"
-                    },
-                    {
-                        "item": "additionaladditions:gilded_netherite_helmet"
-                    },
-                    {
-                        "item": "betternether:nether_ruby_helmet"
-                    }
-                ]
+                "ingredient": {
+                    "tag": "tideorigins:fireproof_armor"
+                }
             },
             "inverted": true
         },
@@ -50,17 +42,9 @@
             "equipment_slot": "chest",
             "item_condition": {
                 "type": "origins:ingredient",
-                "ingredient": [
-                    {
-                        "item": "minecraft:netherite_chestplate"
-                    },
-                    {
-                        "item": "additionaladditions:gilded_netherite_chestplate"
-                    },
-                    {
-                        "item": "betternether:nether_ruby_chestplate"
-                    }
-                ]
+                "ingredient": {
+                    "tag": "tideorigins:fireproof_armor"
+                }
             },
             "inverted": true
         },
@@ -82,17 +66,9 @@
             "equipment_slot": "legs",
             "item_condition": {
                 "type": "origins:ingredient",
-                "ingredient": [
-                    {
-                        "item": "minecraft:netherite_leggings"
-                    },
-                    {
-                        "item": "additionaladditions:gilded_netherite_leggings"
-                    },
-                    {
-                        "item": "betternether:nether_ruby_leggings"
-                    }
-                ]
+                "ingredient": {
+                    "tag": "tideorigins:fireproof_armor"
+                }
             },
             "inverted": true
         },
@@ -114,17 +90,9 @@
             "equipment_slot": "feet",
             "item_condition": {
                 "type": "origins:ingredient",
-                "ingredient": [
-                    {
-                        "item": "minecraft:netherite_boots"
-                    },
-                    {
-                        "item": "additionaladditions:gilded_netherite_boots"
-                    },
-                    {
-                        "item": "betternether:nether_ruby_boots"
-                    }
-                ]
+                "ingredient": {
+                    "tag": "tideorigins:fireproof_armor"
+                }
             },
             "inverted": true
         },

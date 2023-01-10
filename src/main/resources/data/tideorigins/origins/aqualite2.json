@@ -1,0 +1,24 @@
+{
+	"powers": [
+		"tideorigins:roboenhancements",
+        "tideorigins:smalltrialite",
+        "tideorigins:aquamachinery",
+        "origins:aqua_affinity",
+        "origins:like_water",
+        "origins:swim_speed",
+        "tideorigins:tridentmaster_ranged",
+        "tideorigins:riptide_tri2",
+        "tideorigins:aqualaser2",
+        "tideorigins:instantfood",
+        "tideorigins:ally_ender2",
+        "tideorigins:nohorse",
+        "tideorigins:nokart",
+        "tideorigins:norevive"
+	],
+	"icon": "minecraft:clock",
+    "order": 4,
+	"impact": 2,
+	"name": "Time Spirit V3",
+    "description": "Trialite mkIII, aka Aqualite.",
+    "unchoosable": true
+}

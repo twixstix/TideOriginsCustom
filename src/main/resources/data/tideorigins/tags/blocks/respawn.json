@@ -1,0 +1,10 @@
+{
+    "replace": false,
+    "values": [
+        "minecraft:respawn_anchor",
+        {
+            "id": "betternether:pig_statue_respawner",
+            "required": false
+        }
+    ]
+}

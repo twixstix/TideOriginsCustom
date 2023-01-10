@@ -7,16 +7,49 @@
         "minecraft:golden_pickaxe",
         "minecraft:diamond_pickaxe",
         "minecraft:netherite_pickaxe",
-        "additionaladditions:rose_gold_pickaxe",
-        "additionaladditions:gilded_netherite_pickaxe",
-        "betternether:cincinnasite_pickaxe",
-        "betternether:cincinnasite_pickaxe_diamond",
-        "betternether:nether_ruby_pickaxe",
-        "emerald_tools:emerald_pickaxe",
-        "emerald_tools:ruby_pickaxe",
-        "emerald_tools:amethyst_pickaxe",
-        "emerald_tools:steel_pickaxe",
-        "emerald_tools:obsidian_pickaxe",
-        "emerald_tools:copper_pickaxe"
+        {
+            "id": "additionaladditions:rose_gold_pickaxe",
+            "required": false
+        },
+        {
+            "id": "additionaladditions:gilded_netherite_pickaxe",
+            "required": false
+        },
+        {
+            "id": "betternether:cincinnasite_pickaxe",
+            "required": false
+        },
+        {
+            "id": "betternether:cincinnasite_pickaxe_diamond",
+            "required": false
+        },
+        {
+            "id": "betternether:nether_ruby_pickaxe",
+            "required": false
+        },
+        {
+            "id": "emerald_tools:emerald_pickaxe",
+            "required": false
+        },
+        {
+            "id": "emerald_tools:ruby_pickaxe",
+            "required": false
+        },
+        {
+            "id": "emerald_tools:amethyst_pickaxe",
+            "required": false
+        },
+        {
+            "id": "emerald_tools:steel_pickaxe",
+            "required": false
+        },
+        {
+            "id": "emerald_tools:obsidian_pickaxe",
+            "required": false
+        },
+        {
+            "id": "emerald_tools:copper_pickaxe",
+            "required": false
+        }
     ]
 }

@@ -7,16 +7,49 @@
         "minecraft:golden_hoe",
         "minecraft:diamond_hoe",
         "minecraft:netherite_hoe",
-        "additionaladditions:rose_gold_hoe",
-        "additionaladditions:gilded_netherite_hoe",
-        "betternether:cincinnasite_hoe",
-        "betternether:cincinnasite_hoe_diamond",
-        "betternether:nether_ruby_hoe",
-        "emerald_tools:emerald_hoe",
-        "emerald_tools:ruby_hoe",
-        "emerald_tools:amethyst_hoe",
-        "emerald_tools:steel_hoe",
-        "emerald_tools:obsidian_hoe",
-        "emerald_tools:copper_hoe"
+        {
+            "id": "additionaladditions:rose_gold_hoe",
+            "required": false
+        },
+        {
+            "id": "additionaladditions:gilded_netherite_hoe",
+            "required": false
+        },
+        {
+            "id": "betternether:cincinnasite_hoe",
+            "required": false
+        },
+        {
+            "id": "betternether:cincinnasite_hoe_diamond",
+            "required": false
+        },
+        {
+            "id": "betternether:nether_ruby_hoe",
+            "required": false
+        },
+        {
+            "id": "emerald_tools:emerald_hoe",
+            "required": false
+        },
+        {
+            "id": "emerald_tools:ruby_hoe",
+            "required": false
+        },
+        {
+            "id": "emerald_tools:amethyst_hoe",
+            "required": false
+        },
+        {
+            "id": "emerald_tools:steel_hoe",
+            "required": false
+        },
+        {
+            "id": "emerald_tools:obsidian_hoe",
+            "required": false
+        },
+        {
+            "id": "emerald_tools:copper_hoe",
+            "required": false
+        }
     ]
 }

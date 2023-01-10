@@ -1,0 +1,66 @@
+{
+    "name": "Microscopic",
+    "description": "You are incredibly tiny. You deal 3 less damage than normal and have only 6 hearts.",
+    "type": "origins:multiple",
+    "attribs": {
+        "type": "origins:attribute",
+        "modifiers": [
+        {
+            "name": "health reduction",
+            "attribute": "minecraft:generic.max_health",
+            "value": -8.0,
+            "operation": "addition"
+        },
+        {
+            "name": "attkrange",
+            "attribute": "reach-entity-attributes:attack_range",
+            "operation": "addition",
+            "value": -3
+        },
+        {
+            "name": "buildrange",
+            "attribute": "reach-entity-attributes:reach",
+            "operation": "addition",
+            "value": -2
+        },
+        {
+            "name": "atkspd",
+            "attribute": "generic.attack_speed",
+            "operation": "addition",
+            "value": 0.5
+        }
+        ]
+    },
+    "shrink": {
+        "type": "origins:action_on_callback",
+        "entity_action_chosen": {
+            "type": "origins:and",
+                "actions": [
+                    {
+                        "type": "origins:execute_command",
+                        "command": "scale set pehkui:height 0.2 @s"
+                    },
+                    {
+                        "type": "origins:execute_command",
+                        "command": "scale set pehkui:width 0.2 @s"
+                    },
+                    {    
+                        "type": "origins:execute_command",
+                        "command": "scale persist set true @s"
+                    }
+                ]
+            },
+        "entity_action_lost": {
+            "type": "origins:execute_command",
+            "command": "scale reset @s"
+        },
+        "execute_chosen_when_orb": true
+    },
+    "dmgreduce": {
+        "type": "origins:modify_damage_dealt",
+        "modifier": {
+            "operation": "addition",
+            "value": -3
+        }
+    }
+}

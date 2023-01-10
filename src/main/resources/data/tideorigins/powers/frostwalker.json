@@ -5,7 +5,7 @@
     "interval": 3,
     "entity_action": {
         "type": "origins:execute_command",
-        "command": "/function tideorigins:frostwalk"
+        "command": "function tideorigins:frostwalk"
     },
     "condition": {
         "type": "origins:and",

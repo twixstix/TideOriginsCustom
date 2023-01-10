@@ -4,7 +4,7 @@
     "type": "origins:target_action_on_hit",
     "entity_action": {
         "type": "origins:execute_command",
-        "command": "/summon item ~ ~ ~ {Item:{id:'minecraft:poppy',Count:1b}}"
+        "command": "summon item ~ ~ ~ {Item:{id:'minecraft:poppy',Count:1b}}"
     },
     "target_condition": {
         "type": "origins:and",

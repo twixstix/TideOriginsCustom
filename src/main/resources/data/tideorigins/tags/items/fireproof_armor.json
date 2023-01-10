@@ -1,0 +1,41 @@
+{
+    "replace": false,
+    "values": [
+        "minecraft:netherite_helmet",
+        "minecraft:netherite_chestplate",
+        "minecraft:netherite_leggings",
+        "minecraft:netherite_boots",
+        {
+            "id": "additionaladditions:gilded_netherite_helmet",
+            "required": false
+        },
+        {
+            "id": "betternether:nether_ruby_helmet",
+            "required": false
+        },
+        {
+            "id": "additionaladditions:gilded_netherite_chestplate",
+            "required": false
+        },
+        {
+            "id": "betternether:nether_ruby_chestplate",
+            "required": false
+        },
+        {
+            "id": "additionaladditions:gilded_netherite_leggings",
+            "required": false
+        },
+        {
+            "id": "betternether:nether_ruby_leggings",
+            "required": false
+        },
+        {
+            "id": "additionaladditions:gilded_netherite_boots",
+            "required": false
+        },
+        {
+            "id": "betternether:nether_ruby_boots",
+            "required": false
+        }
+    ]
+}

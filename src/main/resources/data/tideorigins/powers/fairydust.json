@@ -1,6 +1,6 @@
 {
     "name": "Fairy Dust",
-    "description": "Holding Glowstone Dust or Redstone Dust and attacking someone converts it into Fairy Dust, causing them to glow or levitate for a few seconds.",
+    "description": "Attacking someone while holding various dusts converts them into Fairy Dust, causing a unique effect.",
     "type": "origins:multiple",
     "glow": {
         "type": "origins:action_on_hit",
@@ -71,6 +71,104 @@
                             "effect": "minecraft:levitation",
                             "duration": 80
                         }
+                    }
+                },
+                {
+                    "type": "origins:actor_action",
+                    "action": {
+                        "type": "origins:equipped_item_action",
+                        "equipment_slot": "mainhand",
+                        "action": {
+                            "type": "origins:consume",
+                            "amount": 1
+                        }
+                    }
+                }
+            ]
+        },
+        "cooldown": 100
+    },
+    "speeeed": {
+        "type": "origins:action_on_hit",
+        "damage_condition": {
+            "type": "origins:attacker",
+            "entity_condition": {
+                "type": "origins:equipped_item",
+                "equipment_slot": "mainhand",
+                "item_condition": {
+                    "type": "origins:ingredient",
+                    "ingredient": {
+                        "item": "minecraft:sugar"
+                    }
+                }
+            }
+        },
+        "bientity_action": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:target_action",
+                    "action": {
+                        "type": "origins:apply_effect",
+                        "effects": [
+                            {
+                                "effect": "minecraft:speed",
+                                "duration": 80
+                            },
+                            {
+                                "effect": "minecraft:haste",
+                                "duration": 80
+                            },
+                            {
+                                "effect": "minecraft:weakness",
+                                "duration": 80
+                            }
+                        ]
+                    }
+                },
+                {
+                    "type": "origins:actor_action",
+                    "action": {
+                        "type": "origins:equipped_item_action",
+                        "equipment_slot": "mainhand",
+                        "action": {
+                            "type": "origins:consume",
+                            "amount": 1
+                        }
+                    }
+                }
+            ]
+        },
+        "cooldown": 100
+    },
+    "darkness": {
+        "type": "origins:action_on_hit",
+        "damage_condition": {
+            "type": "origins:attacker",
+            "entity_condition": {
+                "type": "origins:equipped_item",
+                "equipment_slot": "mainhand",
+                "item_condition": {
+                    "type": "origins:ingredient",
+                    "ingredient": {
+                        "item": "minecraft:gunpowder"
+                    }
+                }
+            }
+        },
+        "bientity_action": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:target_action",
+                    "action": {
+                        "type": "origins:apply_effect",
+                        "effects": [
+                            {
+                                "effect": "minecraft:blindness",
+                                "duration": 80
+                            }
+                        ]
                     }
                 },
                 {

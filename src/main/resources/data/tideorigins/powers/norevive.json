@@ -5,20 +5,16 @@
     "droptotemmain": {
         "type": "origins:action_over_time",
         "entity_action": {
-            "type": "origins:and",
-            "actions": [
-                {
-                    "type": "origins:equipped_item_action",
-                    "equipment_slot": "mainhand",
-                    "action": {
-                        "type": "origins:consume",
-                        "amount": 1
-                    }
-                },
-                {
-                    "type": "origins:execute_command",
-                    "command": "/summon item ^ ^0.5 ^2 {Item:{id:'minecraft:totem_of_undying',Count:1b}}"
+            "type": "origins:drop_inventory",
+            "item_condition": {
+                "type": "origins:ingredient",
+                "ingredient": {
+                    "item": "minecraft:totem_of_undying"
                 }
+            },
+            "slots": [
+                "weapon.offhand",
+                "weapon.mainhand"
             ]
         },
         "interval": 5,
@@ -28,7 +24,7 @@
             "item_condition": {
                 "type": "origins:ingredient",
                 "ingredient": {
-                "item": "minecraft:totem_of_undying"
+                    "item": "minecraft:totem_of_undying"
                 }
             }
         }
@@ -36,20 +32,16 @@
     "droptotemoff": {
         "type": "origins:action_over_time",
         "entity_action": {
-            "type": "origins:and",
-            "actions": [
-                {
-                    "type": "origins:equipped_item_action",
-                    "equipment_slot": "offhand",
-                    "action": {
-                        "type": "origins:consume",
-                        "amount": 1
-                    }
-                },
-                {
-                    "type": "origins:execute_command",
-                    "command": "/summon item ~ ~ ~ {Item:{id:'minecraft:totem_of_undying',Count:1b}}"
+            "type": "origins:drop_inventory",
+            "item_condition": {
+                "type": "origins:ingredient",
+                "ingredient": {
+                    "item": "minecraft:totem_of_undying"
                 }
+            },
+            "slots": [
+                "weapon.offhand",
+                "weapon.mainhand"
             ]
         },
         "interval": 5,
@@ -59,7 +51,7 @@
             "item_condition": {
                 "type": "origins:ingredient",
                 "ingredient": {
-                "item": "minecraft:totem_of_undying"
+                    "item": "minecraft:totem_of_undying"
                 }
             }
         }
@@ -67,17 +59,8 @@
     "blocks": {
         "type": "origins:prevent_block_use",
         "block_condition": {
-            "type": "origins:or",
-            "conditions": [
-                {
-                    "type": "origins:block",
-                    "block": "minecraft:respawn_anchor"
-                },
-                {
-                    "type": "origins:block",
-                    "block": "betternether:pig_statue_respawner"
-                }
-            ]
+            "type": "origins:in_tag",
+            "tag": "tideorigins:respawn"
         }
     }
 }

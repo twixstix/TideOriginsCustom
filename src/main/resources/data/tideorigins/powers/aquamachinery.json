@@ -1,0 +1,106 @@
+{
+    "name": "Aquatic Machinery",
+    "description": "You do not require air, so you can survive underwater as long as you like. However, your machinery needs constant cooling via water, or it will overheat and damage you.",
+    "type": "origins:multiple",
+    "air": {
+        "type": "origins:action_over_time",
+        "entity_action": {
+            "type": "origins:gain_air",
+            "value": 5
+        },
+        "interval": 5
+    },
+    "timerbar": {
+        "type": "origins:resource",
+        "min": 0,
+        "max": 60,
+        "start_value": 60,
+        "hud_render": {
+            "should_render": true,
+            "sprite_location": "origins:textures/gui/resource_bar.png",
+            "bar_index": 1
+        }
+    },
+    "dryout": {
+        "type": "origins:action_over_time",
+        "entity_action": {
+            "type": "origins:change_resource",
+            "resource": "tideorigins:*_timerbar",
+            "change": -1
+        },
+        "interval": 20,
+        "condition": {
+            "type": "origins:or",
+            "conditions": [
+                {
+                    "type": "origins:fluid_height",
+                    "fluid": "minecraft:water",
+                    "comparison": ">",
+                    "compare_to": 0.0
+                },
+                {
+                    "type": "origins:in_rain"
+                },
+                {
+                    "type": "origins:status_effect",
+                    "effect": "minecraft:conduit_power"
+                }
+            ],
+            "inverted": true
+        }
+    },
+    "rehydrate": {
+        "type": "origins:action_over_time",
+        "entity_action": {
+            "type": "origins:change_resource",
+            "resource": "tideorigins:*_timerbar",
+            "change": 5
+        },
+        "interval": 20,
+        "condition": {
+            "type": "origins:or",
+            "conditions": [
+                {
+                    "type": "origins:fluid_height",
+                    "fluid": "minecraft:water",
+                    "comparison": ">",
+                    "compare_to": 0.0
+                },
+                {
+                    "type": "origins:in_rain"
+                },
+                {
+                    "type": "origins:status_effect",
+                    "effect": "minecraft:conduit_power"
+                }
+            ]
+        }
+    },
+    "damage": {
+        "type": "origins:damage_over_time",
+        "interval": 20,
+        "onset_delay": 1,
+        "damage": 2,
+        "damage_source": {
+            "name": "no_water_for_gills",
+            "unblockable": true,
+            "bypasses_armor": true
+        },
+        "condition": {
+            "type": "origins:resource",
+            "resource": "tideorigins:*_timerbar",
+            "comparison": "==",
+            "compare_to": 0
+        }
+    },
+    "fire": {
+        "type": "origins:modify_damage_taken",
+        "damage_condition": {
+            "type": "origins:fire"
+        },
+        "modifier": {
+            "operation": "multiply_base",
+            "value": 0.5
+        }
+    }
+}

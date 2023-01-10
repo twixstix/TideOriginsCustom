@@ -3,15 +3,27 @@
     "values": [
         "minecraft:iron_helmet",
         "minecraft:golden_helmet",
-        "additionaladditions:rose_gold_helmet",
+        {
+            "id": "additionaladditions:rose_gold_helmet",
+            "required": false
+        },
         "minecraft:iron_chestplate",
         "minecraft:golden_chestplate",
-        "additionaladditions:rose_gold_chestplate",
+        {
+            "id": "additionaladditions:rose_gold_chestplate",
+            "required": false
+        },
         "minecraft:iron_leggings",
         "minecraft:golden_leggings",
-        "additionaladditions:rose_gold_leggings",
+        {
+            "id": "additionaladditions:rose_gold_leggings",
+            "required": false
+        },
         "minecraft:iron_boots",
         "minecraft:golden_boots",
-        "additionaladditions:rose_gold_boots"
+        {
+            "id": "additionaladditions:rose_gold_boots",
+            "required": false
+        }
     ]
   }
