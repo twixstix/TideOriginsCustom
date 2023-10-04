@@ -1,0 +1,19 @@
+{
+    "name": "Hydrophilia",
+    "description": "You need water to live, so the excessively dry environment of the Nether causes damage to you periodically.",
+    "type": "origins:damage_over_time",
+    "interval": 20,
+    "onset_delay": 1,
+    "damage": 2,
+    "damage_source": {
+        "name": "dryout",
+        "unblockable": true,
+        "bypasses_armor": true
+    },
+    "protection_enchantment": "moborigins:heat_protection",
+    "protection_effectiveness": 1.0,
+    "condition": {
+        "type": "origins:dimension",
+        "dimension": "minecraft:the_nether"
+    }
+}

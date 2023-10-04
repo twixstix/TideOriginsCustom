@@ -1,0 +1,17 @@
+{
+    "name": "Piercing Blows",
+    "description": "Your attacks deal extra damage that isn't blocked by armor.",
+    "type": "origins:target_action_on_hit",
+    "entity_action": {
+        "type": "origins:damage",
+        "amount": 2,
+        "source": {
+            "name": "player",
+            "unblockable": true
+        }
+    },
+    "cooldown": 20,
+    "hud_render": {
+        "should_render": false
+    }
+}

@@ -41,7 +41,7 @@
                 },
                 {
                     "type": "origins:execute_command",
-                    "command": "team join LoveSpirit @e[type=!minecraft:player,type=!minecraft:ender_dragon,type=!minecraft:wither,distance=..8]"
+                    "command": "team join LoveSpirit @e[type=!minecraft:player,type=!minecraft:ender_dragon,type=!minecraft:wither,type=!minecraft:warden,distance=..8]"
                 }
             ]
         },

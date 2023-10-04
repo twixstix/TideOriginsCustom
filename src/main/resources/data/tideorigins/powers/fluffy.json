@@ -1,6 +1,6 @@
 {
     "name": "Fluffy",
-    "description": "Your fluffy fur weighs you down in water, and you take double damage from fire. At least you're immune to the cold.",
+    "description": "Your fluff weighs you down in water, and you take double damage from fire. At least you're immune to the cold.",
     "type": "origins:multiple",
     "warm": {
         "type": "origins:invulnerability",

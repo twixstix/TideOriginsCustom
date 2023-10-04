@@ -1,0 +1,230 @@
+{
+    "name": "Magical Transportation",
+    "description": "You can set a location at your feet with your secondary button and teleport entities to it. Hold shift and press the button to deactivate.",
+    "type": "origins:multiple",
+    "setpos": {
+        "type": "origins:active_self",
+        "entity_action": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:block_action_at",
+                    "block_action": {
+                        "type": "origins:execute_command",
+                        "command": "function tideorigins:summoncircle_water"
+                    }
+                },
+                {
+                    "type": "origins:play_sound",
+                    "sound": "minecraft:block.beacon.power_select",
+                    "pitch": 1.5
+                }
+            ]
+        },
+        "cooldown": 20,
+        "key": {
+            "key": "key.origins.secondary_active",
+            "continuous": true
+        },
+        "condition": {
+            "type": "origins:sneaking",
+            "inverted": true
+        }
+    },
+    "clearpos": {
+        "type": "origins:active_self",
+        "entity_action": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:block_action_at",
+                    "block_action": {
+                        "type": "origins:execute_command",
+                        "command": "kill @e[tag=summoncircle3]"
+                    }
+                },
+                {
+                    "type": "origins:play_sound",
+                    "sound": "minecraft:block.beacon.deactivate",
+                    "pitch": 1.65
+                }
+            ]
+        },
+        "cooldown": 20,
+        "key": {
+            "key": "key.origins.secondary_active",
+            "continuous": true
+        },
+        "condition": {
+            "type": "origins:sneaking"
+        }
+    },
+    "tpentity": {
+        "type": "origins:action_on_entity_use",
+        "bientity_action": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:target_action",
+                    "action": {
+                        "type": "origins:and",
+                        "actions": [
+                            {
+                                "type": "origins:execute_command",
+                                "command": "particle enchanted_hit ~ ~0.5 ~ 0.3 0.3 0.3 0.009 4 normal @a"
+                            },
+                            {
+                                "type": "origins:execute_command",
+                                "command": "tp @s @e[tag=summoncircle3,limit=1]"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "type": "origins:actor_action",
+                    "action": {
+                        "type": "origins:and",
+                        "actions": [
+                            {
+                                "type": "origins:exhaust",
+                                "amount": 10
+                            },
+                            {
+                                "type": "origins:trigger_cooldown",
+                                "power": "tideorigins:*_cooldown"
+                            },
+                            {
+                                "type": "origins:execute_command",
+                                "command": "playsound minecraft:entity.illusioner.mirror_move player @a[distance=..32] ~ ~ ~ .5 1"
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
+        "bientity_condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:actor_condition",
+                    "condition": {
+                        "type": "origins:food_level",
+                        "comparison": ">",
+                        "compare_to": 0
+                    }
+                },
+                {
+                    "type": "origins:target_condition",
+                    "condition": {
+                        "type": "origins:or",
+                        "conditions": [
+                            {
+                                "type": "origins:in_tag",
+                                "tag": "tideorigins:notransport",
+                                "inverted": true
+                            },
+                            {
+                                "type": "origins:nbt",
+                                "nbt": "{Tags: ['fairy_ally']}"
+                            },
+                            {
+                                "type": "origins:nbt",
+                                "nbt": "{Tags: ['fairy']}"
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
+        "item_condition": {
+            "type": "origins:empty"
+        },
+        "hands": [
+            "main_hand"
+        ],
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:resource",
+                    "resource": "tideorigins:*_cooldown",
+                    "comparison": "==",
+                    "compare_to": 0
+                },
+                {
+                    "type": "origins:food_level",
+                    "comparison": ">",
+                    "compare_to": 0
+                }
+            ]
+        }
+    },
+    "tpself": {
+        "type": "origins:active_self",
+        "entity_action": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:exhaust",
+                    "amount": 40
+                },
+                {
+                    "type": "origins:trigger_cooldown",
+                    "power": "tideorigins:*_cooldown"
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "playsound minecraft:entity.illusioner.mirror_move player @a[distance=..32] ~ ~ ~ .5 1"
+                },               
+                {
+                    "type": "origins:execute_command",
+                    "command": "particle enchanted_hit ~ ~0.5 ~ 0.3 0.3 0.3 0.009 4 normal @a"
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "tp @s @e[tag=summoncircle3,limit=1]"
+                },
+                {
+                    "type": "origins:play_sound",
+                    "sound": "minecraft:entity.illusioner.mirror_move"
+                }
+            ]
+        },
+        "cooldown": 1,
+        "key": {
+            "key": "key.loadToolbarActivator",
+            "continuous": true
+        },
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:resource",
+                    "resource": "tideorigins:*_cooldown",
+                    "comparison": "==",
+                    "compare_to": 0
+                },
+                {
+                    "type": "origins:food_level",
+                    "comparison": ">",
+                    "compare_to": 0
+                }
+            ]
+        }
+    },
+    "cooldown": {
+        "type": "origins:cooldown",
+        "cooldown": 120,
+        "hud_render": {
+            "should_render": true,
+            "sprite_location": "origins:textures/gui/community/huang/resource_bar_01.png",
+            "bar_index": 19
+        }
+    },
+    "badges": [
+        {
+            "sprite": "origins:textures/gui/badge/info.png",
+            "text": "Right-click with empty hands to tp a mob. Press your Load Toolbar Activator to tp yourself. If a player has accepted an alliance with you, right-click with empty hands to tp them."
+        }
+    ]
+}

@@ -76,6 +76,15 @@
       {"id": "croptopia:steamed_clams", "required": false},
       {"id": "croptopia:grilled_oysters", "required": false},
       {"id": "ecologics:crab_meat", "required": false},
+      {"id": "biomemakeover:glowfish", "required": false},
+      {"id": "biomemakeover:cooked_glowfish", "required": false},
+      {"id": "biomemakeover:raw_crab", "required": false},
+      {"id": "biomemakeover:cooked_crab", "required": false},
+      {"id": "crittersandcompanions:koi_fish", "required": false},
+      {"id": "farmersdelight:cod_slice", "required": false},
+      {"id": "farmersdelight:cooked_cod_slice", "required": false},
+      {"id": "farmersdelight:salmon_slice", "required": false},
+      {"id": "farmersdelight:cooked_salmon_slice", "required": false},
       {"id": "betterend:end_fish", "required": false},
       {"id": "betterend:cooked_end_fish", "required": false}
     ]

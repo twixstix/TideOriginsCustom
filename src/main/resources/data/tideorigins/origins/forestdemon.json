@@ -1,0 +1,19 @@
+{
+	"powers": [
+        "tideorigins:fly",
+        "origins:fall_immunity",
+        "origins:like_air",
+        "tideorigins:sizeshift_med",
+        "tideorigins:healingplants",
+        "tideorigins:ally_undead",
+        "tideorigins:witherweakness",
+        "tideorigins:darkhunger",
+        "tideorigins:soul_weakness",
+        "tideorigins:nothorns"
+	],
+	"icon": "minecraft:vine",
+    "order": 4,
+	"impact": 1,
+	"name": "Nature Demon",
+	"description": "Borne of the earth and flora, Nature Demons are creatures known to prowl forests in search of their next meal."
+}

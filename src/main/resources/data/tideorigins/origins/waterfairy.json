@@ -1,0 +1,26 @@
+{
+	"powers": [
+        "tideorigins:infiniteair",
+		"tideorigins:water_sight",
+        "origins:swim_speed",
+        "origins:like_water",
+		"origins:aqua_affinity",
+        "tideorigins:riptide",
+        "tideorigins:healingwaters",
+        "tideorigins:petite",
+        "tideorigins:sizeshift_small",
+        "tideorigins:summoning_bal",
+        "tideorigins:aquadiet3",
+        "tideorigins:seaweed",
+        "origins:more_exhaustion",
+        "tideorigins:toxinweakness",
+        "tideorigins:flammable",
+        "tideorigins:netherdryout",
+        "tideorigins:faetoken"  
+	],
+	"icon": "minecraft:heart_of_the_sea",
+    "order": 4,
+	"impact": 3,
+	"name": "Water Fairy",
+	"description": "Water Fairies are sylphs of the sea, enchanting all they encounter with their mastery of magic."
+}

@@ -14,5 +14,6 @@
     "order": 4,
 	"impact": 3,
 	"name": "Tardigrade",
-	"description": "Also known as 'water bears', Tardigrades are microscopic creatures with the ability to survive in nearly any environment."
+	"description": "Also known as 'water bears', Tardigrades are microscopic creatures with the ability to survive in nearly any environment.",
+    "unchoosable": true
 }

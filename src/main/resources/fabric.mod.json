@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "id": "tideorigins",
-  "version": "2.0.0",
+  "version": "2.1.0",
 
   "name": "TideOrigins",
   "description": "Adds a handful of Origins specially made for the DD Origins Server.",
@@ -30,9 +30,9 @@
   ],
 
   "depends": {
-    "fabricloader": ">=0.14.9",
-    "fabric": "*",
-    "minecraft": "1.19",
+    "fabricloader": ">=0.14.10",
+    "fabric-api": "*",
+    "minecraft": "1.19.2",
     "java": ">=17"
   },
   "suggests": {

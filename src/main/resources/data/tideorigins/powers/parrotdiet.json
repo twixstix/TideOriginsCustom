@@ -37,7 +37,7 @@
         },
         "entity_action": {
             "type": "origins:damage",
-            "amount": 20,
+            "amount": 99,
             "source": {
                 "name": "tideorigins.chocolate",
                 "bypasses_armor": true,

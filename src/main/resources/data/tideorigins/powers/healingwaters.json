@@ -1,0 +1,65 @@
+{
+    "name": "Healing Waters",
+    "description": "Being in the water or rain grants you various boons, such as Regeneration, Speed, and immunity to fall damage.",
+    "type": "origins:multiple",
+    "damp": {
+        "type": "origins:stacking_status_effect",
+        "min_stacks": 0,
+        "max_stacks": 1,
+        "duration_per_stack": 60,
+        "tick_rate": 20,
+        "effects": [
+            {
+                "effect": "minecraft:speed",
+                "is_ambient": true,
+                "show_particles": true,
+                "show_icon": true
+            },
+            {
+                "effect": "minecraft:regeneration",
+                "is_ambient": true,
+                "show_particles": true,
+                "show_icon": true
+            }
+        ],
+        "condition": {
+            "type": "origins:or",
+            "conditions": [
+                {
+                    "type": "origins:in_block_anywhere",
+                    "block_condition": {
+                        "type": "origins:block",
+                        "block": "minecraft:water"
+                    },
+                    "comparison": ">=",
+                    "compare_to": 1
+                },
+                {
+                    "type": "origins:in_rain"
+                }
+            ]
+        }
+    },
+    "fallimmune": {
+        "type": "origins:modify_falling",
+        "velocity": 0.08,
+        "take_fall_damage": false,
+        "condition": {
+            "type": "origins:or",
+            "conditions": [
+                {
+                    "type": "origins:in_block_anywhere",
+                    "block_condition": {
+                        "type": "origins:block",
+                        "block": "minecraft:water"
+                    },
+                    "comparison": ">=",
+                    "compare_to": 1
+                },
+                {
+                    "type": "origins:in_rain"
+                }
+            ]
+        }
+    }
+}

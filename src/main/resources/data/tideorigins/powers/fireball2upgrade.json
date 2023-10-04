@@ -1,0 +1,59 @@
+{
+    "type": "origins:multiple",
+    "name": "Pyrotechnics",
+    "description": "By drawing together a great amount of strength, you can summon a massive fireball that explodes on contact with anything.",
+    "shoot": {
+        "type": "origins:fire_projectile",
+        "entity_type": "minecraft:armor_stand",
+        "tag": "{Small:1b,Invisible:1b,ArmorItems:[{},{},{},{id:\"minecraft:magma_block\",Count:1b}],CustomName:'{\"text\":\"a pyrotechnic fireball\"}',cardinal_components: {\"apoli:powers\": {Powers: [{Type: \"tideorigins:fireball_exploder\", Data: {}, Sources: [\"apoli:command\"]}]}}}",
+        "divergence": 0,
+        "cooldown": 2,
+        "hud_render": {
+            "should_render": false
+        },
+        "condition": {
+            "type": "origins:food_level",
+            "comparison": ">=",
+            "compare_to": 5
+        }
+    },
+    "hunger": {
+        "type": "origins:active_self",
+        "entity_action": {
+            "type": "origins:exhaust",
+            "amount": 30
+        },
+        "cooldown": 2,
+        "hud_render": {
+            "should_render": false
+        },
+        "condition": {
+            "type": "origins:food_level",
+            "comparison": ">=",
+            "compare_to": 5
+        }
+    },
+    "firesound": {
+        "type": "origins:active_self",
+        "entity_action": {
+            "type": "origins:play_sound",
+            "sound": "minecraft:entity.ghast.shoot"
+        },
+        "cooldown": 2,
+        "condition": {
+            "type": "origins:food_level",
+            "comparison": ">=",
+            "compare_to": 5
+        }
+    },
+    "nodmg": {
+        "type": "origins:invulnerability",
+        "damage_condition": {
+            "type": "origins:attacker",
+            "entity_condition": {
+                "type": "origins:entity_type",
+                "entity_type": "minecraft:armor_stand"
+            }
+        }
+    }
+}

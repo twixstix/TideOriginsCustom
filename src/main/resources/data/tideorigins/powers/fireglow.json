@@ -1,0 +1,12 @@
+{
+    "name": "Fiery Glow",
+    "description": "You can detect the heat changes that living creatures give off, allowing you to detect them through walls.",
+    "type": "origins:entity_glow",
+    "entity_condition": {
+        "type": "origins:living"
+    },
+    "use_teams": false,
+    "red": 1.0,
+    "green": 0.4,
+    "blue": 0.0
+}

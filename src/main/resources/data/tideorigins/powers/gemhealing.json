@@ -1,6 +1,6 @@
 {
     "name": "Restoration",
-    "description": "Being around multiple gemstone ores or blocks allows you to absorb minerals from them, healing your injuries.",
+    "description": "Being around gemstone ores or blocks allows you to absorb minerals from them, healing your injuries.",
     "type": "origins:multiple",
     "low_regen": {
         "type": "origins:stacking_status_effect",
@@ -25,10 +25,10 @@
                     }
                 ]
             },
-            "radius": 5,
+            "radius": 6,
             "shape": "cube",
             "comparison": ">=",
-            "compare_to": 3
+            "compare_to": 1
         }
     },
     "high_regen": {
@@ -58,7 +58,7 @@
             "radius": 5,
             "shape": "cube",
             "comparison": ">=",
-            "compare_to": 3
+            "compare_to": 1
         }
     }
 }

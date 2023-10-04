@@ -1,0 +1,9 @@
+{
+    "name": "Gale Force",
+    "description": "Your attacks create great gusts of wind, knocking enemies back further.",
+    "type": "origins:action_on_hit",
+    "bientity_action": {
+        "type": "origins:add_velocity",
+        "z": 2
+    }
+}

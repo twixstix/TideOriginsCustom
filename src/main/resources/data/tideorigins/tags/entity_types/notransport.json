@@ -3,6 +3,11 @@
     "values": [
       "minecraft:ender_dragon",
       "minecraft:wither",
-      "minecraft:player"
+      "minecraft:player",
+      "minecraft:warden",
+      {"id": "bosses_of_mass_destruction:void_blossom", "required": false},
+      {"id": "bosses_of_mass_destruction:obsidilith", "required": false},
+      {"id": "bosses_of_mass_destruction:lich", "required": false},
+      {"id": "bosses_of_mass_destruction:gauntlet", "required": false}
     ]
   }

@@ -13,7 +13,9 @@
     "tideorigins:amphibian",
     "tideorigins:crystalline",
     "tideorigins:naturefairy",
-    "tideorigins:firefairy",
+    "tideorigins:firefairy2",
+    "tideorigins:waterfairy",
+    "tideorigins:windfairy",
     "tideorigins:flyingrabbit",
     "tideorigins:crow",
     "tideorigins:slayer",
@@ -30,6 +32,11 @@
     "tideorigins:faeling",
     "tideorigins:tardigrade",
     "tideorigins:aqualite",
-    "tideorigins:aqualite2"
+    "tideorigins:aqualite2",
+    "tideorigins:hunter",
+    "tideorigins:pyrolite",
+    "tideorigins:pyrolite2",
+    "tideorigins:forestdemon",
+    "tideorigins:cybernomad"
   ]
 }

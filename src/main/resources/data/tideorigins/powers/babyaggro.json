@@ -35,7 +35,7 @@
         "interval": 5,
         "entity_action": {
             "type": "origins:execute_command",
-            "command": "team join TurtlePassive @e[tag=!InTurtleTeam,type=!minecraft:player,type=!minecraft:ender_dragon,type=!minecraft:wither,type=!minecraft:zombie,type=!minecraft:zombified_piglin,distance=..50]"
+            "command": "team join TurtlePassive @e[tag=!InTurtleTeam,type=!minecraft:player,type=!minecraft:ender_dragon,type=!minecraft:wither,type=!minecraft:warden,type=!minecraft:zombie,type=!minecraft:zombified_piglin,distance=..50]"
         }
     },
     "tagset": {

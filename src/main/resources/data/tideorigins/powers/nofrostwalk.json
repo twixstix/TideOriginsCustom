@@ -1,0 +1,14 @@
+{
+    "name": "no frostwalk",
+    "description": "You cannot equip the Frost Walker enchantment.",
+    "hidden": true,
+    "type": "origins:conditioned_restrict_armor",
+    "feet": {
+        "type": "origins:enchantment",
+        "enchantment": "minecraft:frost_walker",
+        "comparison": ">=",
+        "compare_to": 1
+    },
+    "tick_rate": 20
+    
+}

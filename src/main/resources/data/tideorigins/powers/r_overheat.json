@@ -293,7 +293,17 @@
 		},
 		"interval": 10,
 		"condition": {
-			"type": "origins:on_fire"
+			"type": "origins:and",
+			"conditions": [
+				{
+					"type": "origins:on_fire"
+				},
+				{
+					"type": "origins:status_effect",
+					"effect": "minecraft:fire_resistance",
+					"inverted": true
+				}
+			]
 		}
 	},
 	"on_death": {

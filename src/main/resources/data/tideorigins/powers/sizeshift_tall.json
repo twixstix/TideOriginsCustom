@@ -1,0 +1,248 @@
+{
+    "name": "Sizeshifting",
+    "description": "You can change your size at will. Shift-activate to shrink, and activate to grow.",
+    "type": "origins:multiple",
+    "toggle": {
+        "type": "origins:resource",
+        "min": 0,
+        "max": 2,
+        "start_value": 2,
+        "hud_render": {
+            "should_render": false
+        }
+    },
+    "shrinksmall": {
+        "type": "origins:active_self",
+        "cooldown": 30,
+        "key": {
+            "key": "key.origins.secondary_active",
+            "continuous": false
+        },
+        "entity_action": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:play_sound",
+                    "sound": "minecraft:block.beacon.deactivate",
+                    "pitch": 2
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "scale set pehkui:height 0.25 @s"
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "scale set pehkui:width 0.25 @s"
+                },
+                {
+                    "type": "origins:change_resource",
+                    "resource": "tideorigins:*_toggle",
+                    "operation": "set",
+                    "change": 0
+                },
+                {
+                    "type": "origins:trigger_cooldown",
+                    "power": "tideorigins:*_shrinkmed"
+                },
+                {
+                    "type": "origins:trigger_cooldown",
+                    "power": "tideorigins:*_growmed"
+                },
+                {
+                    "type": "origins:trigger_cooldown",
+                    "power": "tideorigins:*_growlg"
+                }
+            ]
+        },
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:resource",
+                    "resource": "tideorigins:*_toggle",
+                    "comparison": "==",
+                    "compare_to": 1
+                },
+                {
+                    "type": "origins:sneaking"
+                }
+            ]
+        }
+    },
+    "shrinkmed": {
+        "type": "origins:active_self",
+        "cooldown": 30,
+        "key": {
+            "key": "key.origins.secondary_active",
+            "continuous": false
+        },
+        "entity_action": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:play_sound",
+                    "sound": "minecraft:block.beacon.deactivate",
+                    "pitch": 2
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "scale set pehkui:height 0.5 @s"
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "scale set pehkui:width 0.5 @s"
+                },
+                {
+                    "type": "origins:change_resource",
+                    "resource": "tideorigins:*_toggle",
+                    "operation": "set",
+                    "change": 1
+                },
+                {
+                    "type": "origins:trigger_cooldown",
+                    "power": "tideorigins:*_growlg"
+                },             
+                {
+                    "type": "origins:trigger_cooldown",
+                    "power": "tideorigins:*_growmed"
+                },
+                {
+                    "type": "origins:trigger_cooldown",
+                    "power": "tideorigins:*_shrinksmall"
+                }
+            ]
+        },
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:resource",
+                    "resource": "tideorigins:*_toggle",
+                    "comparison": "==",
+                    "compare_to": 2
+                },
+                {
+                    "type": "origins:sneaking"
+                }
+            ]
+        }
+    },
+    "growmed": {
+        "type": "origins:active_self",
+        "cooldown": 30,
+        "key": {
+            "key": "key.origins.secondary_active",
+            "continuous": false
+        },
+        "entity_action": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:play_sound",
+                    "sound": "minecraft:block.beacon.activate",
+                    "pitch": 2
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "scale set pehkui:height 0.5 @s"
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "scale set pehkui:width 0.5 @s"
+                },
+                {
+                    "type": "origins:change_resource",
+                    "resource": "tideorigins:*_toggle",
+                    "operation": "set",
+                    "change": 1
+                },
+                {
+                    "type": "origins:trigger_cooldown",
+                    "power": "tideorigins:*_shrinksmall"
+                },
+                {
+                    "type": "origins:trigger_cooldown",
+                    "power": "tideorigins:*_shrinkmed"
+                },
+                {
+                    "type": "origins:trigger_cooldown",
+                    "power": "tideorigins:*_growlg"
+                }
+            ]
+        },
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:resource",
+                    "resource": "tideorigins:*_toggle",
+                    "comparison": "==",
+                    "compare_to": 0
+                },
+                {
+                    "type": "origins:sneaking",
+                    "inverted": true
+                }
+            ]
+        }
+    },
+    "growlg": {
+        "type": "origins:active_self",
+        "cooldown": 30,
+        "key": {
+            "key": "key.origins.secondary_active",
+            "continuous": false
+        },
+        "entity_action": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:play_sound",
+                    "sound": "minecraft:block.beacon.activate",
+                    "pitch": 2
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "scale set pehkui:height 1 @s"
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "scale set pehkui:width 1 @s"
+                },
+                {
+                    "type": "origins:change_resource",
+                    "resource": "tideorigins:*_toggle",
+                    "operation": "set",
+                    "change": 2
+                },
+                {
+                    "type": "origins:trigger_cooldown",
+                    "power": "tideorigins:*_shrinkmed"
+                },
+                {
+                    "type": "origins:trigger_cooldown",
+                    "power": "tideorigins:*_shrinksmall"
+                },
+                {
+                    "type": "origins:trigger_cooldown",
+                    "power": "tideorigins:*_growmed"
+                }
+            ]
+        },
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:resource",
+                    "resource": "tideorigins:*_toggle",
+                    "comparison": "==",
+                    "compare_to": 1
+                },
+                {
+                    "type": "origins:sneaking",
+                    "inverted": true
+                }
+            ]
+        }
+    }
+}

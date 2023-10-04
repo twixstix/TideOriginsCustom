@@ -1,0 +1,12 @@
+{
+    "name": "ERROR_COOLANT_MALFUNCTION",
+    "description": "Value of array 'coolant_volume' is null;",
+    "type": "origins:modify_damage_taken",
+    "damage_condition": {
+        "type": "origins:fire"
+    },
+    "modifier": {
+        "operation": "multiply_base",
+        "value": 1
+    }
+}

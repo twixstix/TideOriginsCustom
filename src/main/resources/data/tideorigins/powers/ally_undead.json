@@ -1,0 +1,9 @@
+{
+    "name": "Undead Ally",
+    "description": "Undead creatures of the overworld will not attack you unless provoked.",
+    "type": "extraorigins:mob_neutrality",
+    "entity_types": [
+        "minecraft:zombie",
+        "minecraft:skeleton"
+    ]
+}

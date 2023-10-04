@@ -6,8 +6,7 @@
 		"origins:vegetarian",
         "tideorigins:carrotlover",
         "tideorigins:petite",
-		"origins:light_armor",
-		"tideorigins:grabbable"
+		"origins:light_armor"
 	],
 	"icon": {
 		"item": "minecraft:rabbit_foot"

@@ -1,0 +1,30 @@
+{
+    "name": "Zephyr Shield",
+    "description": "You have a protective veil of wind around your body, granting you immunity to kinetic damage and a bit of natural armour.",
+    "type": "origins:multiple",
+    "dmg": {
+        "type": "origins:invulnerability",
+        "damage_condition": {
+            "type": "origins:or",
+            "conditions": [
+              {
+                "type": "origins:name",
+                "name": "fall"
+              },
+              {
+                "type": "origins:name",
+                "name": "flyIntoWall"
+              }
+            ]
+        }
+    },
+    "armor": {
+        "type": "origins:attribute",
+        "modifier": {
+          "name": "Natural Armor health bonus",
+          "attribute": "minecraft:generic.armor",
+          "value": 8.0,
+          "operation": "addition"
+        }
+    }
+}

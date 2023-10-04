@@ -1,0 +1,32 @@
+{
+	"powers": [
+        "origins:fire_immunity",
+        "tideorigins:flametouch",
+        "tideorigins:lavaswim",
+        "tideorigins:furnace",
+        "tideorigins:fireglow",
+        "tideorigins:nethermonarch",
+        "tideorigins:fairywings",
+        "tideorigins:launch",
+        "origins:fall_immunity",
+        "tideorigins:summoning_jade",
+        "tideorigins:petite",
+        "tideorigins:flameheart",
+        "tideorigins:water_weakness",
+        "origins:damage_from_snowballs",
+		"origins:damage_from_potions",
+        "tideorigins:snowmelt",
+        "tideorigins:nofrostwalk",
+        "tideorigins:norevive",
+        "tideorigins:flamefairy_particle",
+        "tideorigins:healingcarrots",
+        "origins:more_exhaustion",
+        "tideorigins:toxinweakness",
+        "tideorigins:faetoken"
+	],
+	"icon": "minecraft:blaze_powder",
+    "order": 4,
+	"impact": 3,
+	"name": "Fire Fairy",
+	"description": "Though rare and nearly extinct, a Fire Fairy's mastery of flame makes them a powerful ally to those they choose to reveal themselves to."
+}

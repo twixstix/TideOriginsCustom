@@ -1,19 +1,18 @@
 {
-    "name": "Mount",
-    "description": "Your small size allows you to be picked up by other players.",
-    "type": "origins:action_on_entity_use",
-    "bientity_action": {
-        "type": "origins:mount"
+    "name": "test",
+    "description": "test power",
+    "type": "origins:action_over_time",
+    "entity_action": {
+        "type": "origins:execute_command",
+        "command": "say IT IS RAINING"
     },
-    "bientity_condition": {
-        "type": "origins:distance",
-        "comparison": "<=",
-        "compare_to": 5
-    },
-    "item_condition": {
-        "type": "origins:empty"
-    },
-    "hands": [
-        "main_hand"
-    ]
+    "interval": 10,
+    "condition": {
+        "type": "origins:and",
+        "conditions": [
+            {
+                "type": "origins:in_rain"
+            }
+        ]
+    }
 }

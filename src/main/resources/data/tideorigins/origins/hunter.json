@@ -1,0 +1,17 @@
+{
+	"powers": [
+		"tideorigins:huntersight",
+		"tideorigins:pierceattack",
+		"tideorigins:swiftfoot",
+		"tideorigins:looming",
+        "origins:carnivore",
+		"origins:more_exhaustion",
+		"tideorigins:magicweakness",
+        "tideorigins:nogapple"
+	],
+	"icon": "minecraft:iron_axe",
+    "order": 4,
+	"impact": 1,
+	"name": "The Hunter",
+	"description": "The bane of all Fairies. It will not rest until their destruction is absolute."
+}

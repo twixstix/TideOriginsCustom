@@ -1,0 +1,34 @@
+{
+	"powers": [
+		"tideorigins:roboenhancements",
+        "tideorigins:smalltrialite",
+        "origins:fire_immunity",
+        "tideorigins:lavaswim",
+        "tideorigins:flametouch_lite",
+        "tideorigins:fireball2",
+        "tideorigins:furnace",
+        "tideorigins:ally_ender2",
+        "tideorigins:ally_fire",
+        "tideorigins:instantfood",
+        "tideorigins:toolwise",
+        "tideorigins:hydrophobictech2",
+        "origins:damage_from_snowballs",
+		"origins:damage_from_potions",
+        "tideorigins:fingerless",
+        "tideorigins:nohorse",
+        "tideorigins:norevive",
+        "origins:nether_spawn"
+	],
+	"icon": "minecraft:clock",
+    "order": 4,
+	"impact": 2,
+	"name": "Time Spirit V4",
+    "description": "Trialite mkIV, aka Pyrolite.",
+    "upgrades": [
+        {
+            "condition": "tideorigins:pyrolite_evolve",
+            "origin": "tideorigins:pyrolite2",
+            "announcement": "Emberfuel absorbed. Pyrotechnic abilities have been enhanced."
+        }
+    ]
+}

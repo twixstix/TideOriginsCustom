@@ -1,0 +1,62 @@
+{
+    "name": "PARTICLE_BLAST",
+    "description": "run function raycast; distance = 10; if target == entity apply_damage; activator = button_primary;",
+    "type": "origins:active_self",
+    "entity_action": {
+        "type": "origins:raycast",
+        "distance": 10,
+        "shape_type": "outline",
+        "bientity_action": {
+            "type": "origins:target_action",
+            "action": {
+                "type": "origins:damage",
+                "amount": 1,
+                "source": {
+                    "name": "tideorigins.laser"
+                }
+            }
+        },
+        "block_action": {
+            "type": "origins:if_else",
+            "condition": {
+                "type": "origins:block",
+                "block": "minecraft:tnt"
+            },
+            "if_action": {
+                "type": "origins:and",
+                "actions": [
+                    {
+                        "type": "origins:set_block",
+                        "block": "minecraft:air"
+                    },
+                    {
+                        "type": "origins:execute_command",
+                        "command": "summon minecraft:tnt ~ ~ ~ {Fuse:80}"
+                    }
+                ]
+            }
+        },
+        "hit_action": {
+            "type": "origins:play_sound",
+            "sound": "minecraft:block.beacon.ambient",
+            "pitch": 2
+        },
+        "miss_action": {
+            "type": "origins:play_sound",
+            "sound": "minecraft:block.beacon.ambient",
+            "pitch": 2
+        },
+        "command_along_ray": "particle dust_color_transition 1.000 0.000 0.000 1 0.188 0.020 0.020 ~ ~ ~ 0 0 0 1 0 normal",
+        "command_step": 0.3
+    },
+    "cooldown": 1,
+    "key": {
+        "key": "key.origins.primary_active",
+        "continuous": true
+    },
+    "hud_render": {
+        "should_render": false,
+        "sprite_location": "origins:textures/gui/community/spiderkolo/resource_bar_02.png",
+        "bar_index": 8
+    }
+}

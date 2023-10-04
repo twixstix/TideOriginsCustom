@@ -1,0 +1,13 @@
+{
+    "name": "Rot",
+    "description": "The Wither effect deals more damage to you.",
+    "type": "origins:modify_damage_taken",
+    "damage_condition": {
+        "type": "origins:name",
+        "name": "wither"
+    },
+    "modifier": {
+        "operation": "multiply_base",
+        "value": 1
+    }
+}

@@ -1,0 +1,15 @@
+{
+	"powers": [
+        "tideorigins:cyber_failsafe",
+        "tideorigins:cyber_beam",
+        "tideorigins:sizeshift_cyber",
+        "tideorigins:cyber_hydrophobia",
+        "tideorigins:cyber_flammable",
+        "tideorigins:cyber_battery"
+	],
+	"icon": "minecraft:observer",
+    "order": 4,
+	"impact": 2,
+	"name": "Cyber Nomad",
+	"description": "PRIMARY OBJECTIVE: SURVIVE; SECONDARY OBJECTIVE: §kAAAA"
+}

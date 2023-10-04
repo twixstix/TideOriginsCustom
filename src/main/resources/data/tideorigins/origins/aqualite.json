@@ -20,6 +20,7 @@
 	"impact": 2,
 	"name": "Time Spirit V3",
     "description": "Trialite mkIII, aka Aqualite.",
+    "unchoosable": true,
     "upgrades": [
         {
             "condition": "tideorigins:aqualite_evolve",

@@ -1,0 +1,20 @@
+{
+    "name": "ERROR_LOW_VOLTAGE",
+    "description": "while energy <= 4 motor_speed = 0.85 §2//this is hacky, put in better battery later",
+    "type": "origins:stacking_status_effect",
+    "min_stacks": 0,
+    "max_stacks": 1,
+    "duration_per_stack": 60,
+    "tick_rate": 20,
+    "effect": {
+        "effect": "minecraft:slowness",
+        "is_ambient": true,
+        "show_particles": true,
+        "show_icon": true
+    },
+    "condition": {
+        "type": "origins:food_level",
+        "comparison": "<",
+        "compare_to": 8
+    }
+}

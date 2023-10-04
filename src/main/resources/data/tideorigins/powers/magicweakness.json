@@ -1,0 +1,13 @@
+{
+    "type": "origins:modify_damage_taken",
+    "name": "Magical Weakness",
+    "description": "Magic damages you more than most people.",
+    "damage_condition": {
+        "type": "origins:name",
+        "name": "magic"
+    },
+    "modifier": {
+        "operation": "multiply_base",
+        "value": 1
+    }
+}

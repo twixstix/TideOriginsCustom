@@ -1,0 +1,19 @@
+{
+    "name": "healing carrots",
+    "hidden": true,
+    "type": "origins:modify_food",
+    "item_condition": {
+        "type": "origins:ingredient",
+        "ingredient": {
+            "item": "minecraft:golden_carrot"
+        }
+    },
+    "entity_action": {
+        "type": "origins:apply_effect",
+        "effect": {
+            "effect": "minecraft:regeneration",
+            "duration": 100,
+            "amplifier": 1
+        }
+    }
+}

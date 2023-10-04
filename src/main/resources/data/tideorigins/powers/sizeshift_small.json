@@ -1,0 +1,97 @@
+{
+    "name": "Sizeshifting",
+    "description": "You can change your size at will. Activate to shrink to half your size, and reactivate to return to normal.",
+    "type": "origins:multiple",
+    "toggle": {
+        "type": "origins:resource",
+        "min": 0,
+        "max": 1,
+        "hud_render": {
+            "should_render": false
+        }
+    },
+    "shrink": {
+        "type": "origins:active_self",
+        "cooldown": 30,
+        "key": {
+            "key": "key.saveToolbarActivator",
+            "continuous": false
+        },
+        "entity_action": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:play_sound",
+                    "sound": "minecraft:block.beacon.deactivate",
+                    "pitch": 2
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "scale set pehkui:height 0.25 @s"
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "scale set pehkui:width 0.25 @s"
+                },
+                {
+                    "type": "origins:change_resource",
+                    "resource": "tideorigins:*_toggle",
+                    "operation": "set",
+                    "change": 1
+                },
+                {
+                    "type": "origins:trigger_cooldown",
+                    "power": "tideorigins:*_grow"
+                }
+            ]
+        },
+        "condition": {
+            "type": "origins:resource",
+            "resource": "tideorigins:*_toggle",
+            "comparison": "==",
+            "compare_to": 0
+        }
+    },
+    "grow": {
+        "type": "origins:active_self",
+        "cooldown": 30,
+        "key": {
+            "key": "key.saveToolbarActivator",
+            "continuous": false
+        },
+        "entity_action": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:play_sound",
+                    "sound": "minecraft:block.beacon.activate",
+                    "pitch": 2
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "scale set pehkui:height 0.5 @s"
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "scale set pehkui:width 0.5 @s"
+                },
+                {
+                    "type": "origins:change_resource",
+                    "resource": "tideorigins:*_toggle",
+                    "operation": "set",
+                    "change": 0
+                },
+                {
+                    "type": "origins:trigger_cooldown",
+                    "power": "tideorigins:*_shrink"
+                }
+            ]
+        },
+        "condition": {
+            "type": "origins:resource",
+            "resource": "tideorigins:*_toggle",
+            "comparison": "==",
+            "compare_to": 1
+        }
+    }
+}

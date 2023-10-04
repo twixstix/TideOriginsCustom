@@ -1,0 +1,23 @@
+{
+	"powers": [
+
+        "tideorigins:windknockback",
+        "tideorigins:windshield",
+        "tideorigins:fairywings",
+        "tideorigins:launch",
+        "tideorigins:summoning_alice",
+        "tideorigins:sizeshift_multi",
+        "tideorigins:aerialaffinity",
+        "origins:aerial_combatant",
+        "tideorigins:petite",
+        "tideorigins:healingcarrots",
+        "origins:fresh_air",
+		"origins:claustrophobia",
+        "tideorigins:faetoken"
+	],
+	"icon": "minecraft:elytra",
+    "order": 4,
+	"impact": 3,
+	"name": "Wind Fairy",
+	"description": "The ethereal Wind Fairies rarely stay in one place for long, often breezing by civilizations as quickly as they arrive."
+}

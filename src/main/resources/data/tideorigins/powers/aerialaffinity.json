@@ -1,0 +1,23 @@
+{
+    "name": "Aerial Affinity",
+    "description": "You can break blocks while in the air as easily as you were on land.",
+    "type": "origins:modify_break_speed",
+    "modifier": {
+        "operation": "multiply_total",
+        "value": 4
+    },
+    "condition": {
+        "type": "origins:and",
+        "conditions": [
+            {
+                "type": "origins:submerged_in",
+                "fluid": "minecraft:water",
+                "inverted": true
+            },
+            {
+                "type": "origins:on_block",
+                "inverted": true
+            }
+        ]
+    }
+}

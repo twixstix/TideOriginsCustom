@@ -1,0 +1,20 @@
+{
+    "name": "INITIATE_FAILSAFE",
+    "description": "if health < 3 apply_effect strength; level = 2;",
+    "type": "origins:stacking_status_effect",
+    "min_stacks": 0,
+    "max_stacks": 1,
+    "duration_per_stack": 60,
+    "tick_rate": 20,
+    "effect": {
+        "effect": "minecraft:strength",
+        "is_ambient": true,
+        "show_particles": true,
+        "show_icon": true
+    },
+    "condition": {
+        "type": "origins:health",
+        "comparison": "<",
+        "compare_to": 6
+    }
+}

@@ -1,9 +1,10 @@
 {
     "name": "Phased",
     "description": "You are not fully within this plane of existence, so hostile creatures (aside from spiders, with their many eyes) will be unable to detect you unless provoked.",
-    "type": "moborigins:remove_mob_hostility",
-    "entity_condition": {
-        "type": "origins:in_tag",
-        "tag": "tideorigins:ghost_neutral"
-    }
+    "type": "extraorigins:mob_neutrality",
+    "entity_types": [
+        "minecraft:spider",
+        "minecraft:cave_spider"
+    ],
+    "inverted": true
 }

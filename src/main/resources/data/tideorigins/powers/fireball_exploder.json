@@ -1,0 +1,32 @@
+{
+    "name": "fireball suicide",
+    "description": "explodes then kills itself. rip",
+    "hidden": true,
+    "type": "origins:action_over_time",
+    "interval": 3,
+    "rising_action": {
+        "type": "origins:explode",
+        "power": 4,
+        "destruction_type": "none",
+        "damage_self": false,
+        "create_fire": false
+    },
+    "entity_action": {
+        "type": "origins:execute_command",
+        "command": "kill @s"
+    },
+    "condition": {
+        "type": "origins:or",
+        "conditions": [
+            {
+                "type": "origins:on_block"
+            },
+            {
+                "type": "origins:block_collision",
+                "offset_x": 0.1,
+                "offset_y": 0.1,
+                "offset_z": 0.1
+            }
+        ]
+    }
+}

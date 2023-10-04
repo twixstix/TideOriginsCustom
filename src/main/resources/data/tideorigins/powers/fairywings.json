@@ -1,0 +1,6 @@
+{
+    "type": "origins:elytra_flight",
+    "name": "Fairy Wings",
+    "description": "You can glide using the large wings on your back.",
+    "render_elytra": true
+}

@@ -1,0 +1,10 @@
+{
+    "name": "Nether Monarch",
+    "description": "All denizens of the Nether respect you, and will not attack you unless provoked.",
+    "type": "extraorigins:mob_neutrality",
+    "inverted": true,
+    "condition": {
+        "type": "origins:dimension",
+        "dimension": "minecraft:the_nether"
+    }
+}

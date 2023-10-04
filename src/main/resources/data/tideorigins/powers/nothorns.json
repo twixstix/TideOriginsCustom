@@ -1,0 +1,20 @@
+{
+    "name": "Thornwild",
+    "description": "Your body recognizes magical thorns as actual plantlife and will attempt to absorb them (painfully).",
+    "type": "origins:damage_over_time",
+    "interval": 20,
+    "onset_delay": 1,
+    "damage": 1,
+    "damage_source": {
+        "name": "cactus",
+        "unblockable": true,
+        "bypasses_armor": true
+    },
+    "condition": {
+        "type": "origins:enchantment",
+        "enchantment": "minecraft:thorns",
+        "calculation": "sum",
+        "comparison": ">=",
+        "compare_to": 1
+    }
+}

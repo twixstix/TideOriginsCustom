@@ -2,9 +2,6 @@
     "name": "Neutral",
     "description": "lovespirit true neutrality",
     "hidden": true,
-    "type": "moborigins:remove_mob_hostility",
-    "entity_condition": {
-        "type": "origins:in_tag",
-        "tag": "tideorigins:love_neutral"
-    }
+    "type": "extraorigins:mob_neutrality",
+    "inverted": true
 }

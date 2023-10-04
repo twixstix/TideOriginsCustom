@@ -1,17 +1,9 @@
 {
   "replace": false,
   "values": [
-    {
-      "id": "betteranimalsplus:deer",
-      "required": false
-    },
-    {
-      "id": "betteranimalsplus:reindeer",
-      "required": false
-    },
-    {
-      "id": "betteranimalsplus:moose",
-      "required": false
-    }
+    {"id": "betteranimalsplus:deer", "required": false},
+    {"id": "betteranimalsplus:reindeer", "required": false},
+    {"id": "betteranimalsplus:moose", "required": false},
+    {"id": "goodall:deer", "required": false}
   ]
 }

@@ -10,8 +10,7 @@
         "tideorigins:riptide",
 		"origins:aquatic",
 		"origins:conduit_power_on_land",
-		"origins:air_from_potions",
-		"tideorigins:meloncat"
+		"origins:air_from_potions"
 	],
 	"icon": {
 		"item": "minecraft:cod"

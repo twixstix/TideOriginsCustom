@@ -62,6 +62,14 @@
     {"id": "croptopia:soybean_seed", "required": false},
     {"id": "croptopia:vanilla_seeds", "required": false},
     {"id": "croptopia:tea_seed", "required": false},
-    {"id": "croptopia:pepper_seed", "required": false}
+    {"id": "croptopia:pepper_seed", "required": false},
+    {"id": "biomemakeover:rootling_seeds", "required": false},
+    {"id": "expandeddelight:asparagus_seeds", "required": false},
+    {"id": "expandeddelight:chili_pepper_seeds", "required": false},
+    {"id": "farmersdelight:cabbage_seeds", "required": false},
+    {"id": "farmersdelight:tomato_seeds", "required": false},
+    {"id": "vinery:red_grape_seeds", "required": false},
+    {"id": "vinery:white_grape_seeds", "required": false},
+    {"id": "supplementaries:flax_seeds", "required": false}
   ]
 }

@@ -1,0 +1,25 @@
+{
+    "name": "ERROR_WATER_OVERFLOW",
+    "description": "Could not find function 'ability_swim' in directory 'main'; Could not find file 'waterproof_coating' in directory 'main/materials';",
+    "type": "origins:multiple",
+    "sink": {
+        "type": "origins:ignore_water"
+    },
+    "dmg": {
+        "type": "origins:damage_over_time",
+        "interval": 20,
+        "onset_delay": 1,
+        "damage": 2,
+        "damage_source": {
+            "name": "hurt_by_water",
+            "unblockable": true,
+            "bypasses_armor": true
+        },
+        "condition": {
+            "type": "origins:fluid_height",
+            "fluid": "minecraft:water",
+            "comparison": ">",
+            "compare_to": 0.0
+        }
+    }
+}
